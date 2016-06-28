@@ -153,7 +153,7 @@
       $( ".autocomplete" ).autocomplete({
         source: availableTags
       }).autocomplete( "instance" )._renderItem = function( ul, item ) {
-        return $( "<li><span class='bysides'><div>" + item.label + "</div><div>" + item.code + "</div></span></li>" )
+        return $( "<li><span class='f d vtop space10'><div>" + item.label + "</div><div>" + item.code + "</div></span></li>" )
           .appendTo( ul );
       };;
 

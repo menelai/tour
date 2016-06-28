@@ -10,9 +10,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="js/jquery.flexslider-min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
-  <!--script src="js/jquery.sticky.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
-
+  <script src="js/jquery.sticky.js"></script>
+  <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <link rel="stylesheet" type="text/css" href="css/selectric.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="js/script.js"></script>
   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -119,22 +119,21 @@
         <div class="drop-down mobile"></div>
       </div>
       <div id="from-input">
-        <input type="text" placeholder="Город вылета" class="autocomplete">
-        <div id="change-from-to"></div>
+        <select class="selectric">
+          <option value="+7" data-flag="i/flag.png">Россия</option>
+          <option value="+90" data-flag="i/greece.png">Грузия</option>
+          <option value="+383" data-flag="i/flag.png">Россия</option>
+          <option value="+900" data-flag="i/greece.png">Украина</option>
+          <option value="+1" data-flag="i/flag.png">США</option>
+          <option value="+800" data-flag="i/greece.png">Зимбабве</option>
+        </select>
       </div>
-      <div id="to-input">
-        <input type="text" placeholder="Город прилета" class="autocomplete">
-      </div>
-      <div id="date-input-1">
-        <input type="text" class="datepicker" placeholder="Туда">
-      </div>
-      <div id="date-input-2">
-        <input type="text" class="datepicker" placeholder="Обратно">
-        <div class="close"></div>
+      <div id="to-input" class="flex1 f">
+        <input type="text" placeholder="Куда: страна, курорт или отель" class="autocomplete flex1">
       </div>
       <div id="passengers-input">
         <div class="pass-border" ng-click="show=!show" ng-init="show=false;">
-          <div>1 пасс., эконом</div>
+          <div><img src="i/adult.png">×2 <img src="i/child.png">×2</div>
         </div>
         <div class="drop-down"></div>
         <div id="passengers-popup" ng-show="show">
@@ -176,8 +175,15 @@
           </div>
         </div>
       </div>
+      <div id="date-input-1">
+        <input type="text" class="datepicker" placeholder="Туда">
+      </div>
+      <div id="date-input-2">
+        <input type="text" class="datepicker" placeholder="Обратно">
+        <div class="close"></div>
+      </div>
       <div id="search-submit">
-        <input type="submit" value="Найти">
+        <input type="submit" value="Найти" class="orange-button ttu">
       </div>
     </form>
   </div>

@@ -250,3 +250,9 @@ img {
 .flex100 {
   @include flex(0 1 100%);
 }
+
+@mixin ul-reset {
+  padding:0;
+  margin:0;
+  list-style: none;
+}
