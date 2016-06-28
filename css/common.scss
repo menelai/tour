@@ -1,0 +1,337 @@
+@font-face{
+  font-family: 'wf_SegoeUILight';
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot');
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot?#iefix') format('embedded-opentype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.woff') format('woff'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.ttf') format('truetype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.svg#web') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AFuturaRound';
+  src: url('fonts/afuturaround-regular-webfont.eot');
+  src: url('fonts/afuturaround-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/afuturaround-regular-webfont.woff2') format('woff2'),
+  url('fonts/afuturaround-regular-webfont.woff') format('woff'),
+  url('fonts/afuturaround-regular-webfont.ttf') format('truetype'),
+  url('fonts/afuturaround-regular-webfont.svg#a_futuraroundregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AFuturaRound';
+  src: url('fonts/afuturaround-bold-webfont.eot');
+  src: url('fonts/afuturaround-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/afuturaround-bold-webfont.woff2') format('woff2'),
+  url('fonts/afuturaround-bold-webfont.woff') format('woff'),
+  url('fonts/afuturaround-bold-webfont.ttf') format('truetype'),
+  url('fonts/afuturaround-bold-webfont.svg#a_futuraroundbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AFuturaRoundDemi';
+  src: url('fonts/afuturarounddemi-webfont.eot');
+  src: url('fonts/afuturarounddemi-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/afuturarounddemi-webfont.woff2') format('woff2'),
+  url('fonts/afuturarounddemi-webfont.woff') format('woff'),
+  url('fonts/afuturarounddemi-webfont.ttf') format('truetype'),
+  url('fonts/afuturarounddemi-webfont.svg#a_futurarounddemiregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Segoe UI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+  line-height: 1.3;
+  min-width:1000px;
+}
+
+input, select, textarea {
+  font-family: 'Segoe UI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
+}
+
+a, .pseudolink {
+  color:#058fc8;
+  &:hover {
+    color:#47c0ff;
+  }
+}
+
+.pseudolink {
+  cursor:pointer;
+  position: relative;
+  top:-0.1em;
+  border-bottom: dashed 1px;
+  >span {
+    position: relative;
+    top:0.1em;
+  }
+}
+
+.max-width {
+  max-width: 1400px;
+  padding:0 20px;
+}
+
+$orange: #ff6700;
+$green: #9cd71d;
+$cyan: #24c2e6;
+$grey: #969696;
+$lightgrey: #bdbdbd;
+$dark-blue: #07466a;
+
+.afut {
+  font-family: 'AFuturaRound';
+}
+
+.f {
+  @include display-flex;
+}
+
+.vtop {
+  @include align-items(flex-start);
+}
+
+.vcen {
+  @include align-items(center);
+}
+
+.stretch {
+  @include align-items(stretch);
+}
+
+.flex1 {
+  @include flex(1);
+}
+
+.d {
+  @include justify-content(space-between);
+}
+
+.orange {
+  color: $orange;
+}
+.green {
+  color: $green;
+}
+.cyan {
+  color: $cyan;
+}
+.black {
+  color:black;
+}
+.grey {
+  color:$grey;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+.bg-green {
+  background-color: $green;
+}
+.bg-cyan {
+  background-color: $cyan;
+}
+
+.r {
+  @include flex-direction(row);
+}
+
+.c {
+  @include flex-direction(column);
+}
+
+@media all and (min-width: 800px) {
+  .ws-r {
+    @include flex-direction(row);
+  }
+  .ws-c {
+    @include flex-direction(column);
+  }
+}
+@media all and (max-width: 800px) {
+  .ss-r {
+    @include flex-direction(row);
+  }
+  .ss-c {
+    @include flex-direction(column);
+  }
+}
+
+#bricks {
+  height:10px;
+}
+
+#logo {
+  margin-top:-15px;
+  width:300px;
+}
+#sitename-and-slogan {
+  position: absolute;
+  top:0;
+  left:70px;
+}
+#domain {
+  top: 1.3em;
+  right: -0.6em;
+  position: absolute;
+}
+
+.sep {
+  width:1px;
+  background: $lightgrey;
+  margin:0 5px;
+}
+
+#top {
+  padding-top:15px;
+}
+
+.swap {
+  overflow: hidden;
+  img {
+    &:nth-child(2) {
+      position: absolute;
+      bottom:110%;
+    }
+  }
+
+  &:hover {
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        bottom:110%;
+      }
+      &:nth-child(2) {
+        position: relative;
+        bottom:auto;
+      }
+    }
+  }
+}
+
+#personal {
+  text-align: right;
+}
+
+#call-variants {
+  display: inline-block;
+  width:130px;
+  table {
+
+  }
+  td {
+    text-align: center;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+}
+
+#call-icons {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+#call-helpers {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color:$lightgrey;
+  >span:first-child {
+    -webkit-flex: 0 1 75%;
+    -ms-flex: 0 1 75%;
+    flex: 0 1 75%;
+    text-align: center;
+    text-align: center;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  >span:nth-child(2) {
+    -webkit-flex: 0 1 25%;
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%;
+    text-align: right;
+    font-size: 10px;
+    white-space: nowrap;
+
+  }
+}
+
+#lk {
+  font-size: 13px;
+  color:$grey;
+  &:before {
+    content: '';
+    width:14px;
+    height:15px;
+    background: url(../i/user.png) left top no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left:0.3em;
+  }
+}
+
+#menu-line {
+  a {
+    color:black;
+    text-decoration: none;
+    display: block;
+    padding:10px 0;
+  }
+  >.max-width {
+    >ul {
+      padding:0 35px;
+    }
+  }
+}
+
+#top-search-form {
+  background: url(../i/mainform.png) center center no-repeat;
+  background-size: cover;
+  padding:10px 0;
+
+  form {
+    margin:0 -10px;
+    padding:10px;
+    border-radius:10px;
+    background: rgba($dark-blue, 0.52);
+  }
+}

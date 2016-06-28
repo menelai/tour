@@ -3,220 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>bil</title>
+  <title>tour</title>
   <link href="js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
   <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="js/jquery.flexslider-min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <!--script src="js/jquery.sticky.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
 
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="js/script.js"></script>
   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  <!--style>
+  <style>
     .max-width {
       max-width: {{width}}px;
     }
-  </style-->
+  </style>
 </head>
 <body>
-<div id="search-throbber" ng-hide="true">
-  <div id="sth-inner">
-    <h2 id="sth-title" class="blue ttu tac">поиск дешёвых авиабилетов займёт не более 25 секунд</h2>
-    <div class="bysides smaller2">
-      <div>
-        <div class="rounded5">
-          <div class="tac ttu">
-            За первые 2 года работы Мы реализовали<br>
-            <b class="cyan fz18">35 000 авиабилетов,</b><br>
-            получив 7 отрицательных честных отзывов
-          </div>
-        </div>
-        <div class="rounded5 mt5">
-          <div class="bysides">
-            <div class="ttu tar">страхование от</div>
-            <div><img src="i/ingols-large.png" height="70"></div>
-          </div>
-        </div>
-        <div class="rounded5 mt5">
-          <div class="tac ttu">
-            Мы работаем<br>
-            <b class="cyan fz18">без выходных</b>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="rounded5">
-          <div class="tac ttu">
-            <b class="cyan fz18">только у нас:</b><br>
-            самый большой ассортимент<br>
-            чартерных и блочных авиабмлетов —<br>
-            лучшие цены в россии
-          </div>
-        </div>
-        <div class="rounded5 mt5">
-          <div class=" tac" style="width:100%;">
-            <div class="ttu">Способы оплаты</div>
-            <div class="bysides">
-              <div><img src="i/visa-mastercard.png" width="27"></div>
-              <div><img src="i/euroset-l.png" width="55"></div>
-              <div><img src="i/svyaznoy-big.png" width="55"></div>
-              <div><img src="i/qiwi.png" width="60"></div>
-              <div><img src="i/alfa-small.png"></div>
-            </div>
-            <div class="ttu fwb blue">комиссия 0%</div>
-          </div>
-        </div>
-        <div class="rounded5 mt5">
-          <div class="tac ttu">
-            <b class="cyan fz18">Ж/Д билеты</b><br>
-            по очень привлекательным ценам<br>
-            без очереди за несколько минут
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="magnif">
-      <div id="eye">
-
-      </div>
-      <div id="magnifscale">
-
-      </div>
-      <script type="text/javascript">
-        $(function() {
-          var svg = d3.select("#magnifscale")
-            .append("svg")
-            .attr("width", 180)
-            .attr("height", 180)
-            .append("g")
-            .attr("transform", "translate(90,90)");
-
-          var arc = d3.svg.arc()
-            .innerRadius(70)
-            .outerRadius(87)
-            .startAngle(0)
-            .endAngle(1 * Math.PI);
-
-          var path = svg.append("path")
-            .attr("class", "arc")
-            .attr("d", arc);
-
-          var arc1 = d3.svg.arc()
-            .innerRadius(87)
-            .outerRadius(90)
-            .startAngle(0)
-            .endAngle(2 * Math.PI);
-
-          var path1 = svg.append("path")
-            .attr("class", "arc1")
-            .attr("d", arc1);
-
-          var arc2 = d3.svg.arc()
-            .innerRadius(67)
-            .outerRadius(70)
-            .startAngle(0)
-            .endAngle(2 * Math.PI);
-
-          var path2 = svg.append("path")
-            .attr("class", "arc1")
-            .attr("d", arc2);
-
-          setTimeout(function() {
-            var arc = d3.svg.arc()
-              .innerRadius(70)
-              .outerRadius(87)
-              .startAngle(0)
-              .endAngle(1.5 * Math.PI);
-            path.attr("d", arc);
-          }, 2000);
-        });
-      </script>
-    </div>
-  </div>
-</div>
-<div id="statusbar">
-  <div class="max-width">
-    <div>
-      <div class="wsn">
-        ОНЛАЙН-ТАБЛО: <a href="/">Домодедово</a> (DME) <a href="/">Шереметьево</a> (SVO) <a href="/">Внуково</a> (VKO)
-      </div>
-    </div>
-    <div class="separator"></div>
-    <div>
-      <div id="links-block">
-        <div id="safety"><a href="/">Абсолютная
-          безопасность платежей</a></div>
-        <div><a href="/">Публичная
-          оферта</a></div>
-      </div>
-    </div>
-    <div class="separator"></div>
-    <div>
-      <div id="smm">
-        <div class="wsn">Акции, розыгрыши,<br>
-          новости, отзывы о нас
-        </div>
-        <div class="wsn">
-          <a href="/">
-            <div class="swap ib"><img src="i/Vk.svg"><img src="i/vk-color.png"></div>
-          </a>
-          <a href="/">
-            <div class="swap ib"><img src="i/Facebook.svg"><img src="i/f-color.png"></div>
-          </a>
-          <a href="/">
-            <div class="swap ib"><img src="i/Insta.svg"><img src="i/in-color.png"></div>
-          </a>
-          <a href="/">
-            <div class="swap ib"><img src="i/Twitter.svg"><img src="i/tw-color.png"></div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="totop"><a href="#top"></a></div>
+<div class="f r stretch d" id="bricks">
+  <div class="flex1 bg-cyan"></div>
+  <div class="flex1 bg-orange"></div>
+  <div class="flex1 bg-green"></div>
+  <div class="flex1 bg-cyan"></div>
+  <div class="flex1 bg-orange"></div>
+  <div class="flex1 bg-green"></div>
 </div>
 <div id="top">
-  <div class="max-width">
+  <div class="max-width f ws-r stretch d">
     <div id="logo">
-      <a ng-init="width=1400" ng-click="width= (width==1024) ? 1400 : 1024">
+      <a ng-init="width=1024" ng-click="width= (width==1024) ? 1400 : 1024">
         <div>
-          <div><img src="/i/logo.png"></div>
+          <div><img src="/i/besttours.png"></div>
           <div class="afut" id="sitename-and-slogan">
-            <div id="sitename"><span class="green">biletideshevo</span><span class="blue">.ru</span></div>
-            <div id="slogan" class="blue">
-              Лучшие цены на авиабилеты<br>
-              Европейское качество обслуживания
+            <div id="sitename" class="fz35">
+              <span class="orange">лучшие</span><span class="green">туры</span>
+              <span class="orange fz22" id="domain">.онлайн</span>
+            </div>
+            <div id="slogan" class="black fz16 mt5">
+              Мы осуществляем ваши мечты!
             </div>
           </div>
         </div>
       </a>
     </div>
     <div class="sep"></div>
-    <div id="partners">
+    <div id="partners" class="f r vtop d ws-space10">
       <div>
-        <h4>Наши партнеры:</h4>
+        <h4 class="fwn fz12 grey">Наши партнеры:</h4>
 
-        <div class="swap"><img src="i/sber.png"><img src="i/sber-color.png"></div>
-        <div class="swap"><img src="i/ingos.png"><img src="i/ingos-color.png"></div>
+        <div class="swap mt10"><img src="i/sber.png"><img src="i/sber-color.png"></div>
+        <div class="swap mt10"><img src="i/ingos.png"><img src="i/ingos-color.png"></div>
       </div>
-      <div>
-        <h4>Нас рекомендуют:</h4>
 
-        <div class="swap"><img src="i/rbc.png"><img src="i/rbc-color.png"></div>
-        <div class="swap"><img src="i/national.png"><img src="i/national-color.png"></div>
+      <div>
+        <h4 class="fwn fz12 grey">Нас рекомендуют:</h4>
+
+        <div class="swap mt10"><img src="i/rbc.png"><img src="i/rbc-color.png"></div>
+        <div class="swap mt10"><img src="i/national.png"><img src="i/national-color.png"></div>
+      </div>
+
+      <div class="tac">
+        <h4 class="fwn fz12 grey">Мы уполномоченное<br>
+          агентство</h4>
+        <div class="swap mt10"><img src="i/mousenidis.png"><img src="i/mousenidis-color.png"></div>
       </div>
     </div>
     <div class="sep"></div>
     <div id="phones">
-      <p class="blue"><a class="phon tdn" href="tel:+74951501182">+7 495 150-11-82</a><br>
-        <span class="phon desktop">8 800 234 5 99 5</span></p>
+      <p class="tar"><a class="fz20 orange tdn" href="tel:+74951501182">+7 495 150-11-82</a><br>
+        <span class="fz20 orange desktop">8 800 234 5 99 5</span></p>
 
-      <p class="grey">с 9:00 до 23:00</p>
+      <p class="orange tar fz12">с 9:00 до 23:00</p>
     </div>
     <div class="sep"></div>
     <div id="personal">
@@ -239,7 +99,7 @@
 <div id="menu-line">
   <div id="buter"></div>
   <div class="max-width">
-    <ul>
+    <ul class="ul f d ws-r ss-c fz12 ttu">
       <li><a href="/">Авиабилеты</a></li>
       <li><a href="/">Бронирование отелей</a></li>
       <li><a href="/">Бронирование авто</a></li>
@@ -253,7 +113,7 @@
 </div>
 <div id="top-search-form" ng-init="class=false" class="search{{class}}">
   <div class="max-width">
-    <form>
+    <form class="f d ws-r ss-c ws-space4 vcen">
       <div id="new-search" ng-click="class = !class">
         <div>Новый поиск</div>
         <div class="drop-down mobile"></div>

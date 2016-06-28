@@ -130,3 +130,123 @@ ul.textm>li>* {text-indent: 0;}
 .ibt {display:inline-block; vertical-align:top;}
 .j {display:inline-block; width:90%;}
 .max-width {max-width:76em; margin:0 auto; padding:0 1em;}
+
+img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.fsi {
+  font-style: italic;
+}
+
+.tdu {
+  text-decoration: underline;
+}
+
+.tar {
+  text-align: right;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.ybg {
+  background: #ffff00;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+.tac {
+  text-align: center;
+}
+
+.fwn {
+  font-weight: normal;
+}
+
+.tdn {
+  text-decoration: none;
+}
+
+.views-field-edit-term, .views-field-edit-node {
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+@for $i from 1 through 60 {
+  .fz#{$i} {
+    font-size: #{$i}px;
+  }
+  .rounded#{$i} {
+    border-radius: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .mt#{$i} {
+    margin-top: #{$i}px;
+  }
+
+  .mb#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}
+
+@for $i from 2 through 200 {
+  .split#{$i} {
+    >*:not(:first-child) {
+      padding-left:#{$i*1/2}px;
+    }
+    >*:not(:last-child) {
+      padding-right:#{$i*1/2}px;
+    }
+  }
+
+  .space#{$i} {
+    >*:not(:first-child) {
+      margin-left:#{$i*1/2}px;
+    }
+    >*:not(:last-child) {
+      margin-right:#{$i*1/2}px;
+    }
+  }
+}
+
+@media all and (min-width:800px) {
+  @for $i from 2 through 200 {
+    .ws-split#{$i} {
+      >*:not(:first-child) {
+        padding-left:#{$i*1/2}px;
+      }
+      >*:not(:last-child) {
+        padding-right:#{$i*1/2}px;
+      }
+    }
+
+    .ws-space#{$i} {
+      >*:not(:first-child) {
+        margin-left:#{$i*1/2}px;
+      }
+      >*:not(:last-child) {
+        margin-right:#{$i*1/2}px;
+      }
+    }
+  }
+}
+
+.flex100 {
+  @include flex(0 1 100%);
+}
