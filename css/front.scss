@@ -1,0 +1,23 @@
+.max-text-width {
+  max-width: 75%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#front-content {
+  border-top:solid 3px $blue;
+  padding:25px 0 75px;
+}
+
+.fat-bottom {
+  padding-bottom:30px;
+  border-bottom:solid 9px #3e3e3e;
+}
+
+.spacing10 {
+  margin-right:-5px;
+  margin-left:-5px;
+  >* {
+    padding:0 5px;
+  }
+}

@@ -1,0 +1,164 @@
+#responses {
+  display: none;
+}
+
+#order-cols {
+  padding:0;
+  @include flex-direction(column);
+
+  #ocl, #ocr {
+    width:auto;
+    padding:10px;
+  }
+}
+
+#ocr {
+  //display: none;
+  .form-group {
+    .becomecol {
+      @include align-items(stretch);
+      &.withmargin {
+        >*+* {
+          margin:15px 0 0 0;
+        }
+      }
+    }
+  }
+
+  .w50 {
+    width: auto;
+  }
+}
+
+.inputshadow input[type="text"].cellular {
+  padding-left:0.5em;
+  @include order(1);
+  +select {
+    margin-right:15px;
+  }
+}
+
+#ingos-advantages {
+  >div {
+    width:100%;
+    +div {
+      padding:15px 0 0 0;
+    }
+  }
+}
+
+.add-insurance {
+  .name {
+    @include flex(0 0 100%);
+    margin-bottom:10px;
+    br {
+      display: none;
+    }
+
+    +div +div {
+      @include flex(1);
+    }
+  }
+}
+
+#insurance {
+  .dobuy {
+    margin-top:10px;
+    @include flex(0 0 100%);
+    input {
+      width:100%;
+    }
+  }
+}
+
+.becomewrap {
+  @include flex-wrap(wrap);
+}
+
+#aeroexpress {
+  .aeroexpress-ticket {
+    @include flex-wrap(wrap);
+
+    .aeroexpress-price {
+      @include flex(0 1 25%);
+      text-align: right;
+    }
+
+    .dobuy {
+      margin-top:10px;
+      @include flex(0 0 100%);
+      input {
+        width:100%;
+      }
+    }
+  }
+}
+
+.services-input {
+  > div {
+    @include flex(auto);
+    +div {
+      margin-top:10px;
+    }
+  }
+}
+
+#go-to-search {
+  #subscribe-form {
+    +div {
+      margin:10px 0 0 0;
+    }
+  }
+}
+
+.notebook {
+  display: none;
+}
+
+.becomewrap {
+  @include flex-wrap(wrap);
+  &.withmargin {
+    >* {
+      margin-top:15px;
+      + * {
+        margin-left: 0;
+      }
+
+    }
+  }
+}
+
+.labels-on-top {
+  @include align-items(flex-end);
+}
+
+.passenger .sideline {
+  width:4px;
+  margin-left: 6px;
+}
+
+.payments {
+  margin-top:-10px;
+  @include justify-content(flex-start);
+  >.flex1 {
+    margin-top:30px;
+    @include flex(0 1 100px);
+  }
+}
+
+.fp {
+  padding:0;
+  +* {
+    .green-button {
+      padding: 3px 5px;
+      width:100%;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: none;
+    }
+  }
+}
+
+.w135 {
+  width: auto;
+}

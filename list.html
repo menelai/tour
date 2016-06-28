@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>bil</title>
+  <link href="js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <!--style>
+    .max-width {
+      max-width: {{width}}px;
+    }
+  </style-->
+</head>
+<body>
+<div id="search-throbber" ng-hide="true">
+  <div id="sth-inner">
+    <h2 id="sth-title" class="blue ttu tac">поиск дешёвых авиабилетов займёт не более 25 секунд</h2>
+    <div class="bysides smaller2">
+      <div>
+        <div class="rounded5">
+          <div class="tac ttu">
+            За первые 2 года работы Мы реализовали<br>
+            <b class="cyan fz18">35 000 авиабилетов,</b><br>
+            получив 7 отрицательных честных отзывов
+          </div>
+        </div>
+        <div class="rounded5 mt5">
+          <div class="bysides">
+            <div class="ttu tar">страхование от</div>
+            <div><img src="i/ingols-large.png" height="70"></div>
+          </div>
+        </div>
+        <div class="rounded5 mt5">
+          <div class="tac ttu">
+            Мы работаем<br>
+            <b class="cyan fz18">без выходных</b>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="rounded5">
+          <div class="tac ttu">
+            <b class="cyan fz18">только у нас:</b><br>
+            самый большой ассортимент<br>
+            чартерных и блочных авиабмлетов —<br>
+            лучшие цены в россии
+          </div>
+        </div>
+        <div class="rounded5 mt5">
+          <div class=" tac" style="width:100%;">
+            <div class="ttu">Способы оплаты</div>
+            <div class="bysides">
+              <div><img src="i/visa-mastercard.png" width="27"></div>
+              <div><img src="i/euroset-l.png" width="55"></div>
+              <div><img src="i/svyaznoy-big.png" width="55"></div>
+              <div><img src="i/qiwi.png" width="60"></div>
+              <div><img src="i/alfa-small.png"></div>
+            </div>
+            <div class="ttu fwb blue">комиссия 0%</div>
+          </div>
+        </div>
+        <div class="rounded5 mt5">
+          <div class="tac ttu">
+            <b class="cyan fz18">Ж/Д билеты</b><br>
+            по очень привлекательным ценам<br>
+            без очереди за несколько минут
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="magnif">
+      <div id="eye">
+
+      </div>
+      <div id="magnifscale">
+
+      </div>
+      <script type="text/javascript">
+        $(function() {
+          var svg = d3.select("#magnifscale")
+            .append("svg")
+            .attr("width", 180)
+            .attr("height", 180)
+            .append("g")
+            .attr("transform", "translate(90,90)");
+
+          var arc = d3.svg.arc()
+            .innerRadius(70)
+            .outerRadius(87)
+            .startAngle(0)
+            .endAngle(1 * Math.PI);
+
+          var path = svg.append("path")
+            .attr("class", "arc")
+            .attr("d", arc);
+
+          var arc1 = d3.svg.arc()
+            .innerRadius(87)
+            .outerRadius(90)
+            .startAngle(0)
+            .endAngle(2 * Math.PI);
+
+          var path1 = svg.append("path")
+            .attr("class", "arc1")
+            .attr("d", arc1);
+
+          var arc2 = d3.svg.arc()
+            .innerRadius(67)
+            .outerRadius(70)
+            .startAngle(0)
+            .endAngle(2 * Math.PI);
+
+          var path2 = svg.append("path")
+            .attr("class", "arc1")
+            .attr("d", arc2);
+
+          setTimeout(function() {
+            var arc = d3.svg.arc()
+              .innerRadius(70)
+              .outerRadius(87)
+              .startAngle(0)
+              .endAngle(1.5 * Math.PI);
+            path.attr("d", arc);
+          }, 2000);
+        });
+      </script>
+    </div>
+  </div>
+</div>
+<div id="statusbar">
+  <div class="max-width">
+    <div>
+      <div class="wsn">
+        ОНЛАЙН-ТАБЛО: <a href="/">Домодедово</a> (DME) <a href="/">Шереметьево</a> (SVO) <a href="/">Внуково</a> (VKO)
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div>
+      <div id="links-block">
+        <div id="safety"><a href="/">Абсолютная
+          безопасность платежей</a></div>
+        <div><a href="/">Публичная
+          оферта</a></div>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div>
+      <div id="smm">
+        <div class="wsn">Акции, розыгрыши,<br>
+          новости, отзывы о нас
+        </div>
+        <div class="wsn">
+          <a href="/">
+            <div class="swap ib"><img src="i/Vk.svg"><img src="i/vk-color.png"></div>
+          </a>
+          <a href="/">
+            <div class="swap ib"><img src="i/Facebook.svg"><img src="i/f-color.png"></div>
+          </a>
+          <a href="/">
+            <div class="swap ib"><img src="i/Insta.svg"><img src="i/in-color.png"></div>
+          </a>
+          <a href="/">
+            <div class="swap ib"><img src="i/Twitter.svg"><img src="i/tw-color.png"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="totop"><a href="#top"></a></div>
+</div>
+<div id="top">
+  <div class="max-width">
+    <div id="logo">
+      <a ng-init="width=1400" ng-click="width= (width==1024) ? 1400 : 1024">
+        <div>
+          <div><img src="/i/logo.png"></div>
+          <div class="afut" id="sitename-and-slogan">
+            <div id="sitename"><span class="green">biletideshevo</span><span class="blue">.ru</span></div>
+            <div id="slogan" class="blue">
+              Лучшие цены на авиабилеты<br>
+              Европейское качество обслуживания
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="sep"></div>
+    <div id="partners">
+      <div>
+        <h4>Наши партнеры:</h4>
+
+        <div class="swap"><img src="i/sber.png"><img src="i/sber-color.png"></div>
+        <div class="swap"><img src="i/ingos.png"><img src="i/ingos-color.png"></div>
+      </div>
+      <div>
+        <h4>Нас рекомендуют:</h4>
+
+        <div class="swap"><img src="i/rbc.png"><img src="i/rbc-color.png"></div>
+        <div class="swap"><img src="i/national.png"><img src="i/national-color.png"></div>
+      </div>
+    </div>
+    <div class="sep"></div>
+    <div id="phones">
+      <p class="blue"><a class="phon tdn" href="tel:+74951501182">+7 495 150-11-82</a><br>
+        <span class="phon desktop">8 800 234 5 99 5</span></p>
+
+      <p class="grey">с 9:00 до 23:00</p>
+    </div>
+    <div class="sep"></div>
+    <div id="personal">
+      <div id="call-variants">
+        <div id="call-icons">
+          <img src="i/viber.png">
+          <img src="i/skype.png">
+          <img src="i/whatsapp.png">
+          <img src="i/email.png">
+        </div>
+        <div id="call-helpers">
+          <span>Позвонить онлайн</span>
+          <span>Email</span>
+        </div>
+      </div>
+      <div><a href="/" id="lk">Личный кабинет</a></div>
+    </div>
+  </div>
+</div>
+<div id="menu-line">
+  <div id="buter"></div>
+  <div class="max-width">
+    <ul>
+      <li><a href="/">Авиабилеты</a></li>
+      <li><a href="/">Бронирование отелей</a></li>
+      <li><a href="/">Бронирование авто</a></li>
+      <li><a href="/">Ж\д билеты</a></li>
+      <li><a href="/">Билеты на автобус on-line</a></li>
+      <li><a href="/">О компании</a></li>
+      <li><a href="/">Контакты</a></li>
+      <li><a href="/">Отзывы о нас</a></li>
+    </ul>
+  </div>
+</div>
+<div id="top-search-form" ng-init="class=false" class="search{{class}}">
+  <div class="max-width">
+    <form>
+      <div id="new-search" ng-click="class = !class">
+        <div>Новый поиск</div>
+        <div class="drop-down mobile"></div>
+      </div>
+      <div id="from-input">
+        <input type="text" placeholder="Город вылета" class="autocomplete">
+        <div id="change-from-to"></div>
+      </div>
+      <div id="to-input">
+        <input type="text" placeholder="Город прилета" class="autocomplete">
+      </div>
+      <div id="date-input-1">
+        <input type="text" class="datepicker" placeholder="Туда">
+      </div>
+      <div id="date-input-2">
+        <input type="text" class="datepicker" placeholder="Обратно">
+        <div class="close"></div>
+      </div>
+      <div id="passengers-input">
+        <div class="pass-border" ng-click="show=!show" ng-init="show=false;">
+          <div>1 пасс., эконом</div>
+        </div>
+        <div class="drop-down"></div>
+        <div id="passengers-popup" ng-show="show">
+          <div class="adult">
+            <div class="bysides">
+              <div>Взрослые</div>
+              <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
+            </div>
+          </div>
+          <div class="child" ng-if="true" ng-init="children=[13,14]; co=children.length;">
+            <div class="bysides">
+              <div>Дети до 14 лет</div>
+              <div class="number-with-spinners"><span class="minus" ng-click="children.pop(); co=children.length;">−</span><input type="number" ng-model="co" step="1"><span class="plus" ng-click="children.push(0); co=children.length;">+</span></div>
+            </div>
+            <ul ng-show="children.length>0">
+              <li ng-repeat="child in children track by $index">
+                <div class="bysides">
+                  <div>Возраст {{$index+1}}-го ребенка</div>
+                  <div><div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="baby">
+            <div class="bysides">
+              <div class="baby-title">Дети до 2 лет<br>
+                <span class="grey">без места</span>
+              </div>
+              <div class="number-with-spinners"><span class="minus" ng-click="ba=ba-1;">−</span><input type="number" ng-model="ba" ng-init="ba=1;" step="1" min="1"><span class="plus" ng-click="ba=ba+1;">+</span></div>
+            </div>
+          </div>
+          <div class="bysides business-class">
+            <div class="">
+              <input type="checkbox" id="busclass"> <label for="busclass">Бизнес-класс</label>
+            </div>
+            <div>
+              <input type="button" value="Закрыть" class="blue-button" ng-click="show=false;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="search-submit">
+        <input type="submit" value="Найти">
+      </div>
+    </form>
+  </div>
+</div>
+<div id="alternate-price">
+  <div class="max-width">
+    <div class="bysides" id="alternate-header">
+      <div id="alt-title">цена авиабилетов на альтернативные даты - прибывание 7 дней</div>
+      <div>
+        <ul>
+          <li class="cheap">Дешевые рейсы</li>
+          <li class="recommended">Рекомендуемые рейсы</li>
+        </ul>
+      </div>
+    </div>
+    <div id="alternate-results">
+      <div class="month" ng-attr-style="width:{{6/30*100}}%;">
+        <div class="month-title">Январь 2016</div>
+        <div class="month-day {{day.cheap ? 'cheap' : ''}} {{day.recommended ? 'recommended' : ''}}" ng-attr-style="width:{{100/6*2}}%;" ng-repeat="day in [{day:'25', price:'12&thinsp;338'},{day:'26', price:'12&thinsp;338'},{day:'27', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'27', price:'12&thinsp;338', recommended:true}, {}]">
+          <h2 ng-show="day.day">{{day.day}}<span> янв</span></h2>
+          <div class="price" ng-show="day.price">{{day.price}} <span class="rub">Р</span></div>
+        </div>
+      </div>
+      <div class="month" ng-attr-style="width:{{24/30*100}}%;">
+        <div class="month-title">Февраль 2016</div>
+        <div class="month-day {{day.cheap ? 'cheap' : ''}} {{day.recommended ? 'recommended' : ''}}"  ng-attr-style="width:{{100/24*2}}%;" ng-repeat="day in [{day:'25', price:'12&thinsp;338'},{day:'26', price:'12&thinsp;338'},{day:'27', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338', cheap:true},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'}]">
+          <h2>{{day.day}}<span> фев</span></h2>
+          <div class="price">{{day.price}} <span class="rub">Р</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="alternate-popup">
+  <div class="close-popup" onclick="$('#alternate-popup').hide();"></div>
+  <ul class="ul">
+    <li class="bysides">
+      <div><img src="i/nordstar.png"></div>
+      <div class="flex1">
+        <b class="blue">Только туда:</b>
+        <p><span class="grey vylpril">Вылет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p><span class="grey vylpril">Прилет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p>2 ч 30 м в пути, прямой</p>
+      </div>
+      <div>
+        <a href="/" class="button-grey aib">Подробнее</a>
+      </div>
+    </li>
+    <li class="bysides">
+      <div><img src="i/nordstar.png"></div>
+      <div class="flex1">
+        <b class="blue">Туда:</b>
+        <p><span class="grey vylpril">Вылет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p><span class="grey vylpril">Прилет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p>2 ч 30 м в пути, прямой</p>
+
+        <p class="mt20"><b class="blue">Обратно:</b></p>
+        <p><span class="grey vylpril">Вылет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p><span class="grey vylpril">Прилет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p>2 ч 30 м в пути, прямой</p>
+      </div>
+      <div>
+        <a href="/" class="button-grey aib">Подробнее</a>
+      </div>
+    </li>
+    <li class="bysides">
+      <div><img src="i/nordstar.png"></div>
+      <div class="flex1">
+        <b class="blue">Только туда:</b>
+        <p><span class="grey vylpril">Вылет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p><span class="grey vylpril">Прилет:</span><span class="tm">11:50</span> Москва <span class="grey">DME</span></p>
+        <p>2 ч 30 м в пути, прямой</p>
+      </div>
+      <div>
+        <a href="/" class="button-grey aib">Подробнее</a>
+      </div>
+    </li>
+    <li>
+      <div class="tac"><a href="/" class="blue-button aib multiline iflex"><div>Посмотреть все 16 предложений</div></a></div>
+    </li>
+  </ul>
+</div>
+
+<div id="search-results">
+  <div id="results-header">
+    <div class="max-width">
+      <span id="src-dst">
+        Москва     <span class="gt"></span>   Санкт-петербург
+        <span class="gt"></span>    Москва
+      </span>
+      <span id="res-dates">25 ноября - 5 декабря</span>
+    </div>
+  </div>
+  <div id="two-cols">
+    <div class="max-width">
+      <div id="col1">
+        <div class="mobile bysides" id="mobile-filter">
+          <div class="drop-controller active{{showperesadki}}" ng-click="showperesadki=!showperesadki">
+            <span>Пересадки</span>
+            <div class="drop-down"></div>
+          </div>
+          <div class="drop-controller active{{showairports}}" ng-click="showairports=!showairports">
+            <span>Аэропорты</span>
+            <div class="drop-down"></div>
+          </div>
+          <div class="drop-controller active{{showavia}}" ng-click="showavia=!showavia">
+            <span>Авиакомпании</span>
+            <div class="drop-down"></div>
+          </div>
+        </div>
+        <div id="blocks">
+          <div class="block mobilevis-{{showperesadki}}" ng-if="true" id="peresadki">
+            <div class="close-popup mobile" ng-click="$parent.showperesadki=false;"></div>
+            <h2>Пересадки</h2>
+            <ul class="ul radios" ng-init="ar = [{title:'Только прямые', price:'12&thinsp;338'}, {title:'1 пересадка', price:'12&thinsp;338'}]">
+              <li ng-repeat="el in ::ar">
+                <input type="radio" name="peres" id="r{{$index}}">
+                <label for="r{{$index}}" class="bysides">
+                  <div>{{::el.title}}</div>
+                  <div>{{::el.price}} <span class="rub">Р</span></div>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="block mobilevis-{{showairports}}" id="blockairports">
+            <div class="close-popup mobile" ng-click="$parent.showairports=false;"></div>
+            <div class="block" ng-if="true">
+              <h2>Аэропорт вылета</h2>
+              <ul class="ul radios" ng-init="ar = [{title:'Домодедово', code:'DME', price:'12&thinsp;338'}, {title:'Шереметьево', code:'SVO', price:'12&thinsp;338'}, {title:'Внуково', code:'VKO', price:'12&thinsp;338'}]">
+                <li ng-repeat="el in ::ar">
+                  <input type="radio" name="peres" id="r1{{$index}}">
+                  <label for="r1{{$index}}" class="bysides">
+                    <div>
+                      {{::el.title}}<!--br>
+                      <span class="grey">({{::el.code}})</span-->
+                    </div>
+                    <div>{{::el.price}} <span class="rub">Р</span></div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="block last" ng-if="true">
+              <h2>Аэропорт прилета</h2>
+              <ul class="ul radios" ng-init="ar = [{title:'Домодедово', code:'DME', price:'12&thinsp;338'}, {title:'Шереметьево', code:'SVO', price:'12&thinsp;338'}, {title:'Внуково', code:'VKO', price:'12&thinsp;338'}]">
+                <li ng-repeat="el in ::ar">
+                  <input type="radio" name="peres" id="r1{{$index}}">
+                  <label for="r1{{$index}}" class="bysides">
+                    <div>
+                      {{::el.title}}<!--br>
+                      <span class="grey">({{::el.code}})</span-->
+                    </div>
+                    <div>{{::el.price}} <span class="rub">Р</span></div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="block last mobilevis-{{showavia}}" ng-if="true" id="aviacompany">
+            <div class="close-popup mobile" ng-click="$parent.showavia=false;"></div>
+            <h2>Авиакомпания</h2>
+            <ul class="ul radios" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
+              <li ng-repeat="el in ::ar">
+                <input type="radio" name="peres" id="r2{{$index}}">
+                <label for="r2{{$index}}" class="bysides">
+                  <div>
+                    {{::el.title}}
+                  </div>
+                  <div>{{::el.price}} <span class="rub">Р</span></div>
+                </label>
+              </li>
+            </ul>
+            <div class="show-all">
+              <span ng-click="allShown=true;">Показать все 16 <img src="i/arrow-down.png"></span>
+              <div class="all-items" ng-if="allShown">
+                <span ng-click="$parent.allShown=false;">Свернуть <img src="i/arrow-down.png" style="transform: rotate(180deg);"></span>
+                <ul class="ul radios" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
+                  <li ng-repeat="el in ::ar">
+                    <input type="radio" name="peres" id="r3{{$index}}">
+                    <label for="r3{{$index}}" class="bysides">
+                      <span>
+                        {{::el.title}}
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="col2">
+        <div id="time-and-subscribe" ng-init="dayParts = [{title:'Ночь',time:'с 00:00 до 7:00'}, {title:'Утро',time:'с 7:00 до 11:00'}, {title:'День',time:'с 11:00 до 16:00'}, {title:'Ночь',time:'с 16:00 до 23:59'}]">
+          <div id="time-form">
+            <div class="drop-controller active{{show1}}" ng-click="show1=!show1">
+              <span>Время вылета/<br>прилета туда</span>
+              <div class="drop-down"></div>
+            </div>
+            <div class="popup-div" ng-show="show1">
+              <h2>Время вылета туда</h2>
+
+              <h3 class="plane-up">Вылет из Москвы</h3>
+              <ul class="ul times-of-day">
+                <li ng-repeat="part in ::dayParts">
+                  <label>
+                    <input type="radio" name="lol"> <span class="blue ttu">{{part.title}}</span><br>
+                    <span>{{part.time}}</span>
+                  </label>
+                </li>
+              </ul>
+              <hr>
+              <h3 class="plane-down">Прилёт в Санкт-Петербург</h3>
+              <ul class="ul times-of-day">
+                <li ng-repeat="part in ::dayParts">
+                  <label>
+                    <input type="radio" name="lol1"> <span class="blue ttu">{{part.title}}</span><br>
+                    <span>{{part.time}}</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="bysides popup-buttons">
+                <input type="reset" value="Сбросить фильтры" class="button-grey">
+                <input type="button" value="Применить" class="blue-button">
+              </div>
+              <div class="close-popup" ng-click="show1=false;"></div>
+            </div>
+
+            <div class="drop-controller active{{show2}}" ng-click="show2=!show2">
+              <span>Время вылета/<br>прилета обратно</span>
+              <div class="drop-down"></div>
+            </div>
+            <div class="popup-div" ng-show="show2">
+              <h2>Время вылета обратно</h2>
+              <h3 class="plane-up">Вылет из Москвы</h3>
+              <ul class="ul times-of-day">
+                <li ng-repeat="part in ::dayParts">
+                  <label>
+                    <input type="radio" name="lol"> <span class="blue ttu">{{part.title}}</span><br>
+                    <span>{{part.time}}</span>
+                  </label>
+                </li>
+              </ul>
+              <hr>
+              <h3 class="plane-down">Прилёт в Санкт-Петербург</h3>
+              <ul class="ul times-of-day">
+                <li ng-repeat="part in ::dayParts">
+                  <label>
+                    <input type="radio" name="lol1"> <span class="blue ttu">{{part.title}}</span><br>
+                    <span>{{part.time}}</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="bysides popup-buttons">
+                <input type="reset" value="Сбросить фильтры" class="button-grey">
+                <input type="button" value="Применить" class="blue-button">
+              </div>
+              <div class="close-popup" ng-click="show2=false;"></div>
+            </div>
+
+            <div class="drop-controller active{{show3}}" ng-click="show3=!show3">
+              <span>Вид<br>авиарейса</span>
+              <div class="drop-down"></div>
+            </div>
+            <div class="popup-div" ng-show="show3">
+              <h2>Вид авиарейса</h2>
+              <ul class="ul race-kind">
+                <li class="bysides" ng-repeat="type in [{title:'Регулярный авиарейс', moneyback:'Стандартный авиабилет'}, {title:'Регулярный авиарейс', moneyback:'Блочный авиабилет'}, {title:'Чартерный рейс. Маловероятное изменение времени вылета', moneyback:'Есть возврат билета'}]">
+                  <label class="radio-pad">
+                    <input type="radio" name="jop1">
+                    <span>
+                      <span class="larger">{{type.title}}</span><br>
+                      <span class="grey">{{type.moneyback}}</span>
+                    </span>
+                  </label>
+                  <span class="smaller pseudo blue">Подробнее</span>
+                </li>
+              </ul>
+              <div class="bysides popup-buttons">
+                <input type="reset" value="Сбросить фильтры" class="button-grey">
+                <input type="button" value="Применить" class="blue-button">
+              </div>
+              <div class="close-popup" ng-click="show3=false;"></div>
+            </div>
+          </div>
+          <div id="subscribe-form" class="inputshadow">
+            <form>
+              <h2>Цена на авиабилет может снизиться</h2>
+              <input type="email" placeholder="Ваш email"> <input type="submit" value="Следить за ценой" class="button-grey">
+            </form>
+          </div>
+        </div>
+        <div id="results">
+          <ng-include src="'result'"></ng-include>
+          <div class="promo-result">
+            <div class="promo-content">
+              <div class="promo-header bysides">
+                <div>
+                  <h2>
+                    <span class="afut"><span class="green">лучшие</span><span class="orange">туры.</span><span class="green">онлайн</span></span>
+                    <span class="ttu">Лучшее предложение</span>
+                  </h2>
+                </div>
+                <div>
+                  <a href="" class="green-button">Выбрать другой вариант тура</a>
+                </div>
+              </div>
+              <div class="hotel-and-trip">
+                <div class="hotel-info rounded">
+                  <div class="hotel-title">
+                    <h3>AMBASSADOR CITY<br>
+                      JOMTIEN HOTEL<br>
+                      <span style="font-size: 25px;">****</span></h3>
+                  </div>
+                  <div class="semi-white">
+                    <h4 class="blue ttu">В стоимость тура входит:</h4>
+                    Групповой трансфер<br>
+                    Медицинская страховка<br>
+                    Услуги гида
+                    <div>
+                      <select>
+                        <option>Тип питания: все вкл.</option>
+                      </select>
+                    </div>
+                    <div>
+                      <select>
+                        <option>Тип номера: стандарт</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="promo-trip">
+                  <ng-include src="'result'" ng-if="true" ng-init="hideTopGrey=true;"></ng-include>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ng-include src="'result'" ng-if="true" ng-init="hideThere=true;"></ng-include>
+          <ng-include src="'result'" ng-if="true" ng-init="hideThere=true;"></ng-include>
+          <ng-include src="'result'" ng-if="true" ng-init="hideTopGrey=true;"></ng-include>
+          <ng-include src="'result'"></ng-include>
+          <ng-include src="'result'"></ng-include>
+          <ng-include src="'result'" ng-if="true" ng-init="hideThere=true;"></ng-include>
+          <ng-include src="'result'"></ng-include>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/ng-template" id="result">
+  <div class="result">
+    <div class="result-cols">
+      <div class="col-trip-info rounded">
+        <div class="trip-grey-row trip-there-grey trip-row" ng-if="!(hideThere || hideTopGrey)">
+          <div class="trip-col1 flex-center">
+            <div class="plane-model">Airbus 321</div>
+          </div>
+          <div class="trip-col2 flight-params">
+            <div class="flex-center m-flex-start">
+              <div class="luggage"><span>Багаж</span> <span>20&nbsp;кг</span></div>
+            </div>
+            <div class="flex-center m-flex-start">
+              <div class="bag"><span>Ручная кладь</span> <span>5&nbsp;кг</span></div>
+            </div>
+            <div class="flex-center m-flex-start">
+              <div class="chair"><span>Класс:</span> <span>эконом</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="trip-there" ng-hide="hideThere">
+          <div class="trip-white-row trip-row">
+            <div class="trip-col1 flex-center">
+              <div class="company-name-and-logo">
+                <img src="i/nordstar.png"><br>
+                Nord Star Airlines
+              </div>
+            </div>
+            <div class="trip-col2 times-row">
+              <div class="flex-center">
+                <div>
+                  <div class="tm">15:30</div>
+                  <div class="dt blue">30 ноября 2015, пн</div>
+                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
+                </div>
+              </div>
+              <div class="flex-center">
+                <div>
+                  2 ч 30 м<br>
+                  <span class="grey">прямой</span>
+                </div>
+              </div>
+              <div class="flex-center">
+                <div>
+                  <div class="tm">15:30</div>
+                  <div class="dt blue">30 ноября 2015, пн</div>
+                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="trip-help">
+          <div class="trip-white-row trip-row">
+            <div class="trip-col1 flex-center">
+              <div></div>
+            </div>
+            <div class="trip-col2 blue-row {{hideThere ? 'only-back' : ''}}">
+              <div class="flex-center">
+                <div class="smaller white-plane">Вылет</div>
+              </div>
+              <div class="flex-center">
+                <div class="smaller clock"><span class="desktop">Время </span>в пути</div>
+              </div>
+              <div class="flex-center">
+                <div class="smaller white-plane down">Прилет</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="trip-back">
+          <div class="trip-white-row trip-row">
+            <div class="trip-col1 flex-center">
+              <div class="company-name-and-logo"><img src="i/nordstar.png"><br>
+                Nord Star Airlines</div>
+            </div>
+            <div class="trip-col2 times-row">
+              <div class="flex-center">
+                <div>
+                  <div class="tm">15:30</div>
+                  <div class="dt blue">30 ноября 2015, пн</div>
+                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
+                </div>
+              </div>
+              <div class="flex-center">
+                <div>
+                  2 ч 30 м<br>
+                  <span class="grey">прямой</span>
+                </div>
+              </div>
+              <div class="flex-center">
+                <div>
+                  <div class="tm">15:30</div>
+                  <div class="dt blue">30 ноября 2015, пн</div>
+                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="trip-grey-row trip-row inner-top-shadow">
+          <div class="trip-col1 flex-center">
+            <div class="plane-model">Airbus 321</div>
+          </div>
+          <div class="trip-col2 flight-params">
+            <div class="flex-center m-flex-start">
+              <div class="luggage"><span>Багаж</span> <span>20&nbsp;кг</span></div>
+            </div>
+            <div class="flex-center m-flex-start">
+              <div class="bag"><span>Ручная кладь</span> <span>5&nbsp;кг</span></div>
+            </div>
+            <div class="flex-center m-flex-start">
+              <div class="chair"><span>Класс:</span> <span>эконом</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-price rounded">
+        <div class="price-n flex1">
+          <span class="price-number xlarge">12&thinsp;338&nbsp;<span class="rub">Р</span></span><br>
+          <span class="grey smaller2">Цена указана с&nbsp;учётом<br>всех сборов и&nbsp;комиссий</span>
+        </div>
+        <div class="buy-n">
+          <input type="button" value="Купить"><br>
+          <span class="grey smaller2">дешевый авиабилет</span>
+        </div>
+        <div class="flex-center credit-wrapper">
+          <a href="/" class="buy-credit smaller">Купить в кредит</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+@charset "utf-8";
+/*reset*/
+@font-face {font-family: 'ALSRublRegular';src: url('/css/font/rouble-webfont.eot');src: local('*'), url('/css/font/rouble-webfont.woff') format('woff'), url('/css/font/rouble-webfont.ttf') format('truetype'), url('/css/font/rouble-webfont.svg#webfontgSHfIo48') format('svg');font-weight: normal;font-style: normal;}
+
+.rub {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "–";
+    left: 0px;
+    top: 55%;
+    line-height: 1px;
+
+  }
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}                  
+article, aside, figure, footer, header, hgroup, nav, section { display:block; }
+nav ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+ins { background:none; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+table { border-collapse:collapse; border-spacing:0; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+input, select { vertical-align:middle; }
+html { height:100%; }
+body { *font-size:small; *font:x-small; line-height:1.22; min-height:100%;}
+table { font-size:inherit; font:100%; }
+select, input, textarea { font:100% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+body, select, input, textarea { color:#444; }
+h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
+html { -webkit-font-smoothing: antialiased; }
+a, a:hover, a:active, a:visited {text-decoration:underline;outline: none;}
+ul { margin-left:30px; }
+ol { margin-left:30px; list-style-type: decimal; }
+small { font-size:85%; }
+strong, th { font-weight: bold; }
+td, td img { vertical-align:top; } 
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+pre { padding: 15px; white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+input[type="radio"] { margin:0;}
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+::-moz-selection{ background: #E6E6E6; color:#000; text-shadow: none; }
+::selection { background:#E6E6E6; color:#000 ; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; } 
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+div {position:relative;}
+* {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+ul{margin:0;}
+.clear{clear:both;}
+/*reset*/
+
+/*скрываем элементы по типу устройства вывода*/
+.no-display {display:none;}
+@media screen {.no-screen{display:none;}}
+@media print {.no-print{display:none;}}
+@media handheld {.no-handheld{display:none;}}
+
+/*выносные кавычки и скобки*/
+/*span.sbrace {margin-right: 0.33em}
+span.hbrace {margin-left: -0.33em}
+
+span.slaquo {margin-right: 0.44em}
+span.hlaquo {margin-left: -0.44em}
+span.slaquo-s {margin-right: 0.5em}
+span.hlaquo-s {margin-left: -0.5em}
+span.slaquo-b {margin-left: 0.85em}
+span.hlaquo-b {margin-left: -0.85em}
+
+span.sbdquo {margin-right: 0.35em}
+span.hbdquo {margin-left: -0.35em}
+span.sbdquo-s {margin-right: 0.35em}
+span.sbdquo-s {margin-left: -0.35em}
+
+span.squot {margin-right: 0.32em}
+span.hquot {margin-left: -0.32em}
+
+span.sowc {margin-right: 0.04em}
+span.howc {margin-left: -0.04em}
+
+span.sowcr {margin-right: 0.05em}
+span.howcr {margin-left: -0.05em}*/
+
+.ul{margin:0;padding:0;list-style:none;position:relative;}
+.ul li{position:relative;}
+
+/*Стиль инпутов*/
+.form{margin:0;padding:0;list-style:none;max-width:60em;}
+.form>li +li{margin: 1em 0 0 0;}
+.form>li>span{display:inline-block;vertical-align:top;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.form>li>span:first-child{width:25%;padding:0 2em 0 0;}
+.form>li>span:first-child +span{display:inline-block;width:75%;}
+.form>li>span:first-child +span>input[type=text],
+.form>li>span:first-child +span>input[type=number],
+.form>li>span:first-child +span>input[type=url],
+.form>li>span:first-child +span>input[type=email],
+.form>li>span:first-child +span>input[type=tel],
+.form>li>span:first-child +span>select
+ {width:100%; border: solid 1px #c8c8c8;}
+.form>li>span:first-child +span>textarea{width:100%;height:8em;}
+.form sub{font-style:italic;}
+.form>li>span:first-child +span>input.selectdate {width:5.3em;}
+
+.ui-widget-overlay{background:black;opacity:0.1;}
+.ui-dialog{-moz-box-shadow:2px 2px 20px #666666;box-shadow:2px 2px 20px #666666;-webkit-box-shadow:2px 2px 20px #666666;}
+
+input[type=text], input[type=url], input[type=email], input[type=tel], input[type=button], input[type=submit], button, textarea{}
+input[type=submit] {}
+
+#fancybox-wrap{padding:0 !important;}
+/*Стиль инпутов*/
+
+ul.textm>li {margin: 0em 0 0.6em 0em;}
+ul.textm {list-style-type: none; padding-left:0.7em;}
+ul.textm>li {padding: 0;}
+ul.textm>li:before {content: '♦\a0'; float: left; margin-left: -0.7em; color:#ff8400;}
+ul.textm>li>*:first-child {margin-top: -1.2em;}
+ul.textm>li>* {text-indent: 0;}
+.textm .sup {position: relative; top: -0.5em; font-size: 0.75em; line-height: 0; vertical-align: baseline;}
+
+.taj {text-align:justify;}
+.ibm {display:inline-block; vertical-align:middle;}
+.ibt {display:inline-block; vertical-align:top;}
+.j {display:inline-block; width:90%;}
+.max-width {max-width:76em; margin:0 auto; padding:0 1em;}

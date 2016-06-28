@@ -1,0 +1,94 @@
+#insurance {
+  .services-input {
+    >div>label {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      background: #ffffff;
+      border-color: #113483;
+    }
+
+    > div label > div + div {
+      margin-top: 5px;
+    }
+  }
+
+  padding:30px 0;
+  margin-bottom:20px;
+  border-bottom:solid 1px #a2a2a2;
+
+  .dobuy {
+    -webkit-flex: 0 1 180px;
+    -ms-flex: 0 1 180px;
+    flex: 0 1 180px;
+    text-align: right;
+    .green-button {
+      margin:0 0 0 auto;
+    }
+  }
+}
+
+.blue-button.viol {
+  // Needs latest Compass, add '@import "compass"' to your scss
+  // Permalink - use to edit and share this gradient:
+  // http://colorzilla.com/gradient-editor/#2e4d92+0,2e4d92+35,123176+65,123176+100
+  background-color: #2e4d92; // Old browsers
+  @include filter-gradient(#2e4d92, #123176, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  #2e4d92 0%,#2e4d92 35%,#123176 65%,#123176 100%));
+  color:white;
+}
+
+.add-insurance {
+  border-radius: 5px;
+  border: solid 1px #b7b7b7;
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  padding:10px 10px 10px 15px;
+  .insurance-price {
+    margin:0 10px;
+    font-size: 18px;
+  }
+
+  .name {
+    line-height: 1;
+  }
+  
+  .line {
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:6px;
+    background: #ffc000;
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.bgins {
+  background: #f4f4f4;
+  margin-left:-4px;
+  margin-right: -4px;
+  padding:15px;
+  text-align: left;
+}
+
+.vertcenter {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}

@@ -1,0 +1,350 @@
+#col1 {
+  //display: none;
+
+  margin:-10px;
+  padding:10px;
+}
+
+#alternate-price {
+  display: none;
+
+}
+
+#time-and-subscribe {
+ display: none;
+  @include flex-direction(column);
+  padding-bottom: 50px;
+
+  margin-top:-10px;
+  margin-left:-10px;
+  margin-right: -10px;
+  padding-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+#time-form {
+  @include flex(auto);
+  padding-right:0;
+  @include flex-direction(column);
+
+  .popup-div {
+    top:auto;
+
+
+    .popup-buttons input {
+      min-width: 0;
+    }
+  }
+
+  .drop-controller {
+    margin-top:2px;
+    @include flex(auto);
+    margin-right:0;
+    padding:5px 10px;
+  }
+}
+#subscribe-form {
+  @include flex(auto);
+  padding-top: 1em;
+  border-top: solid 1px #929292;
+  margin-top: 1em;
+}
+
+#two-cols {
+  padding-bottom: 10px;
+  > .max-width {
+    @include flex-direction(column);
+    #col1 {
+      @include flex(auto);
+    }
+    #col2 {
+      padding-left: 0;
+      @include flex(auto);
+
+      padding-top: 1em;
+      border-top: solid 1px #929292;
+      margin-top: 1em;
+    }
+  }
+}
+
+.popup-div {
+  width:auto;
+  right:0;
+}
+
+.trip-help {
+  //display: none;
+  .trip-col1 {
+    display: none;
+  }
+}
+#results {
+  > *:not(.promo-result) + *:not(.promo-result) {
+    margin-top:20px;
+    &:before {
+      height: 24px;
+    }
+  }
+  .promo-result {
+    display: none;
+    margin: 20px -10px;
+    padding: 10px 10px;
+    //display: none;
+    .promo-header.bysides {
+      text-align: center;
+      padding:5px;
+      .afut {
+        font-size: 24px;
+      }
+      h2 {
+        >span {
+          display: block;
+        }
+      }
+      @include flex-direction(column);
+      >* {
+        width:100%;
+      }
+    }
+
+    .hotel-and-trip {
+      @include flex-direction(column);
+      > .hotel-info {
+        margin-right: 0;
+        background-position: center bottom;
+        background-size: cover;
+      }
+    }
+
+    +* {
+      margin-top:20px;
+      &:before {
+        @include between-results();
+        height: 24px;
+      }
+    }
+  }
+}
+
+.result-cols {
+  .trip-col1 {
+    @include flex(auto);
+  }
+  @include flex-direction(column);
+  .trip-row {
+    @include flex-direction(column);
+  }
+
+  .trip-col2 {
+    border-left: none;
+  }
+  .col-trip-info.rounded {
+    margin-right:0;
+  }
+
+  .col-price {
+    @include flex(none);
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    >* {
+      //background: red;
+    }
+    .price-n, .buy-n {
+      @include flex(1);
+    }
+
+    .price-n {
+      line-height: 1;
+    }
+
+    .buy-n {
+      font-size: 18px;
+    }
+  }
+}
+
+.flight-params, .times-row {
+  font-size: 11px;
+}
+
+.trip-back {
+  .trip-row {
+    @include flex-direction(column-reverse);
+  }
+  +.trip-row {
+    @include flex-direction(column-reverse);
+  }
+}
+
+#results-header {
+
+}
+
+.gt {
+  margin:0 0.2em;
+}
+
+#subscribe-form {
+  display: none;
+}
+
+#src-dst {
+  display: block;
+  .helper {
+    font-weight: normal;
+    text-transform: none;
+    color:#d1d1d1;
+  }
+}
+
+#res-dates {
+  display: block;
+  margin-left:0;
+  margin-top:5px;
+}
+
+.col-trip-info {
+  z-index: 2;
+}
+
+.inner-top-shadow {
+  &:before {
+    top:100%;
+    z-index: 2;
+  }
+}
+
+.price-n {
+  padding-top:7px;
+  padding-bottom:6px;
+
+  .grey.smaller2 {
+    display: none;
+  }
+}
+
+.buy-n {
+  padding-top:10px;
+  padding-bottom:6px;
+  .grey.smaller2 {
+    display: none;
+  }
+}
+
+.credit-wrapper {
+  @include flex(0 0 100%);
+  display: none;
+}
+
+.buy-credit {
+  min-height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding:0;
+}
+
+.company-name-and-logo {
+  br {
+    display: none;
+  }
+  img {
+    vertical-align: middle;
+  }
+}
+
+.blue-row > div {
+  padding:6px 4px;
+}
+
+.searchfalse {
+  #from-input, #to-input, #date-input-1, #date-input-2, #passengers-input, &#top-search-form #search-submit {
+    display: none;
+  }
+}
+
+#top-search-form {
+  &:not(.searchtrue) {
+    margin-bottom:8px;
+  }
+}
+
+#mobile-filter {
+  .drop-controller {
+    padding:8px 20px 8px 2px;
+    @include flex(1 1 auto);
+    &:last-child {
+      margin:0;
+    }
+    &.activetrue {
+      padding:7px 19px 7px 1px;
+    }
+    .drop-down {
+      right:2px;
+    }
+  }
+}
+
+#blocks {
+
+}
+
+.block {
+  margin:0;
+  border-bottom: none;
+}
+
+#peresadki, #blockairports, #aviacompany {
+  position: absolute;
+  top:2px;
+  left:0;
+  right:0;
+  background: #FFFFFF;
+  border: solid 1px $blue;
+  padding:10px;
+  z-index: 100;
+}
+
+#new-search {
+  .drop-down {
+    background-image: url(../i/arrow-down-white.png);
+    background-position: center center;
+  }
+}
+
+.searchtrue {
+  #new-search {
+    .drop-down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+
+.mobilevis-, .mobilevis-false {
+  display: none;
+}
+
+.show-all {
+  display: none;
+}

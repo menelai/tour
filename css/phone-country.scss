@@ -1,0 +1,194 @@
+#nav-col-sticky-wrapper{
+  display: none;
+}
+
+#country {
+  margin-top: 20px;
+  h1 {
+    font-weight: 500;
+  }
+}
+
+#country-info #content-col {
+  padding:0;
+}
+
+.bysides.becomecol, .becomecol {
+  @include flex-direction(column);
+}
+
+.airport-summary {
+  padding:25px 0 0 0;
+}
+
+#airports {
+  ul {
+    >li {
+      +li {
+        margin-top:50px;
+      }
+    }
+  }
+
+  .becomecol + .becomecol {
+    margin-top:10px;
+  }
+}
+
+#time {
+  .bysides.vtop.mt30 {
+    @include flex-wrap(wrap);
+    >div {
+      margin-bottom:20px;
+    }
+  }
+}
+
+.flight-in-c {
+  .rounded5 > div + div {
+    margin-left:0;
+    margin-top:10px;
+  }
+  >div {
+    >div {
+      +div {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .fcity {
+    width:100%;
+    text-align: center;
+    >* {
+      display: inline;
+      white-space: nowrap;
+    }
+    .bysides {
+      @include justify-content(center);
+      >* {
+        display: inline;
+        margin:0;
+      }
+    }
+  }
+
+  .fdur, .blue.tac{
+    width:100%;
+    text-align: center;
+    white-space: nowrap;
+    >* {
+      display: inline;
+
+    }
+  }
+}
+
+.itemsmar4.becomecol {
+  >* {
+    +* {
+      margin-left:0;
+      margin-top:4px;
+    }
+  }
+}
+
+.subscribeform {
+  margin:0 -10px;
+  padding:10px;
+  .selectday {
+    .ui-datepicker {
+      padding:0;
+      margin: 0;
+      @include flex-direction(column);
+      .ui-datepicker-next {
+        top: 2px;
+        right: 2px;
+      }
+      .ui-datepicker-prev {
+        top: 2px;
+        left: 2px;
+      }
+    }
+    .ui-datepicker-group {
+      width: 100%;
+      margin-left: 0;
+      +.ui-datepicker-group {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.bysides.fromtodur {
+  @include flex-direction(column);
+  padding:25px 0;
+  >div {
+    padding:10px 0;
+    +div {
+      border-top: solid 1px #cccccc;
+      border-left:0;
+    }
+  }
+}
+
+.youremail {
+  margin-right:0;
+  margin-bottom: 3px;
+  height:40px;
+  line-height: 40px;
+}
+
+.extra-services {
+  >div {
+    width:100%;
+  }
+}
+
+#country-info #content-col {
+  h2 {
+    text-transform: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.months {
+  >div {
+    flex:0 1 -webkit-calc(25% - 2px);
+    flex:0 1 calc(25% - 2px);
+    margin:0 0 2px 0;
+    font-size: 13px;
+    line-height: 40px;
+    height:40px;
+    label {
+      padding:0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.timeofyear {
+  >div {
+    flex:0 1 -webkit-calc(50% - 2px);
+    flex:0 1 calc(50% - 2px);
+    margin:0 0 2px 0;
+    line-height: 40px;
+    height:40px;
+    label {
+      padding:0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#schedule {
+  .green-button {
+    font-size: $standard-fz;
+    line-height: $standard-height;
+    padding:0;
+  }
+}

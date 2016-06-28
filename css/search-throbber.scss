@@ -1,0 +1,131 @@
+#search-throbber {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 100;
+  //background: rgba(229, 241, 244, 0.9);
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#sth-inner {
+  width:940px;
+
+  .rounded5 {
+    background: #FFFFFF;
+    padding:5px 15px;
+    height:80px;
+    width:340px;
+    border:solid 2px $blue;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  &:before {
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:530px;
+    height:530px;
+    content: '';
+    border-radius: 50%;
+    margin:-295px 0 0 -265px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+#sth-title {
+  position: absolute;
+  bottom:100%;
+  left:0;
+  right:0;
+  font-size: 18px;
+  margin-bottom:30px;
+}
+
+#magnif {
+  position: absolute;
+  left:50%;
+  top:0;
+  width:180px;
+  height:180px;
+  margin:0 0 0 -90px;
+  &:before {
+    content:url(../i/magnif.png);
+    width:278px;
+    height:281px;
+    position: absolute;
+    left: -24px;
+    top: 0px;
+  }
+}
+
+#eye {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:132px;
+  height:75px;
+  background: url(../i/eye-phase.png);
+  margin:-37px 0 0 -66px;
+  animation-name: eye;
+  animation-duration: 2.15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes eye {
+  0%   {background-position: 0 0;}
+  93.02%  {background-position: 0 0;}
+  93.03%   {background-position: 0 -75px;}
+  95.36%  {background-position: 0 -75px;}
+  95.37%   {background-position: 0 -150px;}
+  97.69%  {background-position: 0 -150px;}
+  97.7%   {background-position: 0 -75px;}
+  100%  {background-position: 0 -75px;}
+}
+
+.arc {
+   fill: #08d0e8;
+ }
+
+.arc1 {
+  fill: $blue;
+}
