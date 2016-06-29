@@ -98,6 +98,20 @@ $dark-blue: #07466a;
   @include background-image(linear-gradient(top,  #f4f4f4 0%,#f4f4f4 35%,#d8d8d8 65%,#d8d8d8 100%));
 }
 
+@mixin green-gradient() {
+  background-color: #9dcb2f; // Old browsers
+  @include filter-gradient(#9dcb2f, #81af13, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  #9dcb2f 0%,#9dcb2f 35%,#81af13 65%,#81af13 100%));
+}
+
+@mixin green-hover-gradient() {
+  background: rgb(184,232,69); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(184,232,69,1) 0%, rgba(159,201,60,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(184,232,69,1) 0%,rgba(159,201,60,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(184,232,69,1) 0%,rgba(159,201,60,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e845', endColorstr='#9fc93c',GradientType=0 ); /* IE6-9 */
+}
+
 @mixin common-button() {
   border-radius: 5px;
   text-decoration: none;
@@ -170,6 +184,10 @@ $dark-blue: #07466a;
 
 .f {
   @include display-flex;
+}
+
+.hcen {
+  @include justify-content(center);
 }
 
 .vcen {
@@ -541,6 +559,22 @@ input[type=text] {
   &:hover {
     background: #cccccc;
     color:$orange;
+  }
+}
+
+.green-button {
+  @include green-gradient();
+  @include common-button();
+  &.b {
+
+  }
+  &:not(.ibm) {
+    display: block;
+  }
+  &:hover {
+    color:white;
+    text-decoration: none;
+    @include green-hover-gradient();
   }
 }
 
@@ -1045,4 +1079,21 @@ input[type=text] {
       border-top-color: #ffffff;
     }
   }
+}
+
+.selectric-grey {
+  .selectric {
+    @include grey-gradient();
+    box-shadow: inset 0 0 0 1px $orange;
+    border-radius: 5px;
+    .label {
+      color: $orange;
+    }
+    .button:after {
+    }
+  }
+}
+
+select {
+  max-width: 100%;
 }

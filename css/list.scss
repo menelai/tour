@@ -1,3 +1,163 @@
 #results {
   
 }
+
+.result-starter {
+  @include flex(0 0 10px);
+}
+
+.result-photo {
+  overflow: hidden;
+  @include flex(0 0 215px);
+  img {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    -webkit-transform: translateX(50%) translateY(50%);
+    transform: translateX(50%) translateY(50%);
+    min-width: 101%;
+    min-height: 101%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.rating {
+  width:70px;
+  @include flex(0 0 70px);
+  height:13px;
+  &:after {
+    position: absolute;
+    content:'';
+    top:0;
+    bottom:0;
+    left:0;
+    background: url(../i/small-star-orange.png);
+  }
+  &:before {
+    position: absolute;
+    content:'';
+    top:0;
+    bottom:0;
+    right:0;
+    background: url(../i/small-star-grey.png);
+  }
+
+
+  @for $i from 1 through 5 {
+    &.r#{$i}:after {
+      width:#{$i*14}px;
+    }
+    &.r#{$i}:before {
+      width:#{70 - $i*14}px;
+    }
+  }
+}
+
+.result-period {
+  @include flex(0 0 13em);
+}
+
+.result-contents {
+  border:solid 1px #b7b7b7;
+  border-left:none;
+
+  .spacer {
+    @include flex(0 0 4px);
+  }
+}
+
+.result-flights {
+  background: #24c2e6;
+  color:white;
+}
+
+.flight-there {
+  padding:0 0 0 30px;
+  &:before {
+    position: absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+    background: url(../i/white-plane-right.png) left center no-repeat;
+    width:21px;
+    height:20px;
+    content: '';
+  }
+}
+
+.flight-back {
+  padding:0 0 0 30px;
+  &:before {
+    position: absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+    background: url(../i/white-plane-left.png) left center no-repeat;
+    width:21px;
+    height:20px;
+    content: '';
+  }
+}
+
+.thik-arrow {
+  background: #19b1d4;
+  @include flex(0 0 40px);
+  min-height: 30px;
+  >div {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:30px;
+    height:30px;
+    margin:-15px 0 0 -15px;
+    background: url(../i/thik-arrow.png) center center no-repeat;
+  }
+}
+
+.airlogo {
+  @include flex(0 0 64px);
+  padding:8px 10px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.result-params {
+  @include flex(0 0 160px);
+}
+
+.tour-descr {
+  background: #ededed;
+
+}
+
+.hotel-features {
+  img {
+    border:solid 1px $orange;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    padding: 3px;
+  }
+
+  line-height: 1.1;
+  color:#777777;
+  font-size: 10px;
+}
+
+.result {
+  +.result {
+    margin-top:20px;
+    &:before {
+      content:'';
+      position: absolute;
+      left:5%;
+      right:5%;
+      bottom:100%;
+      height:20px;
+      background: #063c53;
+    }
+  }
+}
