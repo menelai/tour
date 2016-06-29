@@ -180,6 +180,18 @@ img {
   text-decoration: none;
 }
 
+.wsn {
+ white-space: nowrap;
+}
+
+.vab {
+  vertical-align: baseline;
+}
+
+.db {
+  display: block;
+}
+
 .views-field-edit-term, .views-field-edit-node {
   position: absolute;
   top:0;
@@ -202,6 +214,10 @@ img {
 
   .mb#{$i} {
     margin-bottom: #{$i}px;
+  }
+
+  .p#{$i} {
+    padding: #{$i}px;
   }
 }
 
@@ -255,4 +271,25 @@ img {
   padding:0;
   margin:0;
   list-style: none;
+}
+
+.bybounds {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }

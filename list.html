@@ -191,11 +191,11 @@
 <div id="alternate-price">
   <div class="max-width">
     <div class="bysides" id="alternate-header">
-      <div id="alt-title">цена авиабилетов на альтернативные даты - прибывание 7 дней</div>
+      <div id="alt-title">цена туров на альтернативные даты. Длительность тура — 7 дней</div>
       <div>
         <ul>
-          <li class="cheap">Дешевые рейсы</li>
-          <li class="recommended">Рекомендуемые рейсы</li>
+          <li class="cheap">Самые дешевые туры</li>
+          <li class="recommended">Рекомендуемые туры</li>
         </ul>
       </div>
     </div>
@@ -272,404 +272,196 @@
   <div id="results-header">
     <div class="max-width">
       <span id="src-dst">
-        Москва     <span class="gt"></span>   Санкт-петербург
-        <span class="gt"></span>    Москва
+        САНКТ-ПЕТЕРБУРГ     <span class="gt"></span>  КОСТА-ДЕЛЬ-СОЛЬ (Бенальмадена)
+        <span class="gt"></span>    САНКТ-ПЕТЕРБУРГ
       </span>
-      <span id="res-dates">25 ноября - 5 декабря</span>
+      <span id="res-dates">25 ИЮНЯ - 5 ИЮЛЯ</span>
     </div>
   </div>
-  <div id="two-cols">
-    <div class="max-width">
-      <div id="col1">
-        <div class="mobile bysides" id="mobile-filter">
-          <div class="drop-controller active{{showperesadki}}" ng-click="showperesadki=!showperesadki">
-            <span>Пересадки</span>
-            <div class="drop-down"></div>
-          </div>
-          <div class="drop-controller active{{showairports}}" ng-click="showairports=!showairports">
-            <span>Аэропорты</span>
-            <div class="drop-down"></div>
-          </div>
-          <div class="drop-controller active{{showavia}}" ng-click="showavia=!showavia">
-            <span>Авиакомпании</span>
-            <div class="drop-down"></div>
-          </div>
-        </div>
-        <div id="blocks">
-          <div class="block mobilevis-{{showperesadki}}" ng-if="true" id="peresadki">
-            <div class="close-popup mobile" ng-click="$parent.showperesadki=false;"></div>
-            <h2>Пересадки</h2>
-            <ul class="ul radios" ng-init="ar = [{title:'Только прямые', price:'12&thinsp;338'}, {title:'1 пересадка', price:'12&thinsp;338'}]">
-              <li ng-repeat="el in ::ar">
-                <input type="radio" name="peres" id="r{{$index}}">
-                <label for="r{{$index}}" class="bysides">
-                  <div>{{::el.title}}</div>
-                  <div>{{::el.price}} <span class="rub">Р</span></div>
+
+  <div class="bysides vtop max-width ws-space30 mt20">
+    <div id="left-col">
+      <div class="block">
+        <h2>Количество звезд</h2>
+        <ul class="ul">
+          <li class="mb5">
+            <label class="bysides">
+              <div><input type="radio" name="star"> <img src="i/orange-star.png"><img src="i/grey-star.png"><img src="i/grey-star.png"><img src="i/grey-star.png"><img src="i/grey-star.png"></div>
+              <div class="orange fwb">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides">
+              <div><input type="radio" name="star"> <img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/grey-star.png"><img src="i/grey-star.png"><img src="i/grey-star.png"></div>
+              <div class="orange fwb">155 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides">
+              <div><input type="radio" name="star"> <img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/grey-star.png"><img src="i/grey-star.png"></div>
+              <div class="orange fwb">255 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides">
+              <div><input type="radio" name="star"> <img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/grey-star.png"></div>
+              <div class="orange fwb">35 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides">
+              <div><input type="radio" name="star"> <img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/orange-star.png"><img src="i/orange-star.png"></div>
+              <div class="orange fwb">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="block">
+        <h2>Тип питания</h2>
+        <ul class="ul">
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="food" class="vab"></div> <div>Всё включено</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="food" class="vab"></div> <div>Ультра Всё включено</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="food" class="vab"></div> <div>Завтрак, ужин</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="block">
+        <h2>Туроператор</h2>
+        <ul class="ul">
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="oper" class="vab"></div> <div>Библиоглобус</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="oper" class="vab"></div> <div>Интурист</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="oper" class="vab"></div> <div>Музенидис</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+        </ul>
+
+        <div class="show-all">
+          <a ng-click="allShown=true;" class="grey-button db tac fz13 ttu">Показать все 10 ▼</a>
+          <div class="all-items" ng-if="allShown">
+            <div class="tac mb10"><span ng-click="$parent.allShown=false;">Свернуть ▲</span></div>
+            <ul class="ul" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
+              <li class="mb5" ng-repeat="el in ::ar">
+                <label class="bysides vtop space10">
+                  <div class="bysides vtop space4"><div><input type="radio" name="oper" class="vab"></div> <div>{{::el.title}}</div></div>
+                  <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
                 </label>
               </li>
             </ul>
-          </div>
-          <div class="block mobilevis-{{showairports}}" id="blockairports">
-            <div class="close-popup mobile" ng-click="$parent.showairports=false;"></div>
-            <div class="block" ng-if="true">
-              <h2>Аэропорт вылета</h2>
-              <ul class="ul radios" ng-init="ar = [{title:'Домодедово', code:'DME', price:'12&thinsp;338'}, {title:'Шереметьево', code:'SVO', price:'12&thinsp;338'}, {title:'Внуково', code:'VKO', price:'12&thinsp;338'}]">
-                <li ng-repeat="el in ::ar">
-                  <input type="radio" name="peres" id="r1{{$index}}">
-                  <label for="r1{{$index}}" class="bysides">
-                    <div>
-                      {{::el.title}}<!--br>
-                      <span class="grey">({{::el.code}})</span-->
-                    </div>
-                    <div>{{::el.price}} <span class="rub">Р</span></div>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="block last" ng-if="true">
-              <h2>Аэропорт прилета</h2>
-              <ul class="ul radios" ng-init="ar = [{title:'Домодедово', code:'DME', price:'12&thinsp;338'}, {title:'Шереметьево', code:'SVO', price:'12&thinsp;338'}, {title:'Внуково', code:'VKO', price:'12&thinsp;338'}]">
-                <li ng-repeat="el in ::ar">
-                  <input type="radio" name="peres" id="r1{{$index}}">
-                  <label for="r1{{$index}}" class="bysides">
-                    <div>
-                      {{::el.title}}<!--br>
-                      <span class="grey">({{::el.code}})</span-->
-                    </div>
-                    <div>{{::el.price}} <span class="rub">Р</span></div>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="block last mobilevis-{{showavia}}" ng-if="true" id="aviacompany">
-            <div class="close-popup mobile" ng-click="$parent.showavia=false;"></div>
-            <h2>Авиакомпания</h2>
-            <ul class="ul radios" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
-              <li ng-repeat="el in ::ar">
-                <input type="radio" name="peres" id="r2{{$index}}">
-                <label for="r2{{$index}}" class="bysides">
-                  <div>
-                    {{::el.title}}
-                  </div>
-                  <div>{{::el.price}} <span class="rub">Р</span></div>
-                </label>
-              </li>
-            </ul>
-            <div class="show-all">
-              <span ng-click="allShown=true;">Показать все 16 <img src="i/arrow-down.png"></span>
-              <div class="all-items" ng-if="allShown">
-                <span ng-click="$parent.allShown=false;">Свернуть <img src="i/arrow-down.png" style="transform: rotate(180deg);"></span>
-                <ul class="ul radios" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
-                  <li ng-repeat="el in ::ar">
-                    <input type="radio" name="peres" id="r3{{$index}}">
-                    <label for="r3{{$index}}" class="bysides">
-                      <span>
-                        {{::el.title}}
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-      <div id="col2">
-        <div id="time-and-subscribe" ng-init="dayParts = [{title:'Ночь',time:'с 00:00 до 7:00'}, {title:'Утро',time:'с 7:00 до 11:00'}, {title:'День',time:'с 11:00 до 16:00'}, {title:'Ночь',time:'с 16:00 до 23:59'}]">
-          <div id="time-form">
-            <div class="drop-controller active{{show1}}" ng-click="show1=!show1">
-              <span>Время вылета/<br>прилета туда</span>
-              <div class="drop-down"></div>
-            </div>
-            <div class="popup-div" ng-show="show1">
-              <h2>Время вылета туда</h2>
 
-              <h3 class="plane-up">Вылет из Москвы</h3>
-              <ul class="ul times-of-day">
-                <li ng-repeat="part in ::dayParts">
-                  <label>
-                    <input type="radio" name="lol"> <span class="blue ttu">{{part.title}}</span><br>
-                    <span>{{part.time}}</span>
-                  </label>
-                </li>
-              </ul>
-              <hr>
-              <h3 class="plane-down">Прилёт в Санкт-Петербург</h3>
-              <ul class="ul times-of-day">
-                <li ng-repeat="part in ::dayParts">
-                  <label>
-                    <input type="radio" name="lol1"> <span class="blue ttu">{{part.title}}</span><br>
-                    <span>{{part.time}}</span>
-                  </label>
-                </li>
-              </ul>
-              <div class="bysides popup-buttons">
-                <input type="reset" value="Сбросить фильтры" class="button-grey">
-                <input type="button" value="Применить" class="blue-button">
-              </div>
-              <div class="close-popup" ng-click="show1=false;"></div>
-            </div>
+      <div class="block">
+        <h2>Аэропорт</h2>
+        <ul class="ul">
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="aero" class="vab"></div> <div>Шереметьево</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="aero" class="vab"></div> <div>Домодедово</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+          <li class="mb5">
+            <label class="bysides vtop space10">
+              <div class="bysides vtop space4"><div><input type="radio" name="aero" class="vab"></div> <div>Музенидис</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </li>
+        </ul>
 
-            <div class="drop-controller active{{show2}}" ng-click="show2=!show2">
-              <span>Время вылета/<br>прилета обратно</span>
-              <div class="drop-down"></div>
-            </div>
-            <div class="popup-div" ng-show="show2">
-              <h2>Время вылета обратно</h2>
-              <h3 class="plane-up">Вылет из Москвы</h3>
-              <ul class="ul times-of-day">
-                <li ng-repeat="part in ::dayParts">
-                  <label>
-                    <input type="radio" name="lol"> <span class="blue ttu">{{part.title}}</span><br>
-                    <span>{{part.time}}</span>
-                  </label>
-                </li>
-              </ul>
-              <hr>
-              <h3 class="plane-down">Прилёт в Санкт-Петербург</h3>
-              <ul class="ul times-of-day">
-                <li ng-repeat="part in ::dayParts">
-                  <label>
-                    <input type="radio" name="lol1"> <span class="blue ttu">{{part.title}}</span><br>
-                    <span>{{part.time}}</span>
-                  </label>
-                </li>
-              </ul>
-              <div class="bysides popup-buttons">
-                <input type="reset" value="Сбросить фильтры" class="button-grey">
-                <input type="button" value="Применить" class="blue-button">
-              </div>
-              <div class="close-popup" ng-click="show2=false;"></div>
-            </div>
-
-            <div class="drop-controller active{{show3}}" ng-click="show3=!show3">
-              <span>Вид<br>авиарейса</span>
-              <div class="drop-down"></div>
-            </div>
-            <div class="popup-div" ng-show="show3">
-              <h2>Вид авиарейса</h2>
-              <ul class="ul race-kind">
-                <li class="bysides" ng-repeat="type in [{title:'Регулярный авиарейс', moneyback:'Стандартный авиабилет'}, {title:'Регулярный авиарейс', moneyback:'Блочный авиабилет'}, {title:'Чартерный рейс. Маловероятное изменение времени вылета', moneyback:'Есть возврат билета'}]">
-                  <label class="radio-pad">
-                    <input type="radio" name="jop1">
-                    <span>
-                      <span class="larger">{{type.title}}</span><br>
-                      <span class="grey">{{type.moneyback}}</span>
-                    </span>
-                  </label>
-                  <span class="smaller pseudo blue">Подробнее</span>
-                </li>
-              </ul>
-              <div class="bysides popup-buttons">
-                <input type="reset" value="Сбросить фильтры" class="button-grey">
-                <input type="button" value="Применить" class="blue-button">
-              </div>
-              <div class="close-popup" ng-click="show3=false;"></div>
-            </div>
-          </div>
-          <div id="subscribe-form" class="inputshadow">
-            <form>
-              <h2>Цена на авиабилет может снизиться</h2>
-              <input type="email" placeholder="Ваш email"> <input type="submit" value="Следить за ценой" class="button-grey">
-            </form>
+        <div class="show-all">
+          <a ng-click="allShown1=true;" class="grey-button db tac fz13 ttu">Показать все 10 ▼</a>
+          <div class="all-items" ng-if="allShown1">
+            <div class="tac mb10"><span ng-click="$parent.allShown1=false;">Свернуть ▲</span></div>
+            <ul class="ul" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
+              <li class="mb5" ng-repeat="el in ::ar">
+                <label class="bysides vtop space10">
+                  <div class="bysides vtop space4"><div><input type="radio" name="aero" class="vab"></div> <div>{{::el.title}}</div></div>
+                  <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+                </label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div id="results">
-          <ng-include src="'result'"></ng-include>
-          <div class="promo-result">
-            <div class="promo-content">
-              <div class="promo-header bysides">
-                <div>
-                  <h2>
-                    <span class="afut"><span class="green">лучшие</span><span class="orange">туры.</span><span class="green">онлайн</span></span>
-                    <span class="ttu">Лучшее предложение</span>
-                  </h2>
-                </div>
-                <div>
-                  <a href="" class="green-button">Выбрать другой вариант тура</a>
-                </div>
-              </div>
-              <div class="hotel-and-trip">
-                <div class="hotel-info rounded">
-                  <div class="hotel-title">
-                    <h3>AMBASSADOR CITY<br>
-                      JOMTIEN HOTEL<br>
-                      <span style="font-size: 25px;">****</span></h3>
-                  </div>
-                  <div class="semi-white">
-                    <h4 class="blue ttu">В стоимость тура входит:</h4>
-                    Групповой трансфер<br>
-                    Медицинская страховка<br>
-                    Услуги гида
-                    <div>
-                      <select>
-                        <option>Тип питания: все вкл.</option>
-                      </select>
-                    </div>
-                    <div>
-                      <select>
-                        <option>Тип номера: стандарт</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="promo-trip">
-                  <ng-include src="'result'" ng-if="true" ng-init="hideTopGrey=true;"></ng-include>
-                </div>
-              </div>
-            </div>
-          </div>
-          <ng-include src="'result'" ng-if="true" ng-init="hideThere=true;"></ng-include>
-          <ng-include src="'result'" ng-if="true" ng-init="hideThere=true;"></ng-include>
-          <ng-include src="'result'" ng-if="true" ng-init="hideTopGrey=true;"></ng-include>
-          <ng-include src="'result'"></ng-include>
-          <ng-include src="'result'"></ng-include>
-          <ng-include src="'result'" ng-if="true" ng-init="hideThere=true;"></ng-include>
-          <ng-include src="'result'"></ng-include>
+      </div>
+    </div>
+    <div class="flex1">
+      <div class="bysides stretch space4">
+        <div class="flex1 bybounds">
+          <div class="mb5">Диапазон цен, ₽</div>
+          <select class="selectric rng">
+            <option value="5 000 — 7 000">5 000 — 7 000</option>
+            <option value="15 000 — 17 000">15 000 — 17 000</option>
+            <option value="25 000 — 27 000">25 000 — 27 000</option>
+          </select>
         </div>
+        <div class="flex1 bybounds">
+          <div class="mb5">Тип тура</div>
+          <select class="selectric rng">
+            <option value="5 000 — 7 000">5 000 — 7 000</option>
+            <option value="15 000 — 17 000">15 000 — 17 000</option>
+            <option value="25 000 — 27 000">25 000 — 27 000</option>
+          </select>
+        </div>
+        <div class="flex1 bybounds">
+          <div class="mb5">Тип размещения</div>
+          <select class="selectric rng">
+            <option value="5 000 — 7 000">5 000 — 7 000</option>
+            <option value="15 000 — 17 000">15 000 — 17 000</option>
+            <option value="25 000 — 27 000">25 000 — 27 000</option>
+          </select>
+        </div>
+        <div class="flex1 bybounds">
+          <div class="mb5">Сортировать по</div>
+          <select class="selectric rng">
+            <option value="5 000 — 7 000">5 000 — 7 000</option>
+            <option value="15 000 — 17 000">15 000 — 17 000</option>
+            <option value="25 000 — 27 000">25 000 — 27 000</option>
+          </select>
+        </div>
+        <label class="tac bybounds">
+          <div>Бесплатный <br>Wi-FI</div>
+          <div><input type="checkbox"></div>
+        </label>
+      </div>
+
+      <div class="mt10" id="results">
+
       </div>
     </div>
   </div>
 </div>
-
-<script type="text/ng-template" id="result">
-  <div class="result">
-    <div class="result-cols">
-      <div class="col-trip-info rounded">
-        <div class="trip-grey-row trip-there-grey trip-row" ng-if="!(hideThere || hideTopGrey)">
-          <div class="trip-col1 flex-center">
-            <div class="plane-model">Airbus 321</div>
-          </div>
-          <div class="trip-col2 flight-params">
-            <div class="flex-center m-flex-start">
-              <div class="luggage"><span>Багаж</span> <span>20&nbsp;кг</span></div>
-            </div>
-            <div class="flex-center m-flex-start">
-              <div class="bag"><span>Ручная кладь</span> <span>5&nbsp;кг</span></div>
-            </div>
-            <div class="flex-center m-flex-start">
-              <div class="chair"><span>Класс:</span> <span>эконом</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="trip-there" ng-hide="hideThere">
-          <div class="trip-white-row trip-row">
-            <div class="trip-col1 flex-center">
-              <div class="company-name-and-logo">
-                <img src="i/nordstar.png"><br>
-                Nord Star Airlines
-              </div>
-            </div>
-            <div class="trip-col2 times-row">
-              <div class="flex-center">
-                <div>
-                  <div class="tm">15:30</div>
-                  <div class="dt blue">30 ноября 2015, пн</div>
-                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
-                </div>
-              </div>
-              <div class="flex-center">
-                <div>
-                  2 ч 30 м<br>
-                  <span class="grey">прямой</span>
-                </div>
-              </div>
-              <div class="flex-center">
-                <div>
-                  <div class="tm">15:30</div>
-                  <div class="dt blue">30 ноября 2015, пн</div>
-                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="trip-help">
-          <div class="trip-white-row trip-row">
-            <div class="trip-col1 flex-center">
-              <div></div>
-            </div>
-            <div class="trip-col2 blue-row {{hideThere ? 'only-back' : ''}}">
-              <div class="flex-center">
-                <div class="smaller white-plane">Вылет</div>
-              </div>
-              <div class="flex-center">
-                <div class="smaller clock"><span class="desktop">Время </span>в пути</div>
-              </div>
-              <div class="flex-center">
-                <div class="smaller white-plane down">Прилет</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="trip-back">
-          <div class="trip-white-row trip-row">
-            <div class="trip-col1 flex-center">
-              <div class="company-name-and-logo"><img src="i/nordstar.png"><br>
-                Nord Star Airlines</div>
-            </div>
-            <div class="trip-col2 times-row">
-              <div class="flex-center">
-                <div>
-                  <div class="tm">15:30</div>
-                  <div class="dt blue">30 ноября 2015, пн</div>
-                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
-                </div>
-              </div>
-              <div class="flex-center">
-                <div>
-                  2 ч 30 м<br>
-                  <span class="grey">прямой</span>
-                </div>
-              </div>
-              <div class="flex-center">
-                <div>
-                  <div class="tm">15:30</div>
-                  <div class="dt blue">30 ноября 2015, пн</div>
-                  <div class="pls">Санкт-Петербург <span class="grey">LED</span></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="trip-grey-row trip-row inner-top-shadow">
-          <div class="trip-col1 flex-center">
-            <div class="plane-model">Airbus 321</div>
-          </div>
-          <div class="trip-col2 flight-params">
-            <div class="flex-center m-flex-start">
-              <div class="luggage"><span>Багаж</span> <span>20&nbsp;кг</span></div>
-            </div>
-            <div class="flex-center m-flex-start">
-              <div class="bag"><span>Ручная кладь</span> <span>5&nbsp;кг</span></div>
-            </div>
-            <div class="flex-center m-flex-start">
-              <div class="chair"><span>Класс:</span> <span>эконом</span></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-price rounded">
-        <div class="price-n flex1">
-          <span class="price-number xlarge">12&thinsp;338&nbsp;<span class="rub">Р</span></span><br>
-          <span class="grey smaller2">Цена указана с&nbsp;учётом<br>всех сборов и&nbsp;комиссий</span>
-        </div>
-        <div class="buy-n">
-          <input type="button" value="Купить"><br>
-          <span class="grey smaller2">дешевый авиабилет</span>
-        </div>
-        <div class="flex-center credit-wrapper">
-          <a href="/" class="buy-credit smaller">Купить в кредит</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
 </body>
 </html>
