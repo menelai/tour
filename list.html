@@ -12,6 +12,7 @@
   <script src="js/jquery.selectric.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/selectric.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="js/script.js"></script>
@@ -23,7 +24,7 @@
   </style>
 </head>
 <body>
-<div class="f r stretch d" id="bricks">
+<div class="f r stretch d bricks">
   <div class="flex1 bg-cyan"></div>
   <div class="flex1 bg-orange"></div>
   <div class="flex1 bg-green"></div>
@@ -457,7 +458,7 @@
         </label>
       </div>
 
-      <div class="mt10" id="results">
+      <div class="mt10 mb20" id="results">
         <div class="result f ws-r d stretch">
           <div class="bg-cyan result-starter"></div>
           <div class="result-photo">
@@ -558,11 +559,39 @@
               </div>
               <div class="thik-arrow"><div></div></div>
             </div>
+            <div class="extra-flights">
+              <div class="f ws-r d stretch">
+                <div class="airlogo f vcen hcen">
+                  <img src="i/zzz.png">
+                </div>
+                <div class="flex1 f c hcen">
+                  <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+                  <div class="flight-back"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+                </div>
+                <div class="bybounds choose-extra">
+                  <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+                  <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+                </div>
+              </div>
+              <div class="f ws-r d stretch">
+                <div class="airlogo f vcen hcen">
+                  <img src="i/zzz.png">
+                </div>
+                <div class="flex1 f c hcen">
+                  <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+                  <div class="flight-back"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+                </div>
+                <div class="bybounds choose-extra">
+                  <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+                  <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="result f ws-r d stretch">
-          <div class="bg-cyan result-starter"></div>
+          <div class="bg-green result-starter"></div>
           <div class="result-photo">
             <img src="i/ex.jpg">
           </div>
@@ -662,10 +691,48 @@
               <div class="thik-arrow"><div></div></div>
             </div>
           </div>
+
+          <div class="recommended-tour">Рекомендуем данный тур</div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div id="footer">
+  <div class="max-width">
+    <div class="f d ws-r ss-c ws-space20 vcen fz12">
+      <div class="f ws-r vcen space6">
+        <div>Забронировано <br>авиабилетов сегодня</div>
+        <div class="fz42 bigdig">1557</div>
+      </div>
+      <div class="f ws-r vcen space6">
+        <div>Забронировано <br>туров сегодня</div>
+        <div class="fz42 bigdig">1557</div>
+      </div>
+      <div class="f ws-r vcen space20">
+        <div><a href="/">Абсолютная <br>безопасность платежей</a></div>
+        <div><a href="/">Публичная <br>оферта</a></div>
+      </div>
+      <div class="f ws-r vcen space10">
+        <div class="fz11">Акции, розыгрыши,<br>
+          новости, отзывы о нас</div>
+        <div class="wsn socials f ws-r vcen space4">
+          <a href="/"><i class="fa fa-vk"></i></a>
+          <a href="/"><i class="fa fa-facebook"></i></a>
+          <a href="/"><i class="fa fa-instagram"></i></a>
+          <a href="/"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="f r stretch d bricks">
+  <div class="flex1 bg-cyan"></div>
+  <div class="flex1 bg-orange"></div>
+  <div class="flex1 bg-green"></div>
+  <div class="flex1 bg-cyan"></div>
+  <div class="flex1 bg-orange"></div>
+  <div class="flex1 bg-green"></div>
 </div>
 </body>
 </html>

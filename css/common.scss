@@ -183,7 +183,7 @@ $dark-blue: #07466a;
 }
 
 .f {
-  @include display-flex;
+  @include display-flex();
 }
 
 .hcen {
@@ -263,7 +263,7 @@ $dark-blue: #07466a;
   }
 }
 
-#bricks {
+.bricks {
   height:10px;
 }
 
@@ -1096,4 +1096,42 @@ input[type=text] {
 
 select {
   max-width: 100%;
+}
+
+#footer {
+  background: #000 url(../i/footer.jpg) center center no-repeat;
+  background-size: cover;
+  padding:10px 0;
+  color:white;
+  >.max-width {
+    >div {
+      margin:0 -10px;
+      padding:10px;
+      border-radius:10px;
+      background: rgba($dark-blue, 0.52);
+    }
+  }
+
+  a {
+    color:white;
+  }
+
+  .socials {
+    a {
+      width:22px;
+      height:22px;
+      @include display-flex(inline-flex);
+      @include justify-content(center);
+      @include align-items(center);
+      background: white;
+      color:#416967;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+  }
+}
+
+.bigdig {
+  line-height: 0.8;
+  margin-top:-0.1em;
 }
