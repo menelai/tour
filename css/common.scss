@@ -266,30 +266,62 @@ $dark-blue: #07466a;
 #bricks {
   height:10px;
 }
+#logoimg {
+  position: absolute;
+  top:-10px;
+  left:0;
+}
+#sitename {
+  margin-top:-0.45em;
+  margin-bottom: 0.2em;
 
-#logo {
-  margin-top:-15px;
+}
+#domain {
+  top: 1.5em;
+  right: 0;
+  position: absolute;
+}
+
+#sitename-and-slogan {
+  padding-left: 75px;
+}
+/*#logo {
+  margin-top:-5px;
   width:300px;
+  margin-bottom: -55px;
 }
 #sitename-and-slogan {
   position: absolute;
-  top:0;
+  top: -5px;
   left:70px;
+  font-stretch: condensed;
 }
 #domain {
-  top: 1.3em;
-  right: -0.6em;
+  top: 1.5em;
+  right: 0;
   position: absolute;
+}
+
+
+
+#slogan {
+  position: absolute;
+  bottom:0;
+  right:0;
+}
+
+#top {
+  padding-top:15px;
+}*/
+
+#partners {
+  margin-top:-0.3em;
 }
 
 .sep {
   width:1px;
   background: $lightgrey;
   margin:0 5px;
-}
-
-#top {
-  padding-top:15px;
 }
 
 .swap {
