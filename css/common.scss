@@ -352,7 +352,7 @@ $dark-blue: #07466a;
 }
 
 #personal {
-  text-align: right;
+
 }
 
 #call-variants {
@@ -461,6 +461,9 @@ $dark-blue: #07466a;
   background: url(../i/mainform.png) center center no-repeat;
   background-size: cover;
   padding:10px 0;
+  >.max-width {
+    padding:0 2.5em;
+  }
 
   form {
     margin:0 -10px;
@@ -536,7 +539,7 @@ input[type=text] {
 }
 
 #passengers-input {
-  @include flex(0 0 100px);
+  @include flex(0 0 10%);
 }
 
 .ui-autocomplete {
@@ -834,7 +837,7 @@ input[type=text] {
 #new-search {
   color: #FFFFFF;
   font-size: 15px;
-  @include flex(0 1 5%);
+  //@include flex(0 1 5%);
 }
 
 #alternate-price {

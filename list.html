@@ -55,23 +55,23 @@
       <div class="bybounds">
         <h4 class="fwn grey">Наши партнеры:</h4>
         <div>
-          <div class="swap mt"><img src="i/sber.png"><img src="i/sber-color.png"></div>
-          <div class="swap mt5"><img src="i/ingos.png"><img src="i/ingos-color.png"></div>
+          <div class="mt"><!--img src="i/sber.png"--><img src="i/sber-color.png"></div>
+          <div class="mt5"><!--img src="i/ingos.png"--><img src="i/ingos-color.png"></div>
         </div>
       </div>
 
-      <div class="bybounds">
+      <!--div class="bybounds">
         <h4 class="fwn grey">Нас рекомендуют:</h4>
         <div>
           <div class="swap mt"><img src="i/rbc.png"><img src="i/rbc-color.png"></div>
           <div class="swap mt5"><img src="i/national.png"><img src="i/national-color.png"></div>
         </div>
-      </div>
+      </div-->
 
       <div class="tac bybounds">
         <h4 class="fwn grey">Мы уполномоченное<br>
           агентство</h4>
-        <div class="swap mt5"><img src="i/mousenidis.png"><img src="i/mousenidis-color.png"></div>
+        <div class="mt5"><!--img src="i/mousenidis.png"--><img src="i/mousenidis-color.png"></div>
       </div>
     </div>
     <div class="sep"></div>
@@ -82,7 +82,7 @@
       <p class="orange tar fz12" style="margin-bottom: -0.3em;">с 9:00 до 23:00</p>
     </div>
     <div class="sep"></div>
-    <div id="personal" class="bybounds">
+    <div id="personal" class="bybounds tac">
       <div id="call-variants">
         <div id="call-icons">
           <img src="i/viber.png">
@@ -118,8 +118,8 @@
   <div class="max-width">
     <form class="f d ws-r ss-c ws-space4 vcen">
       <div id="new-search" ng-click="class = !class">
-        <div>Новый поиск</div>
-        <div class="drop-down mobile"></div>
+        <div>Новый<br>поиск</div>
+        <div class="drop-down mobile no-display"></div>
       </div>
       <div id="from-input">
         <select class="selectric">
@@ -160,14 +160,14 @@
               </li>
             </ul>
           </div>
-          <div class="baby">
+          <!--div class="baby">
             <div class="bysides">
               <div class="baby-title">Дети до 2 лет<br>
                 <span class="grey">без места</span>
               </div>
               <div class="number-with-spinners"><span class="minus" ng-click="ba=ba-1;">−</span><input type="number" ng-model="ba" ng-init="ba=1;" step="1" min="1"><span class="plus" ng-click="ba=ba+1;">+</span></div>
             </div>
-          </div>
+          </div-->
           <div class="bysides business-class">
             <div class="">
               <input type="checkbox" id="busclass"> <label for="busclass">Бизнес-класс</label>
@@ -182,7 +182,7 @@
         <input type="text" class="datepicker" placeholder="Туда">
       </div>
       <div id="date-input-2">
-        <input type="text" class="datepicker" placeholder="Обратно">
+        <input id="datepicker-back" type="text" class="datepicker" placeholder="Обратно">
         <div class="close"></div>
       </div>
       <div id="search-submit">
@@ -495,7 +495,7 @@
                       страхование</p>
                     </div>
                   </div>
-                  <div class="f vtop ws-r space10 mt10 hotel-features">
+                  <div class="f vtop hcen ws-r space10 mt10 hotel-features">
                     <div class="tac">
                       <img src="i/wifi.png">
                       <div>Бесплатный<br>

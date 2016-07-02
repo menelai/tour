@@ -12,9 +12,11 @@
         $('head').append('<style type="text/css" id="datepickerstyle"></style>');
         $('.datepicker').datepicker({
             beforeShow: function(){
-
-                $("#datepickerstyle").html('.ui-datepicker {width:'+($(this).outerWidth()*2+2)+'px}');
-                //console.log($(this).outerWidth()*2+'px');
+              var margin = '';
+              if($(this).attr('id') == 'datepicker-back') {
+                margin = 'margin-left:-'+($(this).outerWidth()*1+4)+'px;';
+              }
+              $("#datepickerstyle").html('.ui-datepicker {width:'+($(this).outerWidth()*2+4)+'px; '+margin+'}');
             }
         });
 
