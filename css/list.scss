@@ -161,3 +161,63 @@
     }
   }
 }
+
+.recommended-tour {
+  position: absolute;
+  bottom:0;
+  left:0;
+  background: $orange;
+  color:white;
+  text-transform: uppercase;
+  width:225px;
+  padding:4px 5px 4px 42px;
+  font-size: 12px;
+  &:before {
+    width:54px;
+    height:54px;
+    content: url(../i/baloon.png);
+    position: absolute;
+    top:50%;
+    margin-top:-27px;
+    left:-18px;
+  }
+}
+
+.extra-flights {
+  box-shadow: 0 4px 5px 0px rgba(0,0,0,0.31);
+  position: absolute;
+  left:0;
+  right:0;
+  background: rgba(white, 0.9);
+  border:solid 1px $cyan;
+  z-index: 300;
+
+  .flight-there {
+    &:before {
+      background-image: url(../i/grey-plane-right.png);
+    }
+  }
+  .flight-back {
+    &:before {
+      background-image: url(../i/grey-plane-left.png);
+    }
+  }
+}
+
+.choose-extra {
+  padding:10px 10px 10px 0;
+  .grey-button {
+    line-height: 20px;
+    height: 20px;
+  }
+}
+
+.selectric-h30 {
+  .selectric {
+    height: 30px;
+    .label {
+      line-height: 30px;
+      height: 30px;
+    }
+  }
+}

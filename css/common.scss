@@ -93,9 +93,12 @@ $dark-blue: #07466a;
 }
 
 @mixin grey-gradient() {
-  background-color: #f4f4f4; // Old browsers
-  @include filter-gradient(#f4f4f4, #d8d8d8, vertical); // IE6-9
-  @include background-image(linear-gradient(top,  #f4f4f4 0%,#f4f4f4 35%,#d8d8d8 65%,#d8d8d8 100%));
+  // Needs latest Compass, add '@import "compass"' to your scss
+  // Permalink - use to edit and share this gradient:
+  // http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+40,e3e3e3+60,e3e3e3+100
+  background-color: rgb(255,255,255); // Old browsers
+  @include filter-gradient(#ffffff, #e3e3e3, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 40%,rgba(227,227,227,1) 60%,rgba(227,227,227,1) 100%));
 }
 
 @mixin green-gradient() {
@@ -183,7 +186,7 @@ $dark-blue: #07466a;
 }
 
 .f {
-  @include display-flex;
+  @include display-flex();
 }
 
 .hcen {
@@ -263,7 +266,7 @@ $dark-blue: #07466a;
   }
 }
 
-#bricks {
+.bricks {
   height:10px;
 }
 #logoimg {
@@ -316,6 +319,7 @@ $dark-blue: #07466a;
 
 #partners {
   margin-top:-0.3em;
+
 }
 
 .sep {
@@ -1128,4 +1132,42 @@ input[type=text] {
 
 select {
   max-width: 100%;
+}
+
+#footer {
+  background: #000 url(../i/footer.jpg) center center no-repeat;
+  background-size: cover;
+  padding:10px 0;
+  color:white;
+  >.max-width {
+    >div {
+      margin:0 -10px;
+      padding:10px;
+      border-radius:10px;
+      background: rgba($dark-blue, 0.52);
+    }
+  }
+
+  a {
+    color:white;
+  }
+
+  .socials {
+    a {
+      width:22px;
+      height:22px;
+      @include display-flex(inline-flex);
+      @include justify-content(center);
+      @include align-items(center);
+      background: white;
+      color:#416967;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+  }
+}
+
+.bigdig {
+  line-height: 0.8;
+  margin-top:-0.1em;
 }
