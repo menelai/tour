@@ -122,9 +122,9 @@
         <div class="drop-down mobile no-display"></div>
       </div>
       <div id="from-input">
-        <select class="selectric">
-          <option value="+7" data-flag="i/flag.png">Россия</option>
-          <option value="+90" data-flag="i/greece.png">Грузия</option>
+        <select class="selectric city">
+          <option value="+7" >Из: Санкт-Петербург</option>
+          <option value="+90" >Грузия</option>
           <option value="+383" data-flag="i/flag.png">Россия</option>
           <option value="+900" data-flag="i/greece.png">Украина</option>
           <option value="+1" data-flag="i/flag.png">США</option>
@@ -132,7 +132,7 @@
         </select>
       </div>
       <div id="to-input" class="flex1 f">
-        <input type="text" placeholder="Куда: страна, курорт или отель" class="autocomplete flex1">
+        <input type="text" placeholder="Куда: страна, курорт или отель" class="flex1 catcomplete" >
       </div>
       <div id="passengers-input">
         <div class="pass-border" ng-click="show=!show" ng-init="show=false;">

@@ -536,6 +536,7 @@ input[type=text] {
 
 #from-input {
   @include flex(0 0 17%);
+  min-width: 0;
 }
 
 #passengers-input {
@@ -556,14 +557,20 @@ input[type=text] {
     }
   }
 
-  &.ui-menu .ui-menu-item {
-    padding:8px;
+  &.ui-menu {
+    .ui-menu-item, .ui-autocomplete-category {
+      padding:8px;
+    }
+  }
+
+  .ui-autocomplete-category {
+    color: #b2b2b2;
   }
 
   &.ui-menu .ui-menu-item {
     list-style: none;
     &:nth-child(2n+1):not(.ui-state-focus) {
-      background: #f4f4f4;
+      //background: #f4f4f4;
     }
   }
 }
@@ -1173,4 +1180,17 @@ select {
 .bigdig {
   line-height: 0.8;
   margin-top:-0.1em;
+}
+
+.selectric-city {
+  width:100%;
+  .selectric-items {
+    ul {
+      >li {
+        &:nth-child(2n) {
+          background: #f8f8f8;
+        }
+      }
+    }
+  }
 }

@@ -3,7 +3,47 @@
  */
 
 (function($){
+  $.widget( "custom.catcomplete", $.ui.autocomplete, {
+    _create: function() {
+      this._super();
+      this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+    },
+    _renderMenu: function( ul, items ) {
+      var that = this,
+        currentCategory = "";
+      $.each( items, function( index, item ) {
+        var li;
+        if ( item.category != currentCategory ) {
+          ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+          currentCategory = item.category;
+        }
+        li = that._renderItemData( ul, item );
+        if ( item.category ) {
+          li.attr( "aria-label", item.category + " : " + item.label );
+        }
+      });
+    }
+  });
+
     $(function() {
+
+      var data = [
+        { label: "Греция", category: "Популярные направления" },
+        { label: "Турция", category: "Популярные направления" },
+        { label: "Израиль", category: "Популярные направления" },
+        { label: "Ангола", category: "Остальные направления" },
+        { label: "Сомали", category: "Остальные направления" },
+        { label: "США", category: "Остальные направления" }
+      ];
+
+      $( ".catcomplete" ).catcomplete({
+        delay: 0,
+        source: data,
+        minLength: 0
+      }).on('focus', function() {
+        $(this).keydown();
+      });
+
       if (navigator.appVersion.indexOf("Mac")!=-1) {
         $("body").addClass('mac');
       }
