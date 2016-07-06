@@ -189,6 +189,11 @@ $dark-blue: #07466a;
   @include display-flex();
 }
 
+.fi {
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+
 .hcen {
   @include justify-content(center);
 }

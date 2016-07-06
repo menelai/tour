@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html ng-app="tourApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tour</title>
+  <link href="js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/selectric.css"/>
+  <link rel="stylesheet" type="text/css" href="css/flexslider.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <style>
+    .max-width {
+      max-width: {{width}}px;
+    }
+  </style>
+</head>
+<body>
+<ng-include src="'top.html'"></ng-include>
+<div class="max-width f ws-r vtop space20">
+  <div class="flex1 mw0">
+    <div class="col-header">Информация о туре</div>
+
+    <div class="f ws-r hcen mt5">
+      <div class="fz16 f ws-r vtop space10">
+        <div>
+          Sheraton Moscow Sheremetyevo Hotel
+        </div>
+        <div class="mt3">
+          <div class="rating r3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f mt5">
+      <a href="/" class="grey-button aib flex1">Подробнее об отеле</a>
+    </div>
+
+    <div class="slider mt10">
+      <ul class="slides">
+        <li><img src="i/ex.jpg"></li>
+        <li><img src="i/ex.jpg"></li>
+        <li><img src="i/ex.jpg"></li>
+      </ul>
+    </div>
+
+    <div class="mt20">
+      <div class="tac ttu">Услуги в отеле</div>
+      <div class="f vtop hcen ws-r space10 mt5 hotel-features">
+        <div class="tac">
+          <img src="i/wifi.png">
+          <div>Бесплатный<br>
+            Wi-Fi</div>
+        </div>
+        <div class="tac">
+          <img src="i/children.png">
+          <div>Детский<br>
+            клуб</div>
+        </div>
+        <div class="tac">
+          <img src="i/ac.png">
+          <div>Конди-<br>
+            ционер</div>
+        </div>
+        <div class="tac">
+          <img src="i/pool.png">
+          <div>Бассейн</div>
+        </div>
+        <div class="tac">
+          <img src="i/child-beach.png">
+          <div>Детский<br>
+            пляж</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt30">
+      <div class="tac ttu fz16">Курорт «Красная поляна»</div>
+    </div>
+    <div class="f mt5">
+      <a href="/" class="grey-button aib flex1">О курорте</a>
+    </div>
+    <div class="mt10">
+      <img src="i/kurort.jpg" class="w100">
+    </div>
+
+    <div>
+      <div class="space10">
+        <span class="ttu">Авиаперелет</span> <span class="orange">25 июня - 02 июля</span>
+      </div>
+      <div class="fz12 result-flights f ws-r d stretch" ng-click="showF = !showF">
+        <div class="airlogo f vcen hcen">
+          <img src="i/airlogo.png">
+        </div>
+        <div class="flex1 f c hcen">
+          <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+          <div class="flight-back mt5"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+        </div>
+        <div class="thik-arrow"><div></div></div>
+      </div>
+      <div class="fz12 extra-flights" ng-hide="!showF">
+        <div class="f ws-r d stretch">
+          <div class="airlogo f vcen hcen">
+            <img src="i/zzz.png">
+          </div>
+          <div class="flex1 f c hcen">
+            <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+            <div class="flight-back mt5"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+          </div>
+          <div class="bybounds choose-extra">
+            <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+            <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+          </div>
+        </div>
+        <div class="f ws-r d stretch">
+          <div class="airlogo f vcen hcen">
+            <img src="i/zzz.png">
+          </div>
+          <div class="flex1 f c hcen">
+            <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+            <div class="flight-back mt5"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+          </div>
+          <div class="bybounds choose-extra">
+            <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+            <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="responses" class="mt30">
+      <h2 id="resp-title" class="tac fwn ttu">Отзывы покупателей</h2>
+      <ul class="slides">
+        <li ng-repeat="l in [1,1,1,1,1,1,1] track by $index" class="fi r vcen space10">
+          <div class="tac">
+            <img src="i/default.png">
+            <div class="mt5 fz12">28.09.2014<br>Алексей</div>
+          </div>
+          <div class="flex1">
+            <div class="fz13">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            <div class="f r vcen space10 mt10">
+              <div class="flex1 tar">
+                <a href="/" class="orange"><div class="">Проверить отзыв</div></a>
+              </div>
+              <a href="/" class="grey-button aib"><div class="">Прочесть полностью</div></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tour-contents tac mt30">
+      <div class="space10 f d ws-r stretch">
+        <div class="flex1 mt10 mb20">
+          <img src="i/c-plane.png">
+        </div>
+        <div class="sep bg-grey"></div>
+        <div class="flex1 mt10 mb20">
+          <img src="i/c-bus.png">
+        </div>
+        <div class="sep bg-grey"></div>
+        <div class="flex1 mt10 mb20">
+          <img src="i/c-compass.png">
+        </div>
+        <div class="sep bg-grey"></div>
+        <div class="flex1 mt10 mb20">
+          <img src="i/c-doctor.png">
+        </div>
+      </div>
+      <div class="space10 f d ws-r vtop">
+        <div class="flex1">
+          Авиаперелет
+        </div>
+        <div class="sep"></div>
+        <div class="flex1">
+          Групповой<br>трансфер
+        </div>
+        <div class="sep"></div>
+        <div class="flex1">
+          Услуги<br>гида
+        </div>
+        <div class="sep"></div>
+        <div class="flex1">
+          Медицинская<br>страховка
+        </div>
+      </div>
+    </div>
+
+    <div class="exslider mt30">
+      <ul class="slides f ">
+        <li class="bybounds fi" ng-repeat="l in [1,1,1,1,1,1,1] track by $index">
+          <div class="flex1">
+            <div class="excursion-image">
+              <img src="i/exex.png">
+            </div>
+            <div class="tac mt10">Экскурсия на остров Skirathos Skirathos</div>
+          </div>
+          <div class="mt10">
+            <div class="f">
+              <a href="/" class="grey-button aib flex1">Подробнее</a>
+            </div>
+            <div style="height:3em;" ng-if="$index==0" class="mt10 f vcen space6 fz10 hcen">
+              <div><img src="i/galka.png"></div>
+              <div>Включено в<br>стоимость тура</div>
+            </div>
+            <label style="height:3em;" ng-if="$index!=0" class="mt10 f vcen space2 fz10 hcen">
+              <div><input type="checkbox"></div>
+              <div class="">Добавить к&nbsp;туру</div>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mt30">
+      <h2 class="tac fwn ttu">Дополнительные услуги</h2>
+      <div class="additional-services">
+        <div class="f d vcen space10">
+          <div class="bg-orange starter"></div>
+          <div class="flex1">Визовая поддержка</div>
+          <div><span class="orange">55 785 <span class="rub">Р</span></span></div>
+          <div>
+            <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
+          </div>
+          <div><input type="button" value="Добавить" class="grey-button aib"></div>
+        </div>
+        <div class="f d vcen space10">
+          <div class="bg-cyan starter"></div>
+          <div class="flex1">Конкретизация рейса</div>
+          <div><span class="orange">155 785 <span class="rub">Р</span></span></div>
+          <div>
+            <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
+          </div>
+          <div><input type="button" value="Добавить" class="grey-button aib"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex1 mw0">
+    <div class="col-header">Бронирование тура</div>
+  </div>
+</div>
+<ng-include src="'bottom.html'"></ng-include>
+</body>
+</html>

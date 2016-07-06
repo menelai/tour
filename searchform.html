@@ -1,0 +1,77 @@
+<div id="top-search-form" ng-init="class=false" class="search{{class}}">
+  <div class="max-width">
+    <form class="f d ws-r ss-c ws-space4 vcen">
+      <div id="new-search" ng-click="class = !class">
+        <div>Новый<br>поиск</div>
+        <div class="drop-down mobile no-display"></div>
+      </div>
+      <div id="from-input">
+        <select class="selectric city">
+          <option value="+7" >Из: Санкт-Петербург</option>
+          <option value="+90" >Грузия</option>
+          <option value="+383" data-flag="i/flag.png">Россия</option>
+          <option value="+900" data-flag="i/greece.png">Украина</option>
+          <option value="+1" data-flag="i/flag.png">США</option>
+          <option value="+800" data-flag="i/greece.png">Зимбабве</option>
+        </select>
+      </div>
+      <div id="to-input" class="flex1 f">
+        <input type="text" placeholder="Куда: страна, курорт или отель" class="flex1 catcomplete" >
+      </div>
+      <div id="passengers-input">
+        <div class="pass-border" ng-click="show=!show" ng-init="show=false;">
+          <div><img src="i/adult.png">×2 <img src="i/child.png">×2</div>
+        </div>
+        <div class="drop-down"></div>
+        <div id="passengers-popup" ng-show="show">
+          <div class="adult">
+            <div class="bysides">
+              <div>Взрослые</div>
+              <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
+            </div>
+          </div>
+          <div class="child" ng-if="true" ng-init="children=[13,14]; co=children.length;">
+            <div class="bysides">
+              <div>Дети до 14 лет</div>
+              <div class="number-with-spinners"><span class="minus" ng-click="children.pop(); co=children.length;">−</span><input type="number" ng-model="co" step="1"><span class="plus" ng-click="children.push(0); co=children.length;">+</span></div>
+            </div>
+            <ul ng-show="children.length>0">
+              <li ng-repeat="child in children track by $index">
+                <div class="bysides">
+                  <div>Возраст {{$index+1}}-го ребенка</div>
+                  <div><div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--div class="baby">
+            <div class="bysides">
+              <div class="baby-title">Дети до 2 лет<br>
+                <span class="grey">без места</span>
+              </div>
+              <div class="number-with-spinners"><span class="minus" ng-click="ba=ba-1;">−</span><input type="number" ng-model="ba" ng-init="ba=1;" step="1" min="1"><span class="plus" ng-click="ba=ba+1;">+</span></div>
+            </div>
+          </div-->
+          <div class="bysides business-class">
+            <div class="">
+              <input type="checkbox" id="busclass"> <label for="busclass">Бизнес-класс</label>
+            </div>
+            <div>
+              <input type="button" value="Закрыть" class="blue-button" ng-click="show=false;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="date-input-1">
+        <input type="text" class="datepicker" placeholder="Туда">
+      </div>
+      <div id="date-input-2">
+        <input id="datepicker-back" type="text" class="datepicker" placeholder="Обратно">
+        <div class="close"></div>
+      </div>
+      <div id="search-submit">
+        <input type="submit" value="Найти" class="orange-button ttu">
+      </div>
+    </form>
+  </div>
+</div>

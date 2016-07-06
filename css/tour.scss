@@ -1,0 +1,60 @@
+.col-header {
+  background: #8e8e8e;
+  color:white;
+  text-transform: uppercase;
+  text-align: center;
+  padding:0.35em 0;
+}
+
+.slider {
+  .slides {
+    >li {
+      >img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.w100 {
+  width: 100%;
+}
+
+.tour-contents {
+  background: #f4f4f4;
+  padding:10px;
+}
+
+.excursion-image {
+  width:100px;
+  height:100px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin:0 auto;
+  img {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    -webkit-transform: translateX(50%) translateY(50%);
+    transform: translateX(50%) translateY(50%);
+    min-width: 101%;
+    min-height: 101%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.starter {
+  width:10px;
+  @include align-self(stretch);
+}
+
+.additional-services {
+  >div {
+    >*:not(.starter) {
+      padding:10px 0;
+    }
+  }
+}
