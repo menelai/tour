@@ -28,6 +28,7 @@
     $(function() {
 
       var data = [
+        { label: "Греция", category: "" },
         { label: "Греция", category: "Популярные направления" },
         { label: "Турция", category: "Популярные направления" },
         { label: "Израиль", category: "Популярные направления" },
