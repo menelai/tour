@@ -93,8 +93,8 @@
       <img src="i/kurort.jpg" class="w100">
     </div>
 
-    <div>
-      <div class="space10">
+    <div class="mt30">
+      <div class="space10 mb5">
         <span class="ttu">Авиаперелет</span> <span class="orange">25 июня - 02 июля</span>
       </div>
       <div class="fz12 result-flights f ws-r d stretch" ng-click="showF = !showF">
@@ -247,8 +247,88 @@
       </div>
     </div>
   </div>
+
   <div class="flex1 mw0">
     <div class="col-header">Бронирование тура</div>
+
+    <div class="f d vcen ws-r mt10 p10 border-orange b-1">
+      <div class="flex1 tac orange">
+        25 июня — 2 июля
+      </div>
+      <div class="flex1 tar fz13 grey">
+        <img src="i/adult-cyan.png"> Взрослых×2 <img src="i/child-green.png"> Детей×2
+      </div>
+    </div>
+
+    <div class="f d vtop ws-r mt10 space10">
+      <div class="flex1 mw0">
+        <div class="grey fz12 mb5">Тип питания</div>
+        <select class="selectric grey">
+          <option value="5 000 — 7 000">Семейный номер,
+            2 комнаты,
+            боковой вид на море</option>
+          <option value="15 000 — 17 000">Семейный номер,
+            2 комнаты,
+            боковой вид на море</option>
+          <option value="25 000 — 27 000">Семейный номер,
+            2 комнаты,
+            боковой вид на море</option>
+        </select>
+      </div>
+      <div class="flex1 mw0">
+        <div class="grey fz12 mb5">Тип номера</div>
+        <select class="selectric grey">
+          <option value="5 000 — 7 000">Семейный номер,
+            2 комнаты,
+            боковой вид на море</option>
+          <option value="15 000 — 17 000">Семейный номер,
+            2 комнаты,
+            боковой вид на море</option>
+          <option value="25 000 — 27 000">Семейный номер,
+            2 комнаты,
+            боковой вид на море</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mt20">
+      <div class="f d vcen ws-r turoperators-table fz10 tac grey space10 header">
+        <div class="starter"></div>
+        <div class="flex1">Туроператор</div>
+        <div>Стоимость</div>
+        <div>Скидка</div>
+        <div>Итого</div>
+        <div>Ваш выбор</div>
+      </div>
+      <div class="f d vcen ws-r turoperators-table space10">
+        <div class="starter bg-orange"></div>
+        <div class="flex1"><img src="i/intourist.png"/></div>
+        <div>55 870 <span class="rub">Р</span></div>
+        <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
+        <div class="rounded4 b-1 border-green green"><b>54 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib"></div>
+      </div>
+      <div class="f d vcen ws-r turoperators-table space10">
+        <div class="starter bg-cyan"></div>
+        <div class="flex1"><img src="i/intourist.png"/></div>
+        <div>55 870 <span class="rub">Р</span></div>
+        <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
+        <div class="rounded4 b-1 border-green green"><b>54 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib"></div>
+      </div>
+      <div class="f d vcen ws-r turoperators-table space10">
+        <div class="starter bg-green"></div>
+        <div class="flex1"><img src="i/intourist.png"/></div>
+        <div>255 870 <span class="rub">Р</span></div>
+        <div class="rounded4 b-1 border-cyan cyan">10 000 <span class="rub">Р</span></div>
+        <div class="rounded4 b-1 border-green green"><b>254 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib"></div>
+      </div>
+    </div>
+
+    <div class="mt20 tour-total">
+      
+    </div>
   </div>
 </div>
 <ng-include src="'bottom.html'"></ng-include>
