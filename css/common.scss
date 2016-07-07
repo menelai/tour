@@ -224,6 +224,10 @@ $dark-blue: #07466a;
   @include align-items(flex-start);
 }
 
+.vbot {
+  @include align-items(flex-end);
+}
+
 .orange {
   color: $orange;
 }
