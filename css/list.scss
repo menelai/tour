@@ -159,9 +159,10 @@
   img {
     border:solid 1px $orange;
     border-radius: 4px;
-    margin-bottom: 4px;
     padding: 3px;
     filter: grayscale(100%);
+    width: 40px;
+    height: 40px;
   }
 
   line-height: 1.1;

@@ -12589,16 +12589,17 @@ select {
 .hotel-features img {
   border: solid 1px #ff6700;
   border-radius: 4px;
-  margin-bottom: 4px;
   padding: 3px;
   filter: grayscale(100%);
+  width: 40px;
+  height: 40px;
 }
 
-/* line 173, list.scss */
+/* line 174, list.scss */
 .result + .result {
   margin-top: 20px;
 }
-/* line 175, list.scss */
+/* line 176, list.scss */
 .result + .result:before {
   content: '';
   position: absolute;
@@ -12609,7 +12610,7 @@ select {
   background: #063c53;
 }
 
-/* line 187, list.scss */
+/* line 188, list.scss */
 .recommended-tour {
   position: absolute;
   bottom: 0;
@@ -12621,7 +12622,7 @@ select {
   padding: 4px 5px 4px 42px;
   font-size: 12px;
 }
-/* line 197, list.scss */
+/* line 198, list.scss */
 .recommended-tour:before {
   width: 54px;
   height: 54px;
@@ -12632,7 +12633,7 @@ select {
   left: -18px;
 }
 
-/* line 208, list.scss */
+/* line 209, list.scss */
 .extra-flights {
   box-shadow: 0 4px 5px 0px rgba(0, 0, 0, 0.31);
   position: absolute;
@@ -12642,35 +12643,35 @@ select {
   border: solid 1px #24c2e6;
   z-index: 300;
 }
-/* line 218, list.scss */
+/* line 219, list.scss */
 .extra-flights .flight-there:before {
   background-image: url(../i/grey-plane-right.png);
 }
-/* line 223, list.scss */
+/* line 224, list.scss */
 .extra-flights .flight-back:before {
   background-image: url(../i/grey-plane-left.png);
 }
 
-/* line 229, list.scss */
+/* line 230, list.scss */
 .choose-extra {
   padding: 10px 10px 10px 0;
 }
-/* line 231, list.scss */
+/* line 232, list.scss */
 .choose-extra .grey-button {
   line-height: 20px;
   height: 20px;
 }
 
-/* line 238, list.scss */
+/* line 239, list.scss */
 .selectric-h30 .selectric {
   height: 30px;
 }
-/* line 240, list.scss */
+/* line 241, list.scss */
 .selectric-h30 .selectric .label {
   line-height: 30px;
   height: 30px;
 }
-/* line 244, list.scss */
+/* line 245, list.scss */
 .selectric-h30 .selectric .button {
   height: 30px;
 }
