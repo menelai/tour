@@ -123,6 +123,21 @@ $dark-blue: #07466a;
   padding:0 8px;
   height: 40px;
   line-height: 40px;
+
+  &.h30 {
+    height: 30px;
+    line-height: 30px;
+
+    &[type=button], &[type=submit] {
+      line-height: 20px;
+    }
+
+    &.aib {
+      &.multiline {
+        min-height: 30px;
+      }
+    }
+  }
   /*&.ttu {
     line-height: 30px;
   }*/
@@ -218,6 +233,10 @@ $dark-blue: #07466a;
   @include justify-content(space-between);
 }
 
+.around {
+  @include justify-content(space-around);
+}
+
 
 
 .vtop {
@@ -256,6 +275,10 @@ $dark-blue: #07466a;
 
 .border-orange {
   border-color:$orange;
+}
+
+.border-grey {
+  border-color:$grey;
 }
 
 .r {
@@ -533,6 +556,11 @@ $dark-blue: #07466a;
 input[type=text] {
   @include selectric();
   padding:0 10px;
+  &.b-1 {
+    line-height: 38px;
+    border:solid 1px $grey;
+    border-radius: 2px;
+  }
 }
 
 .selectric-items {
@@ -1223,3 +1251,8 @@ select {
 .flex2 {
   @include flex(2);
 }
+
+.mt-1 {
+  margin-top: -1px;
+}
+

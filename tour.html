@@ -26,7 +26,7 @@
 </head>
 <body>
 <ng-include src="'top.html'"></ng-include>
-<div class="max-width f ws-r vtop space20">
+<div class="max-width f ws-r vtop space20" id="tour-columns">
   <div class="flex1 mw0">
     <div class="col-header">Информация о туре</div>
 
@@ -326,10 +326,11 @@
       </div>
     </div>
 
-    <div class="mt20 tour-total f d vcen">
+    <div class="mt20 tour-total f d vcen space10">
       <div>
         <img src="i/intourist.png"/>
       </div>
+      <div class="sep bg-grey"></div>
       <div class="flex1">
         <div class="f d ws-r vbot space10">
           <div class="flex1">
@@ -337,40 +338,232 @@
               <div>Стоимость тура</div>
               <div><b>155 000</b> <span class="rub">Р</span></div>
             </div>
-            <div class="mt5 f d ws-r vcen cyan rounded4 b-1">
+            <div class="mt5 f d ws-r vcen cyan rounded4 b-1 p5">
               <div>Скидка для вас</div>
               <div><b>2 000</b> <span class="rub">Р</span></div>
             </div>
           </div>
-          <div>
-            <input type="submit" value="Забронировать" class="green-button">
+          <div class="fl130 f">
+            <input type="submit" value="Забронировать" class="green-button h30 flex1">
           </div>
         </div>
-        <div class="mt10 f d stretch ws-r">
-          <div class="flex1">
+        <div class="mt10 f d stretch ws-r space10">
+          <div class="flex1 fz12">
             <div class="f d vtop ws-r space10">
-              <div>Топливный сбор</div><div>670 <span class="rub">Р</span></div>
+              <div>Топливный сбор</div><div class="wsn">670 <span class="rub">Р</span></div>
             </div>
-            <div class="f d vtop ws-r space10">
-              <div>Топливный сбор</div><div>670 <span class="rub">Р</span></div>
+            <div class="f d vtop ws-r space10 mt2">
+              <div>Топливный сбор</div><div class="wsn">670 <span class="rub">Р</span></div>
             </div>
-            <div class="f d vtop ws-r space10">
-              <div>Топливный сбор</div><div>670 <span class="rub">Р</span></div>
+            <div class="f d vtop ws-r space10 mt2">
+              <div>Топливный сбор</div><div class="wsn">670 <span class="rub">Р</span></div>
             </div>
-            <div class="f d vtop ws-r space10">
-              <div>Топливный сбор</div><div>670 <span class="rub">Р</span></div>
+            <div class="f d vtop ws-r space10 mt2">
+              <div>Топливный сбор</div><div class="wsn">670 <span class="rub">Р</span></div>
             </div>
-            <div class="f d vtop ws-r space10">
-              <div>Топливный сбор</div><div>670 <span class="rub">Р</span></div>
+            <div class="f d vtop ws-r space10 mt2">
+              <div>Окончательная
+                стоимость тура</div><div class="wsn">670 <span class="rub">Р</span></div>
             </div>
           </div>
-          <div class="bybounds">
+          <div class="bybounds fl130">
             <div><a href="/" class="grey-button aib multiline"><div>Оплатить 50%, остальное позже</div></a></div>
-            <div class="mt5"><a href="/" class="grey-button aib">Купить в кредит</a></div>
+            <div class="mt5 f"><a href="/" class="grey-button aib flex1">Купить в кредит</a></div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="mt30 bg-orange p10 tac please-title fz12">
+      ПОЖАЛУЙСТА УКАЖИТЕ КОНТАКТЫ ПОКУПАТЕЛЯ,<br>
+      ДАННЫЕ ЗАГРАНПАСПОРТА ТУРИСТОВ.
+    </div>
+
+    <div class="mt20 border-orange b-1 p10">
+      <div class="f d ws-r space30 vcen">
+        <div class="orange ttu">Покупатель</div>
+        <div class="flex1 f "><input type="text" class="flex1 b-1"></div>
+      </div>
+      <div class="mt10 f d ws-r vcen space4">
+        <div class="flex1 f">
+          <input type="text" class="flex1 cellular b-1" placeholder="Номер мобильного телефона" value="+7">
+          <select class="selectric countrycode">
+            <option value="+7" data-flag="i/flag.png">Россия</option>
+            <option value="+90" data-flag="i/greece.png">Грузия</option>
+            <option value="+383" data-flag="i/flag.png">Россия</option>
+            <option value="+900" data-flag="i/greece.png">Украина</option>
+            <option value="+1" data-flag="i/flag.png">США</option>
+            <option value="+800" data-flag="i/greece.png">Зимбабве</option>
+          </select>
+        </div>
+        <div class="flex1 f"><input type="text" class="flex1 b-1" placeholder="Ваш Email"></div>
+      </div>
+    </div>
+    <div class="border-orange b-1 p10 mt-1" ng-repeat="l in [1,1] track by $index">
+
+      <div class="f d ws-r space70 vcen">
+        <div class="ttu">Взрослый 1</div>
+        <div class="flex1 f space10 vcen d">
+          <div>Документ</div>
+          <div class="flex1">
+            <select class="selectric grey">
+              <option value="+7" data-flag="i/flag.png">Россия</option>
+              <option value="+90" data-flag="i/greece.png">Грузия</option>
+              <option value="+383" data-flag="i/flag.png">Россия</option>
+              <option value="+900" data-flag="i/greece.png">Украина</option>
+              <option value="+1" data-flag="i/flag.png">США</option>
+              <option value="+800" data-flag="i/greece.png">Зимбабве</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt10 f d vcen space10">
+        <div class="f vbot space4">
+          <div><img src="i/adult-cyan.png"></div>
+          <div>
+            <div>Пол</div>
+            <div><label><input type="radio" name="s"> М</label></div>
+            <div><label><input type="radio" name="s"> Ж</label></div>
+          </div>
+        </div>
+        <div class="flex1">
+          <div class="f d vtop space10">
+            <div class="flex1 f"><input type="text" class="flex1 b-1" placeholder="Ваш Email"></div>
+            <div class="flex1 f"><input type="text" class="flex1 b-1" placeholder="Ваш Email"></div>
+          </div>
+          <div class="mt10 f d vcen space10">
+            <div class="flex1 tar">Гражданство</div>
+            <div>
+              <select class="selectric citizenship grey">
+                <option value="Georgia" data-flag="i/flag.png">Албания</option>
+                <option value="Georgia" data-flag="i/greece.png">Грузия</option>
+                <option value="Georgia" data-flag="i/flag.png">Россия</option>
+                <option value="Georgia" data-flag="i/greece.png">Украина</option>
+                <option value="Georgia" data-flag="i/flag.png">США</option>
+                <option value="Georgia" data-flag="i/greece.png">Зимбабве</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt10 f d vtop space4 tac grey mw0">
+            <div class="flex1 mw0">
+              <div class="fz12">Дата рождения</div>
+              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1"></div>
+            </div>
+            <div class="flex2 mw0">
+              <div class="fz12">Серия и номер загранпаспорта</div>
+              <div class="f mw0"><input type="text" class="flex1 mw0 w100 b-1"></div>
+            </div>
+            <div class="flex1 mw0">
+              <div class="fz12">Срок действия</div>
+              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt20">
+      <h2 class="tac fwn ttu">Способ оплаты</h2>
+      <div class="mt10 f around vtop space40 payment-ways">
+        <label>
+          <div class="tac"><input type="radio" name="p"></div>
+          <div>
+            <div class="tac"><img src="i/cash.png"></div>
+            <div class="orange">Оплата наличными в офисе</div>
+            <div>
+              <ul style="margin-left:1em;">
+                <li>Экономьте деньги</li>
+                <li>Экономьте деньги</li>
+                <li>Экономьте деньги</li>
+                <li>Экономьте деньги</li>
+              </ul>
+            </div>
+          </div>
+        </label>
+        <label>
+          <div class="tac"><input type="radio" name="p"></div>
+          <div>
+            <div class="tac"><img src="i/cards.png"></div>
+            <div class="orange">Оплата банковской картой</div>
+            <div>
+              <ul style="margin-left:1em;">
+                <li>Экономьте время</li>
+                <li>Платите онлайн откуда удобно
+                  и когда хочется</li>
+                <li>Документы на emai</li>
+              </ul>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+  <div class="mt20 border-orange b-1 p10">
+    <div class="tac">
+      Абсолютная гарантия платежей.<br>
+      Оплата происходит через авторизизационный сервер<br>
+      Процессингового цетра ПАО «Сбербанк России».<br>
+      К оплате принимаются банковские карты следующих платёжных систем<br>
+    </div>
+    <div class="f around vcen mt20">
+      <img src="i/visa-grey.png">
+      <img src="i/mastercard-grey.png">
+      <img src="i/visaelectron-grey.png">
+      <img src="i/maestro-grey.png">
+    </div>
+    <div class="grey mt20 tac">Комиссия за проведение оплаты с помщью банковской карты: 670 ₽ </div>
+
+    <div class="mt20">
+      <label class="f d vtop space6">
+        <div><input type="checkbox"></div>
+        <div class="fz13 flex1">Я ознакомлен и согласен с правилами публичной оферты
+          и условиями применения тарифа</div>
+      </label>
+    </div>
+  </div>
+
+    <div class="mt20 border-orange b-1 p10">
+      <div class="tac">
+        Уважаемые Клиенты!<br>
+        Мы ценим Ваше время, при желании Вы можете выбрать удобное для Вас время посещения офиса
+      </div>
+      <div class="f hcen vcen mt20 space10">
+        <div>
+          <input type="text" class="b-1 datepicker">
+        </div>
+        <div>
+          <select class="selectric grey">
+            <option>09:00—11:00</option>
+            <option>09:00—11:00</option>
+            <option>09:00—11:00</option>
+            <option>09:00—11:00</option>
+            <option>09:00—11:00</option>
+            <option>09:00—11:00</option>
+            <option>09:00—11:00</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt20">
+        <label class="f d vtop space6">
+          <div><input type="checkbox"></div>
+          <div class="fz13 flex1">Спасибо, на данный этап времени я не имею возможности
+            спланировать время визита. Я приду, когда мне будет удобно</div>
+        </label>
+      </div>
+    </div>
+
+  <div class="mt20 f">
+    <input type="submit" value="Оплатить лучший тур онлайн" class="flex1 green-button ttu">
+  </div>
+
+    <div class="mt20 f">
+      <button class="flex1 green-button ttu multiline aib"><div class="fwn fz12">ОТПРАВИТЬ ИНФОРМАЦИЮ О БРОНИРОВАНИИ И ПОСЕЩЕНИИ ОФИСА
+        ЛУЧШЕМУ   <i class="fa fa-smile-o"></i>      МЕНЕДЖЕРУ</div></button>
+    </div>
+
   </div>
 </div>
 <ng-include src="'bottom.html'"></ng-include>

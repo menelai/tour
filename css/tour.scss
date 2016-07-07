@@ -15,6 +15,35 @@
       }
     }
   }
+
+
+}
+
+.flex-direction-nav {
+  a {
+    opacity:1;
+    text-indent: -9999px;
+    text-align: left;
+  }
+  .flex-prev {
+    left:0;
+    background: url(../i/slider-left.png) left center no-repeat;
+    &:before {
+      display: none;
+    }
+  }
+  .flex-next {
+    text-align: left;
+    right:0;
+    background: url(../i/slider-right.png) right center no-repeat;
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.flex-control-nav {
+  display: none;
 }
 
 .w100 {
@@ -100,6 +129,82 @@
 }
 
 .tour-total {
-  border-top:#e4e4e4;
+  border-top:solid 1px #e4e4e4;
   padding-top:20px;
+  >.sep {
+    @include align-self(stretch);
+  }
+}
+
+
+.fl130 {
+  @include flex(0 0 130px);
+}
+
+.please-title {
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color:white;
+}
+
+input[type="text"].cellular {
+  padding-left:50px;
+}
+.selectric-countrycode {
+  position:absolute;
+  left:0;
+  top:50%;
+  margin-top:-20px;
+  .selectric {
+    border:none;
+    background: none;
+    box-shadow: none;
+
+    .label {
+      margin-right:15px;
+      .flag {
+        margin:3px;
+        img {
+          border: solid 1px #cccccc;
+        }
+      }
+    }
+    .button {
+      width:15px;
+      &:after {
+        border-width:4px;
+      }
+    }
+  }
+}
+
+.flag {
+  margin-right:15px;
+  &.country-code-flag {
+    margin-right: 5px;
+  }
+  img {
+    border: solid 1px #cccccc;
+    display: inline-block;
+    vertical-align:-2px;
+  }
+}
+
+.selectric-citizenship {
+  width:250px;
+}
+
+.payment-ways {
+  >label {
+    @include flex(0 0 200px);
+  }
+}
+
+#tour-columns {
+  padding-top:10px;
+  padding-bottom: 30px;
+}
+
+#responses, .exslider {
+  padding:0 30px;
 }

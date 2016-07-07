@@ -239,6 +239,10 @@ img {
       margin-right:#{$i*1/2}px;
     }
   }
+
+  .lh#{$i} {
+    line-height:#{$i*1}px;
+  }
 }
 
 @media all and (min-width:800px) {
