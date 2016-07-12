@@ -1299,3 +1299,145 @@ select {
     }
   }
 }
+
+#destination-popup {
+  background: rgba(white, 0.95);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: absolute;
+  left:0;
+  top:100%;
+  z-index: 1000;
+  width:200%;
+  margin-top:2px;
+}
+
+.first-level {
+  border-top: solid 1px #b5b5b5;
+  &:nth-child(2n+2):not(:hover) {
+    background: rgba(#b5b5b5, 0.2);
+  }
+  &:hover {
+    .direction-title {
+      background: $orange;
+      color:white;
+      .orange {
+        color:white;
+      }
+    }
+  }
+}
+
+.direction-title {
+
+
+}
+
+.second-level {
+  padding:3px 0;
+  >label {
+    padding: 0 10px 0 20px;
+    >.flex1 {
+      padding:5px 0;
+    }
+  }
+
+  .starter {
+    width:5px;
+  }
+}
+
+.third-level {
+  padding: 5px 10px 5px 51px;
+  >label {
+    +label {
+      margin-top:10px;
+    }
+  }
+}
+
+.bt2 {
+  border-top:solid 2px $orange;
+}
+
+.like-select {
+  cursor:pointer;
+  .label {
+    margin: 0 32px 0 10px;
+    line-height: 1.1;
+  }
+  height:40px;
+  .button {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #BBB;
+    text-align: center;
+    font: 0/0 a;
+    *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
+    height: 40px;
+    width: 32px;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-top-color: #BBB;
+      border-bottom: none;
+    }
+  }
+
+  &.rng {
+    @include orange-gradient();
+    box-shadow: none;
+    border-radius: 5px;
+    .label {
+      color: white;
+    }
+    .button:after {
+      border-top-color: #ffffff;
+    }
+  }
+
+  .variants {
+    position: absolute;
+    top:100%;
+    left:0;
+    &.align-right {
+      right: 0;
+      left:auto;
+    }
+    margin-top:2px;
+    z-index: 1000;
+    background: rgba(white, 0.95);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width:130%;
+
+    .variant {
+      line-height: 1.1;
+      border-top: solid 1px #b5b5b5;
+      &:nth-child(2n+2):not(:hover) {
+        background: rgba(#b5b5b5, 0.2);
+      }
+      &:hover {
+        background: #dff6ff;
+      }
+    }
+
+    input[type=text] {
+      line-height: 28px;
+      border:solid 1px #a5a5a5;
+      border-radius: 4px;
+      width:6em;
+    }
+  }
+}

@@ -16,11 +16,83 @@
         </select>
       </div>
       <div id="to-input" class="flex1 f">
-        <input type="text" placeholder="Куда: страна, курорт или отель" class="flex1 catcomplete" >
+        <input type="text" placeholder="Куда: страна, курорт или отель" class="flex1">
+        <div id="destination-popup" class="b-1 border-orange">
+          <div class="p10 f ws-r space20 vcen">
+            <div class="fz12 grey">Популярные направления</div>
+            <div><input type="button" value="Применить" class="grey-button h30"></div>
+          </div>
+
+          <div class="first-level">
+            <label class="p10 f d vcen space6 fwb direction-title">
+              <div><input type="checkbox"></div>
+              <div class="flex1">Греция</div>
+              <div class="orange" ng-click="sls = !sls;">{{!sls ? '▼' : '▲'}}</div>
+            </label>
+            <div class="second-level" ng-show="sls">
+              <label class="f d vcen ws-r space6">
+                <div class="starter bg-orange"></div>
+                <div><input type="checkbox"></div>
+                <div class="flex1">Барселона, побережье Коста Брава</div>
+                <div class="grey" ng-click="tls = !tls;">{{!tls ? '▼' : '▲'}}</div>
+              </label>
+              <div class="third-level" ng-show="tls">
+                <label class="f d vtop space6">
+                  <div><input type="checkbox"></div>
+                  <div class="flex1">Бланес</div>
+                </label>
+                <label class="f d vtop space6">
+                  <div><input type="checkbox"></div>
+                  <div class="flex1">Бланес</div>
+                </label>
+                <label class="f d vtop space6">
+                  <div><input type="checkbox"></div>
+                  <div class="flex1">Бланес</div>
+                </label>
+              </div>
+              <label class="f d vcen ws-r space6">
+                <div class="starter bg-orange"></div>
+                <div><input type="checkbox"></div>
+                <div class="flex1">Барселона, побережье Коста Брава</div>
+                <div class="grey">▼</div>
+              </label>
+            </div>
+          </div>
+          <div class="first-level">
+            <label class="p10 f d vcen space6 fwb direction-title">
+              <div><input type="checkbox"></div>
+              <div class="flex1">Турция</div>
+              <div class="orange">▼</div>
+            </label>
+          </div>
+          <div class="first-level">
+            <label class="p10 f d vcen space6 fwb direction-title">
+              <div><input type="checkbox"></div>
+              <div class="flex1">Египет</div>
+              <div class="orange">▼</div>
+            </label>
+          </div>
+
+          <div class="p10 f ws-r space20 vcen bt2">
+            <div class="fz12 grey">Остальные направления</div>
+          </div>
+          <div class="first-level">
+            <label class="p10 f d vcen space6 fwb direction-title">
+              <div><input type="checkbox"></div>
+              <div class="flex1">Греция</div>
+            </label>
+          </div>
+          <div class="first-level">
+            <label class="p10 f d vcen space6 fwb direction-title">
+              <div><input type="checkbox"></div>
+              <div class="flex1">Греция</div>
+            </label>
+         </div>
+        </div>
       </div>
       <div id="passengers-input">
         <div class="pass-border" ng-click="show=!show" ng-init="show=false;">
-          <div><img src="i/adult-cyan.png" class="vab">×2 <img src="i/child-green.png" class="vab">×2</div>
+          <div><img src="i/adult-cyan.png" class="">×2 <img src="i/child-green.png" class="">×2</div>
         </div>
         <div class="drop-down"></div>
         <div id="passengers-popup" ng-show="show">

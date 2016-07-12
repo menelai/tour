@@ -258,7 +258,37 @@
     <div class="flex1">
       <div class="bysides stretch space4">
         <div class="flex1 bybounds">
-          <div class="mb5">Диапазон цен, ₽</div>
+          <div class="mb5">Диапазон цен, <span class="rub">Р</span></div>
+          <div class="like-select rng f vcen">
+            <p class="label fz12" ng-click="diapazon=!diapazon">Все отели</p>
+            <b class="button">▾</b>
+
+            <div class="variants b-1 border-orange" ng-show="diapazon" style="width:200%;">
+              <label class="variant f p10 vcen space6">
+                <div class="orange">10 000 — 20 000</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div>10 000 — 20 000</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div>10 000 — 20 000</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div>10 000 — 20 000</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div>10 000 — 20 000</div>
+              </label>
+              <div class="p10 tac bt2">
+                <p class="fz10 grey">Задайте свой диапазон</p>
+                <div class="mt10 mb10"><input type="text"> — <input type="text"></div>
+                <div><input type="button" value="Применить" class="grey-button h30"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex1 bybounds">
+          <div class="mb5">Сортировать по</div>
           <select class="selectric rng">
             <option value="5 000 — 7 000">5 000 — 7 000</option>
             <option value="15 000 — 17 000">15 000 — 17 000</option>
@@ -266,12 +296,35 @@
           </select>
         </div>
         <div class="flex1 bybounds">
-          <div class="mb5">Тип тура</div>
-          <select class="selectric rng">
-            <option value="5 000 — 7 000">5 000 — 7 000</option>
-            <option value="15 000 — 17 000">15 000 — 17 000</option>
-            <option value="25 000 — 27 000">25 000 — 27 000</option>
-          </select>
+          <div class="mb5">Выбрать отель</div>
+          <div class="like-select rng f vcen">
+            <p class="label fz12" ng-click="hotel=!hotel">Все отели</p>
+            <b class="button">▾</b>
+
+            <div class="variants b-1 border-orange" ng-show="hotel">
+              <div class="tar p10"><input type="button" class="grey-button h30" value="Применить"></div>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div class="orange">Все отели</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+            </div>
+          </div>
         </div>
         <div class="flex1 bybounds">
           <div class="mb5">Тип размещения</div>
@@ -282,12 +335,41 @@
           </select>
         </div>
         <div class="flex1 bybounds">
-          <div class="mb5">Сортировать по</div>
-          <select class="selectric rng">
+          <div class="mb5">Тип пляжа, линия</div>
+          <!--select class="selectric rng">
             <option value="5 000 — 7 000">5 000 — 7 000</option>
             <option value="15 000 — 17 000">15 000 — 17 000</option>
             <option value="25 000 — 27 000">25 000 — 27 000</option>
-          </select>
+          </select-->
+          <div class="like-select rng f vcen">
+            <p class="label fz12" ng-click="beach=!beach">Все пляжи, любая линия</p>
+            <b class="button">▾</b>
+
+            <div class="variants b-1 border-orange align-right" ng-show="beach">
+              <div class="tar p10"><input type="button" class="grey-button h30" value="Применить"></div>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div class="orange">Все пляжи,
+                  любая линия</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+              <label class="variant f p10 vcen space6">
+                <div><input type="checkbox"></div>
+                <div>Галечный</div>
+              </label>
+            </div>
+          </div>
         </div>
         <label class="tac bybounds">
           <div>Бесплатный <br>Wi-FI</div>
