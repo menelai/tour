@@ -17,10 +17,10 @@
       </div>
       <div id="to-input" class="flex1 f">
         <input type="text" placeholder="Куда: страна, курорт или отель" class="flex1">
-        <div id="destination-popup" class="b-1 border-orange">
+        <div id="destination-popup" class="b-1 border-orange" ng-hide="hideWhere">
           <div class="p10 f ws-r space20 vcen">
             <div class="fz12 grey">Популярные направления</div>
-            <div><input type="button" value="Применить" class="grey-button h30"></div>
+            <div><input type="button" value="Применить" class="grey-button h30" ng-click="hideWhere = true;"></div>
           </div>
 
           <div class="first-level">

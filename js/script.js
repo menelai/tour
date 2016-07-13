@@ -124,6 +124,18 @@
             }
           });
 
+          $('.selectric.html').selectric({
+            optionsItemBuilder: function(currItem) {
+              return currItem.element.attr('data-html');
+            }
+          });
+
+          $('.selectric.hasprice').selectric({
+            optionsItemBuilder: function(currItem) {
+              return '<span class="f d vtop space10"><span class="flex1">'+currItem.text+'</span><span class="orange">'+currItem.element.attr('data-price')+' <span class="rub">Р</span></span></span>';
+            }
+          });
+
           $('.selectric.countrycode').selectric({
             optionsItemBuilder: function(currItem) {
               return '<span class="flag country-code-flag"><img src="'+currItem.element.attr('data-flag')+'"></span><span class="">'+currItem.text+'</span><span class="country-code-option">'+currItem.element.attr('value')+'</span>';

@@ -8,7 +8,7 @@
 
 .result-photo {
   overflow: hidden;
-  @include flex(0 0 215px);
+  @include flex(0 0 28.5%);
   img {
     position: absolute;
     bottom: 50%;
@@ -162,6 +162,37 @@
 }
 
 .hotel-features {
+  >.tac {
+    >div {
+      display: none;
+    }
+    &:hover {
+      >div {
+        display: block;
+        position: absolute;
+        padding:10px 10px;
+        background: white;
+        color:$orange;
+        border:solid 1px $orange;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 0px rgba(black, 0.2);
+        bottom:100%;
+        left:100%;
+        margin-left:-4px;
+        margin-bottom: -4px;
+        z-index: 2000;
+        font-size: 11px;
+      }
+    }
+  }
+  >* {
+    &:not(:first-child) {
+      margin-left:1%;
+    }
+    &:not(:last-child) {
+      margin-right:1%;
+    }
+  }
   img {
     border:solid 1px $orange;
     border-radius: 4px;
@@ -170,6 +201,9 @@
     filter: grayscale(100%);
     width: 40px;
     height: 40px;
+    &:hover {
+      filter:none;
+    }
   }
 
   .tac:hover {
@@ -195,6 +229,13 @@
       bottom:100%;
       height:20px;
       background: #063c53;
+    }
+  }
+
+  &:last-child {
+    .extra-flights {
+      bottom:47px;
+      box-shadow: 0 -4px 5px 0px rgba(0, 0, 0, 0.31);
     }
   }
 }
@@ -259,5 +300,13 @@
     .button {
       height: 30px;
     }
+  }
+}
+
+.main-selects {
+  min-width: 0;
+  >* {
+    @include flex(0 0 20%);
+    min-width: 0;
   }
 }
