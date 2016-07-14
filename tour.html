@@ -53,7 +53,7 @@
       </ul>
     </div>
 
-    <div class="mt20">
+    <div class="mt15">
       <div class="tac ttu">Услуги в отеле</div>
       <div class="f vtop hcen ws-r space10 mt5 hotel-features">
         <div class="tac">
@@ -87,7 +87,7 @@
       <div class="tac ttu fz16">Курорт «Красная поляна»</div>
     </div>
     <div class="f mt5">
-      <a href="/" class="grey-button aib flex1">О курорте</a>
+      <a href="/" class="grey-button aib flex1 h30">О курорте</a>
     </div>
     <div class="mt10">
       <img src="i/kurort.jpg" class="w100">
@@ -118,7 +118,7 @@
           </div>
           <div class="bybounds choose-extra">
             <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
-            <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+            <div class="mt5"><a class="grey-button aib h30" href="/">Выбрать</a></div>
           </div>
         </div>
         <div class="f ws-r d stretch">
@@ -131,7 +131,7 @@
           </div>
           <div class="bybounds choose-extra">
             <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
-            <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+            <div class="mt5"><a class="grey-button aib h30" href="/">Выбрать</a></div>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@
               <div class="flex1 tar">
                 <a href="/" class="orange"><div class="">Проверить отзыв</div></a>
               </div>
-              <a href="/" class="grey-button aib"><div class="">Прочесть полностью</div></a>
+              <a href="/" class="grey-button aib h30"><div class="">Прочесть полностью</div></a>
             </div>
           </div>
         </li>
@@ -198,6 +198,9 @@
     </div>
 
     <div class="exslider mt30">
+      <div class="mb10">
+        <div class="tac ttu fz16">Экскурсии</div>
+      </div>
       <ul class="slides f ">
         <li class="bybounds fi" ng-repeat="l in [1,1,1,1,1,1,1] track by $index">
           <div class="flex1">
@@ -208,15 +211,15 @@
           </div>
           <div class="mt10">
             <div class="f">
-              <a href="/" class="grey-button aib flex1">Подробнее</a>
+              <a href="/" class="grey-button aib flex1 h30">Подробнее</a>
             </div>
             <div style="height:3em;" ng-if="$index==0" class="mt10 f vcen space6 fz10 hcen">
               <div><img src="i/galka.png"></div>
               <div>Включено в<br>стоимость тура</div>
             </div>
-            <label style="height:3em;" ng-if="$index!=0" class="mt10 f vcen space2 fz10 hcen">
+            <label style="height:3em;" ng-if="$index!=0" class="mt10 f vcen space2 fz12 hcen">
               <div><input type="checkbox"></div>
-              <div class="">Добавить к&nbsp;туру</div>
+              <div class="grey777">Добавить к&nbsp;туру</div>
             </label>
           </div>
         </li>
@@ -233,7 +236,7 @@
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
-          <div><input type="button" value="Добавить" class="grey-button aib"></div>
+          <div><input type="button" value="Добавить" class="grey-button aib h30"></div>
         </div>
         <div class="f d vcen space10">
           <div class="bg-cyan starter"></div>
@@ -242,7 +245,7 @@
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
-          <div><input type="button" value="Добавить" class="grey-button aib"></div>
+          <div><input type="button" value="Добавить" class="grey-button aib h30"></div>
         </div>
       </div>
     </div>
@@ -306,7 +309,7 @@
         <div>55 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-green green"><b>54 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib"></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-cyan"></div>
@@ -314,7 +317,7 @@
         <div>55 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-green green"><b>54 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib"></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-green"></div>
@@ -322,7 +325,7 @@
         <div>255 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">10 000 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-green green"><b>254 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib"></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
       </div>
     </div>
 

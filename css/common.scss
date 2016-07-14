@@ -144,6 +144,22 @@ $dark-blue: #07466a;
       }
     }
   }
+  &.h22 {
+    font-size: 13px;
+    height: 22px;
+    line-height: 22px;
+
+    &[type=button], &[type=submit] {
+      line-height: 16px;
+      padding-bottom: 2px;
+    }
+
+    &.aib {
+      &.multiline {
+        min-height: 22px;
+      }
+    }
+  }
   /*&.ttu {
     line-height: 30px;
   }*/
@@ -276,6 +292,10 @@ a.orange {
 }
 .grey {
   color:$grey;
+}
+
+.grey777 {
+  color:#777777;
 }
 
 .bg-orange {
@@ -612,6 +632,7 @@ input[type=text] {
 }
 
 .selectric-items {
+
   margin-top:2px;
   box-shadow: none;
   background: #ffffff;
@@ -620,10 +641,12 @@ input[type=text] {
   border-top-right-radius: 4px;
   overflow: hidden;
   li:hover {
-    background: #dff6ff !important;
-    //color:black !important;
+    background: $orange !important;
+    color:white !important;
   }
   li {
+    font-size: 14px;
+    color:black;
     &.selected {
       color:$orange;
       background: inherit;
@@ -655,8 +678,8 @@ input[type=text] {
 
     .ui-state-focus {
       font-weight: normal;
-      color: inherit;
-      background: #dff6ff;
+      background: $orange;
+      color:white;
       border:none;
       margin:0;
     }
@@ -1198,6 +1221,7 @@ input[type=text] {
 
 #left-col {
   @include flex(0 0 20%);
+  padding-top:2px;
 }
 
 .all-items {
@@ -1219,7 +1243,7 @@ input[type=text] {
     text-transform: uppercase;
     color:#3e3e3e;
     font-weight: normal;
-    margin-bottom:3px;
+    margin-bottom:6px;
   }
 }
 
@@ -1466,7 +1490,11 @@ select {
         background: rgba(#b5b5b5, 0.2);
       }
       &:hover {
-        background: #dff6ff;
+        background: $orange;
+        color:white;
+        .orange {
+          color:white;
+        }
       }
     }
 
@@ -1475,6 +1503,103 @@ select {
       border:solid 1px #a5a5a5;
       border-radius: 4px;
       width:6em;
+    }
+  }
+}
+
+.ar {
+  width:30px;
+  height:10px;
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: $orange;
+    border-bottom: none;
+  }
+
+  &.up {
+    &:after {
+      border: 6px solid transparent;
+      border-bottom-color: $orange;
+      border-top: none;
+    }
+  }
+}
+
+.opener {
+  @include align-self(stretch);
+  width:30px;
+  margin:-10px;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: $orange;
+    border-bottom: none;
+  }
+
+  &.grey {
+    margin:-5px -10px;
+    &:after {
+      border-top-color: $grey;
+    }
+
+    &.up {
+      &:after {
+        border: 6px solid transparent;
+        border-bottom-color: $grey;
+        border-top: none;
+      }
+    }
+  }
+
+  &.up {
+    &:after {
+      border: 6px solid transparent;
+      border-bottom-color: $orange;
+      border-top: none;
+    }
+  }
+
+  .first-level:hover>label & {
+    &.up {
+      &:after {
+        border-bottom-color: white;
+      }
+    }
+    &:after {
+      border-top-color: white;
+    }
+  }
+
+  .second-level>label:hover & {
+    &.grey {
+      &:after {
+        border-top-color: $orange;
+      }
+
+      &.up {
+        &:after {
+          border-bottom-color: $orange;
+        }
+      }
     }
   }
 }

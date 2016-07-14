@@ -26,7 +26,7 @@
     text-align: left;
   }
   .flex-prev {
-    left:0;
+    left:10px;
     background: url(../i/slider-left.png) left center no-repeat;
     &:before {
       display: none;
@@ -34,7 +34,7 @@
   }
   .flex-next {
     text-align: left;
-    right:0;
+    right:10px;
     background: url(../i/slider-right.png) right center no-repeat;
     &:before {
       display: none;
@@ -201,7 +201,7 @@ input[type="text"].cellular {
 }
 
 #tour-columns {
-  padding-top:10px;
+  padding-top:20px;
   padding-bottom: 30px;
 }
 

@@ -18,23 +18,24 @@
       <div id="to-input" class="flex1 f">
         <input type="text" placeholder="Куда: страна, курорт или отель" class="flex1">
         <div id="destination-popup" class="b-1 border-orange" ng-hide="hideWhere">
-          <div class="p10 f ws-r space20 vcen">
-            <div class="fz12 grey">Популярные направления</div>
-            <div><input type="button" value="Применить" class="grey-button h30" ng-click="hideWhere = true;"></div>
+          <div class="p10 f ws-r space20 vcen d">
+            <div class="fz12 grey777">Популярные направления</div>
+            <div><input type="button" value="Применить" class="grey-button h22" ng-click="hideWhere = true;"></div>
           </div>
 
           <div class="first-level">
             <label class="p10 f d vcen space6 fwb direction-title">
               <div><input type="checkbox"></div>
               <div class="flex1">Греция</div>
-              <div class="orange" ng-click="sls = !sls;">{{!sls ? '▼' : '▲'}}</div>
+              <div class="orange opener {{!sls ? 'down' : 'up'}}" ng-click="sls = !sls;"></div>
             </label>
             <div class="second-level" ng-show="sls">
               <label class="f d vcen ws-r space6">
                 <div class="starter bg-orange"></div>
                 <div><input type="checkbox"></div>
                 <div class="flex1">Барселона, побережье Коста Брава</div>
-                <div class="grey" ng-click="tls = !tls;">{{!tls ? '▼' : '▲'}}</div>
+                <!--div class="grey" ng-click="tls = !tls;">{{!tls ? '▼' : '▲'}}</div-->
+                <div class="grey opener {{!tls ? 'down' : 'up'}}" ng-click="tls = !tls;"></div>
               </label>
               <div class="third-level" ng-show="tls">
                 <label class="f d vtop space6">
@@ -54,7 +55,7 @@
                 <div class="starter bg-orange"></div>
                 <div><input type="checkbox"></div>
                 <div class="flex1">Барселона, побережье Коста Брава</div>
-                <div class="grey">▼</div>
+                <div class="grey opener"></div>
               </label>
             </div>
           </div>
@@ -62,14 +63,14 @@
             <label class="p10 f d vcen space6 fwb direction-title">
               <div><input type="checkbox"></div>
               <div class="flex1">Турция</div>
-              <div class="orange">▼</div>
+              <div class="orange opener"></div>
             </label>
           </div>
           <div class="first-level">
             <label class="p10 f d vcen space6 fwb direction-title">
               <div><input type="checkbox"></div>
               <div class="flex1">Египет</div>
-              <div class="orange">▼</div>
+              <div class="orange opener"></div>
             </label>
           </div>
 
