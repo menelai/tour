@@ -643,6 +643,9 @@ input[type=text] {
   li:hover {
     background: $orange !important;
     color:white !important;
+    .orange {
+      color:white;
+    }
   }
   li {
     font-size: 14px;
@@ -863,6 +866,7 @@ input[type=text] {
   background: #fff;
   border-color:$orange;
   margin-top:2px;
+  min-width: 230px;
 
   .ui-datepicker-header {
     background: none;

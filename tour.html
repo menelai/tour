@@ -42,7 +42,7 @@
     </div>
 
     <div class="f mt5">
-      <a href="/" class="grey-button aib flex1">Подробнее об отеле</a>
+      <a href="/" class="grey-button aib flex1 h30">Подробнее об отеле</a>
     </div>
 
     <div class="slider mt10">
@@ -227,7 +227,13 @@
     </div>
 
     <div class="mt30">
-      <h2 class="tac fwn ttu">Дополнительные услуги</h2>
+      <h2 class="tac fwn ttu mb10">Дополнительные услуги</h2>
+      <div class="f d vcen space10 fz10 grey777 fwb">
+        <div class="flex1"></div>
+        <div class="tac" style="width:64px;">Стоимость</div>
+        <div class="tac" style="width:72px;">Количество</div>
+        <div style="width:82px;"></div>
+      </div>
       <div class="additional-services">
         <div class="f d vcen space10">
           <div class="bg-orange starter"></div>
@@ -236,7 +242,7 @@
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
-          <div><input type="button" value="Добавить" class="grey-button aib h30"></div>
+          <div><input type="button" value="Добавить" class="grey-button aib h22"></div>
         </div>
         <div class="f d vcen space10">
           <div class="bg-cyan starter"></div>
@@ -245,7 +251,7 @@
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
-          <div><input type="button" value="Добавить" class="grey-button aib h30"></div>
+          <div><input type="button" value="Добавить" class="grey-button aib h22"></div>
         </div>
       </div>
     </div>
@@ -254,48 +260,41 @@
   <div class="flex1 mw0">
     <div class="col-header">Бронирование тура</div>
 
-    <div class="f d vcen ws-r mt10 p10 border-orange b-1">
+    <div class="f d vbot ws-r mt10 p10 border-orange b-1">
       <div class="flex1 tac orange">
         25 июня — 2 июля
       </div>
       <div class="flex1 tar fz13 grey">
-        <img src="i/adult-cyan.png"> Взрослых×2 <img src="i/child-green.png"> Детей×2
+        <img src="i/adult-cyan.png" class="vab"> Взрослых×2 <img src="i/child-green.png" class="vab"> Детей×2
       </div>
     </div>
 
     <div class="f d vtop ws-r mt10 space10">
       <div class="flex1 mw0">
-        <div class="grey fz12 mb5">Тип питания</div>
-        <select class="selectric grey">
-          <option value="5 000 — 7 000">Семейный номер,
-            2 комнаты,
-            боковой вид на море</option>
-          <option value="15 000 — 17 000">Семейный номер,
-            2 комнаты,
-            боковой вид на море</option>
-          <option value="25 000 — 27 000">Семейный номер,
-            2 комнаты,
-            боковой вид на море</option>
+        <div class="grey777 fz12 mb5">Тип питания</div>
+        <select class="selectric grey multiline hasprice">
+          <option value="5 000 — 7 000" data-price="55000">Ультра всё включено</option>
+          <option value="15 000 — 17 000" data-price="155000">Всё включено</option>
+          <option value="25 000 — 27 000" data-price="255000">HB — завтрак, ужин</option>
         </select>
       </div>
       <div class="flex1 mw0">
-        <div class="grey fz12 mb5">Тип номера</div>
-        <select class="selectric grey">
-          <option value="5 000 — 7 000">Семейный номер,
+        <div class="grey777 fz12 mb5">Тип номера</div>
+        <select class="selectric grey multiline hasprice">
+          <option value="5 000 — 7 000" data-price="55000">Семейный номер,
             2 комнаты,
             боковой вид на море</option>
-          <option value="15 000 — 17 000">Семейный номер,
-            2 комнаты,
+          <option value="15 000 — 17 000" data-price="55000">Двойной номер,
             боковой вид на море</option>
-          <option value="25 000 — 27 000">Семейный номер,
-            2 комнаты,
+          <option value="25 000 — 27 000" data-price="55000">Одиночный номер,
+            1 комната,
             боковой вид на море</option>
         </select>
       </div>
     </div>
 
     <div class="mt20">
-      <div class="f d vcen ws-r turoperators-table fz10 tac grey space10 header">
+      <div class="f d vcen ws-r turoperators-table fz10 tac grey777 space10 header">
         <div class="starter"></div>
         <div class="flex1">Туроператор</div>
         <div>Стоимость</div>
@@ -377,7 +376,7 @@
       </div>
     </div>
 
-    <div class="mt30 bg-orange p10 tac please-title fz12">
+    <div class="mt30 bg-orange p10 tac please-title fz12 fwb">
       ПОЖАЛУЙСТА УКАЖИТЕ КОНТАКТЫ ПОКУПАТЕЛЯ,<br>
       ДАННЫЕ ЗАГРАНПАСПОРТА ТУРИСТОВ.
     </div>
@@ -451,7 +450,7 @@
           <div class="mt10 f d vtop space4 tac grey mw0">
             <div class="flex1 mw0">
               <div class="fz12">Дата рождения</div>
-              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1"></div>
+              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1 fwb fz14"></div>
             </div>
             <div class="flex2 mw0">
               <div class="fz12">Серия и номер загранпаспорта</div>
@@ -459,7 +458,7 @@
             </div>
             <div class="flex1 mw0">
               <div class="fz12">Срок действия</div>
-              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1"></div>
+              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1 fwb fz14"></div>
             </div>
           </div>
         </div>
