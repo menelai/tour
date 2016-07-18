@@ -632,10 +632,10 @@ input[type=text] {
 }
 
 .selectric-items {
-
+  font-weight: bold;
   margin-top:2px;
   box-shadow: none;
-  background: #ffffff;
+  background: rgba(white, 0.95);
   border:solid 1px $orange;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -657,7 +657,7 @@ input[type=text] {
     }
 
     &:nth-child(2n) {
-      background: #f3f3f3;
+      background: rgba(181, 181, 181, 0.2);
     }
   }
 }
@@ -1282,6 +1282,10 @@ select {
 }
 
 #footer {
+  .sep {
+    @include align-self(stretch);
+    background: #FFFFFF;
+  }
   background: #000 url(../i/footer.jpg) center center no-repeat;
   background-size: cover;
   padding:10px 0;
@@ -1374,7 +1378,7 @@ select {
 }
 
 .first-level {
-  border-top: solid 1px #b5b5b5;
+  border-top:solid 1px #e4e4e4;
   &:nth-child(2n+2):not(:hover) {
     background: rgba(#b5b5b5, 0.2);
   }
@@ -1469,6 +1473,7 @@ select {
   }
 
   .variants {
+    font-weight: bold;
     position: absolute;
     top:100%;
     left:0;
@@ -1485,7 +1490,7 @@ select {
 
     .variant {
       line-height: 1.1;
-      border-top: solid 1px #b5b5b5;
+      border-top:solid 1px #e4e4e4;
       &:nth-child(2n+2):not(:hover) {
         background: rgba(#b5b5b5, 0.2);
       }
@@ -1502,7 +1507,7 @@ select {
       line-height: 28px;
       border:solid 1px #a5a5a5;
       border-radius: 4px;
-      width:6em;
+      width:5em;
     }
   }
 }
@@ -1599,6 +1604,33 @@ select {
         &:after {
           border-bottom-color: $orange;
         }
+      }
+    }
+  }
+}
+
+input[type=radio] {
+  display: none;
+  +.pseudo-radio {
+    display: inline-block;
+    width:14px;
+    height:14px;
+    border-radius: 50%;
+    border:solid 1px #666666;
+    vertical-align: -1px;
+  }
+
+  &:checked {
+    +.pseudo-radio {
+      &:after {
+        position: absolute;
+        left:2px;
+        top:2px;
+        right:2px;
+        bottom:2px;
+        content:'';
+        @include orange-gradient();
+        border-radius: 50%;
       }
     }
   }
