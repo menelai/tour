@@ -243,11 +243,11 @@
 .recommended-tour {
   position: absolute;
   bottom:0;
-  left:0;
+  left:10px;
   background: $orange;
   color:white;
   text-transform: uppercase;
-  width:225px;
+  width:28.5%;
   padding:4px 5px 4px 42px;
   font-size: 12px;
   &:before {
@@ -257,7 +257,7 @@
     position: absolute;
     top:50%;
     margin-top:-27px;
-    left:-18px;
+    left:-28px;
   }
 }
 

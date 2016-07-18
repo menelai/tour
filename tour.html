@@ -80,9 +80,33 @@
           <div>Детский<br>
             пляж</div>
         </div>
+        <div class="tac">
+          <img src="i/wifi.png">
+          <div>Бесплатный<br>
+            Wi-Fi</div>
+        </div>
+        <div class="tac">
+          <img src="i/children.png">
+          <div>Детский<br>
+            клуб</div>
+        </div>
+        <div class="tac">
+          <img src="i/ac.png">
+          <div>Конди-<br>
+            ционер</div>
+        </div>
+        <div class="tac">
+          <img src="i/pool.png">
+          <div>Бассейн</div>
+        </div>
+        <div class="tac">
+          <img src="i/child-beach.png">
+          <div>Детский<br>
+            пляж</div>
+        </div>
       </div>
     </div>
-
+    <hr class="bg-orange mt20 bn">
     <div class="mt30">
       <div class="tac ttu fz16">Курорт «Красная поляна»</div>
     </div>
@@ -95,7 +119,7 @@
 
     <div class="mt30">
       <div class="space10 mb5">
-        <span class="ttu">Авиаперелет</span> <span class="orange">25 июня - 02 июля</span>
+        <span class="ttu">Авиаперелет</span> <span class="orange fwb">25 июня - 02 июля</span>
       </div>
       <div class="fz12 result-flights f ws-r d stretch" ng-click="showF = !showF">
         <div class="airlogo f vcen hcen">
@@ -202,22 +226,22 @@
         <div class="tac ttu fz16">Экскурсии</div>
       </div>
       <ul class="slides f ">
-        <li class="bybounds fi" ng-repeat="l in [1,1,1,1,1,1,1] track by $index">
+        <li class="bybounds fi" ng-repeat="l in ['Экскурсия на остров Skirathos Skirathos', 'Экскурсия на остров Skirathos Skirathos Экскурсия на остров Skirathos Skirathos', 'Экскурсия на остров Skirathos Skirathos', 'Экскурсия на остров Skirathos Skirathos', 'Экскурсия на остров Skirathos Skirathos'] track by $index">
           <div class="flex1">
             <div class="excursion-image">
               <img src="i/exex.png">
             </div>
-            <div class="tac mt10">Экскурсия на остров Skirathos Skirathos</div>
+            <div class="tac mt10">{{l}}</div>
           </div>
           <div class="mt10">
             <div class="f">
               <a href="/" class="grey-button aib flex1 h30">Подробнее</a>
             </div>
-            <div style="height:3em;" ng-if="$index==0" class="mt10 f vcen space6 fz10 hcen">
+            <div style="height:36px;" ng-if="$index==0" class="mt5 f vcen space6 fz12 hcen">
               <div><img src="i/galka.png"></div>
-              <div>Включено в<br>стоимость тура</div>
+              <div class="lh11 grey777">Включено в<br>стоимость тура</div>
             </div>
-            <label style="height:3em;" ng-if="$index!=0" class="mt10 f vcen space2 fz12 hcen">
+            <label style="height:36px;" ng-if="$index!=0" class="mt5 f vcen space2 fz12 hcen">
               <div><input type="checkbox"></div>
               <div class="grey777">Добавить к&nbsp;туру</div>
             </label>
@@ -228,9 +252,9 @@
 
     <div class="mt30">
       <h2 class="tac fwn ttu mb10">Дополнительные услуги</h2>
-      <div class="f d vcen space10 fz10 grey777 fwb">
+      <div class="f d vcen space10 fz12 grey777 fwb">
         <div class="flex1"></div>
-        <div class="tac" style="width:64px;">Стоимость</div>
+        <div class="tac" style="width:74px;">Стоимость</div>
         <div class="tac" style="width:72px;">Количество</div>
         <div style="width:82px;"></div>
       </div>
@@ -238,7 +262,7 @@
         <div class="f d vcen space10">
           <div class="bg-orange starter"></div>
           <div class="flex1">Визовая поддержка</div>
-          <div><span class="orange">55 785 <span class="rub">Р</span></span></div>
+          <div class="tac fwb fz13" style="width:74px;"><span class="orange">55 785 <span class="rub">Р</span></span></div>
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
@@ -247,7 +271,7 @@
         <div class="f d vcen space10">
           <div class="bg-cyan starter"></div>
           <div class="flex1">Конкретизация рейса</div>
-          <div><span class="orange">155 785 <span class="rub">Р</span></span></div>
+          <div class="tac fwb fz13" style="width:74px;"><span class="orange">155 785 <span class="rub">Р</span></span></div>
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
@@ -265,7 +289,7 @@
         25 июня — 2 июля
       </div>
       <div class="flex1 tar fz13 grey">
-        <img src="i/adult-cyan.png" class="vab"> Взрослых×2 <img src="i/child-green.png" class="vab"> Детей×2
+        <!--img src="i/adult-cyan.png" class="vab"> Взрослых×2 <img src="i/child-green.png" class="vab">--> Туристов×2
       </div>
     </div>
 

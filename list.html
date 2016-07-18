@@ -209,8 +209,8 @@
 
         <div class="show-all mb10">
           <a ng-click="allShown=true;" class="grey-button db tac fz13 ttu h30">Показать все 10 <span class="ar dn"></span></a>
-          <div class="all-items" ng-if="allShown">
-            <div class="tac mb10"><span ng-click="$parent.allShown=false;">Свернуть <span class="ar up"></span></span></div>
+          <div class="all-items" ng-show="allShown">
+            <div class="tac mb10"><span ng-click="allShown=false;">Свернуть <span class="ar up"></span></span></div>
             <ul class="ul" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
               <li class="mb10" ng-repeat="el in ::ar">
                 <label class="bysides vtop space10">
@@ -248,8 +248,8 @@
 
         <div class="show-all mb10">
           <a ng-click="allShown1=true;" class="grey-button db tac fz13 ttu h30">Показать все 10 <span class="ar dn"></span></a>
-          <div class="all-items" ng-if="allShown1">
-            <div class="tac mb10"><span ng-click="$parent.allShown1=false;">Свернуть <span class="ar up"></span></span></div>
+          <div class="all-items" ng-show="allShown1">
+            <div class="tac mb10"><span ng-click="allShown1=false;">Свернуть <span class="ar up"></span></span></div>
             <ul class="ul" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
               <li class="mb10" ng-repeat="el in ::ar">
                 <label class="bysides vtop space10">
@@ -289,7 +289,7 @@
                 </label>
                 <div class="p10 tac bt2">
                   <p class="fz12 fwn grey777">Задайте свой диапазон</p>
-                  <div class="mt10 mb10">
+                  <div class="mt10 mb10 fwn">
                     От<br>
                     <input type="text" style="width:150px; max-width: 100%;"><br>
                     до<br>
@@ -433,7 +433,7 @@
                   </div>
                 </div>
                 <div class="bg-grey p10 tour-price">
-                  <div class="tac fz12 orange">25 сентября — 22 сентября</div>
+                  <div class="tac fz12 orange fwb">25 сентября — 22 сентября</div>
                   <div class="tac mt10"><img src="i/adult.png" class="vab">×2 <img src="i/child.png" class="vab">×2</div>
                   <div class="mt10 tac fz24 fwb">
                     212 338 <span class="rub">Р</span>
