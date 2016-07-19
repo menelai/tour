@@ -207,7 +207,7 @@
           </li>
         </ul>
 
-        <div class="show-all mb10">
+        <!--div class="show-all mb10">
           <a ng-click="allShown=true;" class="grey-button db tac fz13 ttu h30">Показать все 10 <span class="ar dn"></span></a>
           <div class="all-items" ng-show="allShown">
             <div class="tac mb10"><span ng-click="allShown=false;">Свернуть <span class="ar up"></span></span></div>
@@ -219,6 +219,17 @@
                 </label>
               </li>
             </ul>
+          </div>
+        </div-->
+        <div class="like-select grey-button f vcen h30">
+          <p class="label" ng-click="turop=!turop">Показать все 10</p>
+          <b class="button">▾</b>
+
+          <div class="variants b-1 border-orange align-right" style="width:100%;" ng-show="turop" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
+            <label class="variant bysides vtop space10 p10" ng-repeat="el in ::ar">
+              <div class="bysides vtop space6"><div><input type="radio" name="oper" class="vab"></div> <div>{{::el.title}}</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
           </div>
         </div>
       </div>
@@ -246,7 +257,7 @@
           </li>
         </ul>
 
-        <div class="show-all mb10">
+        <!--div class="show-all mb10">
           <a ng-click="allShown1=true;" class="grey-button db tac fz13 ttu h30">Показать все 10 <span class="ar dn"></span></a>
           <div class="all-items" ng-show="allShown1">
             <div class="tac mb10"><span ng-click="allShown1=false;">Свернуть <span class="ar up"></span></span></div>
@@ -259,15 +270,26 @@
               </li>
             </ul>
           </div>
+        </div-->
+        <div class="like-select grey-button f vcen h30">
+          <p class="label" ng-click="turop1=!turop1">Показать все 10</p>
+          <b class="button">▾</b>
+
+          <div class="variants b-1 border-orange align-right" style="width:100%;" ng-show="turop1" ng-init="ar = [{title:'Аэрофлот', code:'DME', price:'12&thinsp;338'}, {title:'Air France', code:'SVO', price:'12&thinsp;338'}, {title:'S7', code:'VKO', price:'12&thinsp;338'}]">
+            <label class="variant bysides vtop space10 p10" ng-repeat="el in ::ar">
+              <div class="bysides vtop space6"><div><input type="radio" name="oper" class="vab"></div> <div>{{::el.title}}</div></div>
+              <div class="orange fwb wsn">55 000 <span class="rub">Р</span></div>
+            </label>
+          </div>
         </div>
       </div>
     </div>
     <div class="flex1">
-      <div class="bysides stretch space10">
+      <div class="bysides stretch space20">
         <div class="flex1 f d stretch split4 main-selects">
           <div class="bybounds">
             <div class="mb5">Диапазон цен, <span class="rub">Р</span></div>
-            <div class="like-select rng f vcen">
+            <div class="like-select rng f vcen h30">
               <p class="label" ng-click="diapazon=!diapazon">10&nbsp;000 — 20&nbsp;000</p>
               <b class="button">▾</b>
 
@@ -302,7 +324,7 @@
           </div>
           <div class="bybounds">
             <div class="mb5">Сортировать по:</div>
-            <select class="selectric rng html">
+            <select class="selectric rng html h30">
               <option value="5 000 — 7 000" data-html="Рекомендуемые">Рекомендуемые</option>
               <option value="15 000 — 17 000" data-html="По популярности">По популярности</option>
               <option value="25 000 — 27 000" data-html="По цене">По цене</option>
@@ -310,7 +332,7 @@
           </div>
           <div class="bybounds">
             <div class="mb5">Выбрать отель</div>
-            <div class="like-select rng f vcen">
+            <div class="like-select rng f vcen h30">
               <p class="label" ng-click="hotel=!hotel">Все отели</p>
               <b class="button">▾</b>
 
@@ -341,7 +363,7 @@
           </div>
           <div class="bybounds">
             <div class="mb5">Тип тура</div>
-            <select class="selectric rng">
+            <select class="selectric rng h30">
               <option value="5 000 — 7 000">Все типы туров</option>
               <option value="15 000 — 17 000">Экскурсионный</option>
               <option value="25 000 — 27 000">Пляжный</option>
@@ -349,8 +371,8 @@
             </select>
           </div>
           <div class="bybounds">
-            <div class="mb5">Тип пляжа, линия</div>
-            <div class="like-select rng f vcen">
+            <div class="mb5">Тип пляжа</div>
+            <div class="like-select rng f vcen h30">
               <p class="label" ng-click="beach=!beach">Все пляжи</p>
               <b class="button">▾</b>
 
@@ -395,8 +417,8 @@
           <div class="flex1 bybounds  mw0">
             <div class="result-contents p10">
               <div class="f ws-r d space10 vtop">
-                <div class="flex1 fz16 f ws-r vtop space10">
-                  <div>
+                <div class="flex1 fz16 f ws-r vtop space10 ">
+                  <div class="ttu">
                     Sheraton Moscow Sheremetyevo Hotel
                   </div>
                   <div class="mt3">
@@ -444,7 +466,7 @@
               <div class="f d vtop ws-r mt10 space10">
                 <div class="flex1 mw0">
                   <div class="fz12 mb5 orange fwb">Тип питания</div>
-                  <select class="selectric grey multiline hasprice">
+                  <select class="selectric grey multiline hasprice h30">
                     <option value="5 000 — 7 000" data-price="55000">Ультра всё включено</option>
                     <option value="15 000 — 17 000" data-price="155000">Всё включено</option>
                     <option value="25 000 — 27 000" data-price="255000">HB — завтрак, ужин</option>
@@ -452,7 +474,7 @@
                 </div>
                 <div class="flex1 mw0">
                   <div class="fz12 mb5 orange fwb">Тип номера</div>
-                  <select class="selectric grey multiline hasprice">
+                  <select class="selectric grey multiline hasprice h30">
                     <option value="5 000 — 7 000" data-price="55000">Семейный номер,
                       2 комнаты,
                       боковой вид на море</option>

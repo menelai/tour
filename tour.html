@@ -32,7 +32,7 @@
 
     <div class="f ws-r hcen mt5">
       <div class="fz16 f ws-r vtop space10">
-        <div>
+        <div class="ttu">
           Sheraton Moscow Sheremetyevo Hotel
         </div>
         <div class="mt3">
@@ -107,7 +107,7 @@
       </div>
     </div>
     <hr class="bg-orange mt20 bn">
-    <div class="mt30">
+    <div class="mt17">
       <div class="tac ttu fz16">Курорт «Красная поляна»</div>
     </div>
     <div class="f mt5">
@@ -255,7 +255,7 @@
       <div class="f d vcen space10 fz12 grey777 fwb">
         <div class="flex1"></div>
         <div class="tac" style="width:74px;">Стоимость</div>
-        <div class="tac" style="width:72px;">Количество</div>
+        <div class="tac" style="width:78px;">Количество</div>
         <div style="width:82px;"></div>
       </div>
       <div class="additional-services">
@@ -285,17 +285,17 @@
     <div class="col-header">Бронирование тура</div>
 
     <div class="f d vbot ws-r mt10 p10 border-orange b-1">
-      <div class="flex1 tac orange">
+      <div class="flex1 tac orange fwb">
         25 июня — 2 июля
       </div>
       <div class="flex1 tar fz13 grey">
-        <!--img src="i/adult-cyan.png" class="vab"> Взрослых×2 <img src="i/child-green.png" class="vab">--> Туристов×2
+        <!--img src="i/adult-cyan.png" class="vab"> Взрослых×2 <img src="i/child-green.png" class="vab">--> <img src="i/adult.png" class="vab">×2 <img src="i/child.png" class="vab">×2
       </div>
     </div>
 
     <div class="f d vtop ws-r mt10 space10">
       <div class="flex1 mw0">
-        <div class="grey777 fz12 mb5">Тип питания</div>
+        <div class="orange fwb fz12 mb5">Тип питания</div>
         <select class="selectric grey multiline hasprice">
           <option value="5 000 — 7 000" data-price="55000">Ультра всё включено</option>
           <option value="15 000 — 17 000" data-price="155000">Всё включено</option>
@@ -303,7 +303,7 @@
         </select>
       </div>
       <div class="flex1 mw0">
-        <div class="grey777 fz12 mb5">Тип номера</div>
+        <div class="orange fwb fz12 mb5">Тип номера</div>
         <select class="selectric grey multiline hasprice">
           <option value="5 000 — 7 000" data-price="55000">Семейный номер,
             2 комнаты,
@@ -336,7 +336,7 @@
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-cyan"></div>
-        <div class="flex1"><img src="i/intourist.png"/></div>
+        <div class="flex1"><img src="i/bib.png"/></div>
         <div>55 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-green green"><b>54 000</b> <span class="rub">Р</span></div>
@@ -344,7 +344,7 @@
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-green"></div>
-        <div class="flex1"><img src="i/intourist.png"/></div>
+        <div class="flex1"><img src="i/anex.png"/></div>
         <div>255 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">10 000 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-green green"><b>254 000</b> <span class="rub">Р</span></div>
@@ -387,9 +387,9 @@
             <div class="f d vtop ws-r space10 mt2">
               <div>Топливный сбор</div><div class="wsn">670 <span class="rub">Р</span></div>
             </div>
-            <div class="f d vtop ws-r space10 mt2">
+            <div class="f d vcen ws-r space10 mt2">
               <div>Окончательная
-                стоимость тура</div><div class="wsn">670 <span class="rub">Р</span></div>
+                стоимость&nbsp;тура</div><div class="wsn">670 <span class="rub">Р</span></div>
             </div>
           </div>
           <div class="bybounds fl130">
@@ -408,11 +408,11 @@
     <div class="mt20 border-orange b-1 p10">
       <div class="f d ws-r space30 vcen">
         <div class="orange ttu">Покупатель</div>
-        <div class="flex1 f "><input type="text" class="flex1 b-1"></div>
+        <div class="flex1 f "><input type="text" class="flex1 b-1 h30"></div>
       </div>
       <div class="mt10 f d ws-r vcen space4">
         <div class="flex1 f">
-          <input type="text" class="flex1 cellular b-1" placeholder="Номер мобильного телефона" value="+7">
+          <input type="text" class="flex1 cellular b-1 h30" placeholder="Номер мобильного телефона" value="+7">
           <select class="selectric countrycode">
             <option value="+7" data-flag="i/flag.png">Россия</option>
             <option value="+90" data-flag="i/greece.png">Грузия</option>
@@ -422,7 +422,7 @@
             <option value="+800" data-flag="i/greece.png">Зимбабве</option>
           </select>
         </div>
-        <div class="flex1 f"><input type="text" class="flex1 b-1" placeholder="Ваш Email"></div>
+        <div class="flex1 f"><input type="text" class="flex1 b-1 h30" placeholder="Ваш Email"></div>
       </div>
     </div>
     <div class="border-orange b-1 p10 mt-1" ng-repeat="l in [1,1] track by $index">
@@ -432,7 +432,7 @@
         <div class="flex1 f space10 vcen d">
           <div>Документ</div>
           <div class="flex1">
-            <select class="selectric grey">
+            <select class="selectric grey h30">
               <option value="+7" data-flag="i/flag.png">Россия</option>
               <option value="+90" data-flag="i/greece.png">Грузия</option>
               <option value="+383" data-flag="i/flag.png">Россия</option>
@@ -447,21 +447,21 @@
       <div class="mt10 f d vcen space10">
         <div class="f vbot space4">
           <div><img src="i/adult-cyan.png"></div>
-          <div>
+          <div class="lh1">
             <div>Пол</div>
-            <div><label><input type="radio" name="s"> М</label></div>
-            <div><label><input type="radio" name="s"> Ж</label></div>
+            <div class="mt4"><label><input type="radio" name="s"> М</label></div>
+            <div class="mt4"><label><input type="radio" name="s"> Ж</label></div>
           </div>
         </div>
         <div class="flex1">
           <div class="f d vtop space10">
-            <div class="flex1 f"><input type="text" class="flex1 b-1" placeholder="Ваш Email"></div>
-            <div class="flex1 f"><input type="text" class="flex1 b-1" placeholder="Ваш Email"></div>
+            <div class="flex1 f"><input type="text" class="flex1 b-1 h30" placeholder="Ваш Email"></div>
+            <div class="flex1 f"><input type="text" class="flex1 b-1 h30" placeholder="Ваш Email"></div>
           </div>
           <div class="mt10 f d vcen space10">
             <div class="flex1 tar">Гражданство</div>
             <div>
-              <select class="selectric citizenship grey">
+              <select class="selectric citizenship grey h30">
                 <option value="Georgia" data-flag="i/flag.png">Албания</option>
                 <option value="Georgia" data-flag="i/greece.png">Грузия</option>
                 <option value="Georgia" data-flag="i/flag.png">Россия</option>
@@ -474,15 +474,15 @@
           <div class="mt10 f d vtop space4 tac grey mw0">
             <div class="flex1 mw0">
               <div class="fz12">Дата рождения</div>
-              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1 fwb fz14"></div>
+              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1 fwb fz14 h30"></div>
             </div>
             <div class="flex2 mw0">
               <div class="fz12">Серия и номер загранпаспорта</div>
-              <div class="f mw0"><input type="text" class="flex1 mw0 w100 b-1"></div>
+              <div class="f mw0"><input type="text" class="flex1 mw0 w100 b-1 h30"></div>
             </div>
             <div class="flex1 mw0">
               <div class="fz12">Срок действия</div>
-              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1 fwb fz14"></div>
+              <div class="f mw0"><input type="text" class="datepicker flex1 mw0 w100 b-1 fwb fz14 h30"></div>
             </div>
           </div>
         </div>

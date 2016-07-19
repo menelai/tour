@@ -291,11 +291,17 @@
 }
 
 .selectric-h30 {
+  &:not(.selectric-multiline) {
+    .selectric {
+      .label {
+        line-height: 30px;
+        height: 30px;
+      }
+    }
+  }
   .selectric {
     height: 30px;
     .label {
-      line-height: 30px;
-      height: 30px;
     }
     .button {
       height: 30px;

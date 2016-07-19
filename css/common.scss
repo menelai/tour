@@ -629,10 +629,17 @@ input[type=text] {
     border:solid 1px $grey;
     border-radius: 2px;
   }
+  &.h30 {
+    height: 30px;
+    line-height: 30px;
+    &.b-1 {
+      line-height: 28px;
+    }
+  }
 }
 
 .selectric-items {
-  font-weight: bold;
+  //font-weight: bold;
   margin-top:2px;
   box-shadow: none;
   background: rgba(white, 0.95);
@@ -948,10 +955,10 @@ input[type=text] {
     vertical-align: middle;
   }
   .minus, .plus {
-    height:22px;
+    height:23px;
     border:solid 1px $orange;
     border-radius: 4px;
-    width:22px;
+    width:23px;
     text-indent: -9999px;
     @include grey-gradient();
     position: relative;
@@ -984,7 +991,7 @@ input[type=text] {
   }
   input {
     margin:0 2px;
-    height:22px;
+    height:23px;
     line-height: 17px;
     border:solid 1px $lightgrey;
     width:2em;
@@ -1385,7 +1392,7 @@ select {
     @include align-items(center);
     >.label {
       line-height: 1.1;
-      font-size: 13px;
+      font-size: 12px;
       height: auto;
       white-space: normal;
     }
@@ -1460,6 +1467,9 @@ select {
     line-height: 1.1;
   }
   height:40px;
+  &.h30 {
+    height: 30px;
+  }
   .button {
     display: block;
     position: absolute;
@@ -1469,7 +1479,7 @@ select {
     text-align: center;
     font: 0/0 a;
     *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
-    height: 40px;
+    bottom: 0;
     width: 32px;
 
     &:after {
@@ -1488,6 +1498,15 @@ select {
     }
   }
 
+  &.grey-button {
+    .button {
+      color:$orange;
+      &:after {
+        border-top-color:$orange;
+      }
+    }
+  }
+
   &.rng {
     @include orange-gradient();
     box-shadow: none;
@@ -1501,7 +1520,7 @@ select {
   }
 
   .variants {
-    font-weight: bold;
+    //font-weight: bold;
     position: absolute;
     top:100%;
     left:0;
@@ -1518,7 +1537,9 @@ select {
 
     .variant {
       line-height: 1.1;
-      border-top:solid 1px #e4e4e4;
+      &:not(:first-child) {
+        border-top: solid 1px #e4e4e4;
+      }
       &:nth-child(2n+2):not(:hover) {
         background: rgba(#b5b5b5, 0.2);
       }
@@ -1646,6 +1667,7 @@ input[type=radio] {
     border-radius: 50%;
     border:solid 1px #666666;
     vertical-align: -1px;
+    background: #FFFFFF;
   }
 
   &:checked {
