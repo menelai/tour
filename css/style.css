@@ -12855,6 +12855,42 @@ input[type=radio]:checked + .pseudo-radio:after {
   border-radius: 50%;
 }
 
+/* line 1689, common.scss */
+input[type=checkbox] {
+  display: none;
+}
+/* line 1691, common.scss */
+input[type=checkbox] + .pseudo-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: solid 1px #666666;
+  vertical-align: -1px;
+  background: #FFFFFF;
+  box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.11);
+}
+/* line 1701, common.scss */
+label:hover input[type=checkbox] + .pseudo-checkbox, input[type=checkbox] + .pseudo-checkbox:hover {
+  box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.31);
+}
+/* line 1708, common.scss */
+input[type=checkbox]:checked + .pseudo-checkbox:after {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  content: '';
+  background: url(../i/checkbox.png) center center no-repeat;
+}
+
+/* line 1721, common.scss */
+input[type="text"].calendar {
+  background: #fff url(../i/calendar.png) right center no-repeat;
+  background-origin: content-box;
+}
+
 /* line 5, list.scss */
 .result-starter {
   -webkit-flex: 0 0 10px;
@@ -13314,153 +13350,157 @@ input[type=radio]:checked + .pseudo-radio:after {
 .additional-services > div > *:not(.starter) {
   padding: 10px 0;
 }
+/* line 90, tour.scss */
+.additional-services input[type=button] {
+  width: 82px;
+}
 
-/* line 91, tour.scss */
+/* line 95, tour.scss */
 .turoperators-table {
   padding: 5px 0;
 }
-/* line 95, tour.scss */
+/* line 99, tour.scss */
 .turoperators-table:not(.header) > div:nth-child(3), .turoperators-table:not(.header) > div:nth-child(4), .turoperators-table:not(.header) > div:nth-child(5) {
   line-height: 28px;
   text-align: center;
 }
-/* line 100, tour.scss */
+/* line 104, tour.scss */
 .turoperators-table:not(.header) > div:nth-child(4), .turoperators-table:not(.header) > div:nth-child(5) {
   padding: 0 6px;
 }
-/* line 107, tour.scss */
+/* line 111, tour.scss */
 .turoperators-table > div:nth-child(1) {
   -webkit-flex: 0 0 10px;
   flex: 0 0 10px;
   margin: -5px 0;
 }
-/* line 111, tour.scss */
+/* line 115, tour.scss */
 .turoperators-table > div:nth-child(3) {
   -webkit-flex: 0 0 70px;
   flex: 0 0 70px;
 }
-/* line 114, tour.scss */
+/* line 118, tour.scss */
 .turoperators-table > div:nth-child(4) {
   -webkit-flex: 0 0 70px;
   flex: 0 0 70px;
 }
-/* line 117, tour.scss */
+/* line 121, tour.scss */
 .turoperators-table > div:nth-child(5) {
   -webkit-flex: 0 0 80px;
   flex: 0 0 80px;
 }
-/* line 120, tour.scss */
+/* line 124, tour.scss */
 .turoperators-table > div:nth-child(6) {
   -webkit-flex: 0 0 80px;
   flex: 0 0 80px;
 }
-/* line 125, tour.scss */
+/* line 129, tour.scss */
 .turoperators-table input.grey-button {
   height: 30px;
   line-height: 20px;
 }
 
-/* line 131, tour.scss */
+/* line 135, tour.scss */
 .tour-total {
   border-top: solid 1px #e4e4e4;
   padding-top: 20px;
 }
-/* line 134, tour.scss */
+/* line 138, tour.scss */
 .tour-total > .sep {
   -webkit-align-self: stretch;
   align-self: stretch;
 }
 
-/* line 140, tour.scss */
+/* line 144, tour.scss */
 .fl130 {
   -webkit-flex: 0 0 130px;
   flex: 0 0 130px;
 }
 
-/* line 144, tour.scss */
+/* line 148, tour.scss */
 .please-title {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   color: white;
 }
 
-/* line 150, tour.scss */
+/* line 154, tour.scss */
 input[type="text"].cellular {
   padding-left: 50px;
 }
 
-/* line 153, tour.scss */
+/* line 157, tour.scss */
 .selectric-countrycode {
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -20px;
 }
-/* line 158, tour.scss */
+/* line 162, tour.scss */
 .selectric-countrycode .selectric {
   border: none;
   background: none;
   box-shadow: none;
 }
-/* line 163, tour.scss */
+/* line 167, tour.scss */
 .selectric-countrycode .selectric .label {
   margin-right: 15px;
 }
-/* line 165, tour.scss */
+/* line 169, tour.scss */
 .selectric-countrycode .selectric .label .flag {
   margin: 3px;
 }
-/* line 167, tour.scss */
+/* line 171, tour.scss */
 .selectric-countrycode .selectric .label .flag img {
   border: solid 1px #cccccc;
 }
-/* line 172, tour.scss */
+/* line 176, tour.scss */
 .selectric-countrycode .selectric .button {
   width: 15px;
 }
-/* line 174, tour.scss */
+/* line 178, tour.scss */
 .selectric-countrycode .selectric .button:after {
   border-width: 4px;
 }
 
-/* line 181, tour.scss */
+/* line 185, tour.scss */
 .flag {
   margin-right: 15px;
 }
-/* line 183, tour.scss */
+/* line 187, tour.scss */
 .flag.country-code-flag {
   margin-right: 5px;
 }
-/* line 186, tour.scss */
+/* line 190, tour.scss */
 .flag img {
   border: solid 1px #cccccc;
   display: inline-block;
   vertical-align: -2px;
 }
 
-/* line 193, tour.scss */
+/* line 197, tour.scss */
 .selectric-citizenship {
   width: 250px;
 }
 
-/* line 198, tour.scss */
+/* line 202, tour.scss */
 .payment-ways > label {
   -webkit-flex: 0 0 200px;
   flex: 0 0 200px;
 }
 
-/* line 203, tour.scss */
+/* line 207, tour.scss */
 #tour-columns {
   padding-top: 0px;
   padding-bottom: 30px;
 }
 
-/* line 208, tour.scss */
+/* line 212, tour.scss */
 #responses, .exslider {
   padding: 0 30px;
 }
 
-/* line 213, tour.scss */
+/* line 217, tour.scss */
 .exslider .flex-direction-nav a {
   top: 80px;
 }

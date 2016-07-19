@@ -38,6 +38,7 @@
           $(function() {
 
             $("input[type=radio]").after('<div class="pseudo-radio"></div>');
+            $("input[type=checkbox]").after('<div class="pseudo-checkbox"></div>');
 
             var data = [
               { label: "Греция", category: "" },
