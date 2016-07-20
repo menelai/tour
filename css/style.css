@@ -13357,150 +13357,154 @@ input[type="text"].calendar {
 
 /* line 95, tour.scss */
 .turoperators-table {
-  padding: 5px 0;
+  padding: 0 0 5px 0;
 }
-/* line 99, tour.scss */
+/* line 97, tour.scss */
+.turoperators-table:not(.header) {
+  padding-top: 5px;
+}
+/* line 100, tour.scss */
 .turoperators-table:not(.header) > div:nth-child(3), .turoperators-table:not(.header) > div:nth-child(4), .turoperators-table:not(.header) > div:nth-child(5) {
   line-height: 28px;
   text-align: center;
 }
-/* line 104, tour.scss */
+/* line 105, tour.scss */
 .turoperators-table:not(.header) > div:nth-child(4), .turoperators-table:not(.header) > div:nth-child(5) {
   padding: 0 6px;
 }
-/* line 111, tour.scss */
+/* line 112, tour.scss */
 .turoperators-table > div:nth-child(1) {
   -webkit-flex: 0 0 10px;
   flex: 0 0 10px;
   margin: -5px 0;
 }
-/* line 115, tour.scss */
+/* line 116, tour.scss */
 .turoperators-table > div:nth-child(3) {
   -webkit-flex: 0 0 70px;
   flex: 0 0 70px;
 }
-/* line 118, tour.scss */
+/* line 119, tour.scss */
 .turoperators-table > div:nth-child(4) {
   -webkit-flex: 0 0 70px;
   flex: 0 0 70px;
 }
-/* line 121, tour.scss */
+/* line 122, tour.scss */
 .turoperators-table > div:nth-child(5) {
   -webkit-flex: 0 0 80px;
   flex: 0 0 80px;
 }
-/* line 124, tour.scss */
+/* line 125, tour.scss */
 .turoperators-table > div:nth-child(6) {
   -webkit-flex: 0 0 80px;
   flex: 0 0 80px;
 }
-/* line 129, tour.scss */
+/* line 130, tour.scss */
 .turoperators-table input.grey-button {
   height: 30px;
   line-height: 20px;
 }
 
-/* line 135, tour.scss */
+/* line 136, tour.scss */
 .tour-total {
   border-top: solid 1px #e4e4e4;
   padding-top: 20px;
 }
-/* line 138, tour.scss */
+/* line 139, tour.scss */
 .tour-total > .sep {
   -webkit-align-self: stretch;
   align-self: stretch;
 }
 
-/* line 144, tour.scss */
+/* line 145, tour.scss */
 .fl130 {
   -webkit-flex: 0 0 130px;
   flex: 0 0 130px;
 }
 
-/* line 148, tour.scss */
+/* line 149, tour.scss */
 .please-title {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   color: white;
 }
 
-/* line 154, tour.scss */
+/* line 155, tour.scss */
 input[type="text"].cellular {
   padding-left: 50px;
 }
 
-/* line 157, tour.scss */
+/* line 158, tour.scss */
 .selectric-countrycode {
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -20px;
 }
-/* line 162, tour.scss */
+/* line 163, tour.scss */
 .selectric-countrycode .selectric {
   border: none;
   background: none;
   box-shadow: none;
 }
-/* line 167, tour.scss */
+/* line 168, tour.scss */
 .selectric-countrycode .selectric .label {
   margin-right: 15px;
 }
-/* line 169, tour.scss */
+/* line 170, tour.scss */
 .selectric-countrycode .selectric .label .flag {
   margin: 3px;
 }
-/* line 171, tour.scss */
+/* line 172, tour.scss */
 .selectric-countrycode .selectric .label .flag img {
   border: solid 1px #cccccc;
 }
-/* line 176, tour.scss */
+/* line 177, tour.scss */
 .selectric-countrycode .selectric .button {
   width: 15px;
 }
-/* line 178, tour.scss */
+/* line 179, tour.scss */
 .selectric-countrycode .selectric .button:after {
   border-width: 4px;
 }
 
-/* line 185, tour.scss */
+/* line 186, tour.scss */
 .flag {
   margin-right: 15px;
 }
-/* line 187, tour.scss */
+/* line 188, tour.scss */
 .flag.country-code-flag {
   margin-right: 5px;
 }
-/* line 190, tour.scss */
+/* line 191, tour.scss */
 .flag img {
   border: solid 1px #cccccc;
   display: inline-block;
   vertical-align: -2px;
 }
 
-/* line 197, tour.scss */
+/* line 198, tour.scss */
 .selectric-citizenship {
   width: 250px;
 }
 
-/* line 202, tour.scss */
+/* line 203, tour.scss */
 .payment-ways > label {
   -webkit-flex: 0 0 200px;
   flex: 0 0 200px;
 }
 
-/* line 207, tour.scss */
+/* line 208, tour.scss */
 #tour-columns {
   padding-top: 0px;
   padding-bottom: 30px;
 }
 
-/* line 212, tour.scss */
+/* line 213, tour.scss */
 #responses, .exslider {
   padding: 0 30px;
 }
 
-/* line 217, tour.scss */
+/* line 218, tour.scss */
 .exslider .flex-direction-nav a {
   top: 80px;
 }

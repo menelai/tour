@@ -93,8 +93,9 @@
 }
 
 .turoperators-table {
-  padding:5px 0;
+  padding:0 0 5px 0;
   &:not(.header) {
+    padding-top:5px;
     > div {
       &:nth-child(3), &:nth-child(4), &:nth-child(5) {
         line-height: 28px;
