@@ -83,7 +83,7 @@
 .additional-services {
   >div {
     >*:not(.starter) {
-      padding:10px 0;
+      padding:0 0 10px 0;
     }
   }
 
@@ -134,7 +134,7 @@
 }
 
 .tour-total {
-  border-top:solid 1px #777777;
+  border-top:solid 1px #bebebe;
   padding-top:20px;
   >.sep {
     @include align-self(stretch);
@@ -143,7 +143,7 @@
 
 
 .fl130 {
-  @include flex(0 0 130px);
+  @include flex(0 0 140px);
 }
 
 .please-title {
@@ -217,5 +217,16 @@ input[type="text"].cellular {
 .exslider {
   .flex-direction-nav a {
     top:80px;
+  }
+}
+
+.hotel-photos {
+  .flex-direction-nav {
+    .flex-prev {
+      background: url(../i/white-slider-left.png) left center no-repeat;
+    }
+    .flex-next {
+      background: url(../i/white-slider-right.png) right center no-repeat;
+    }
   }
 }
