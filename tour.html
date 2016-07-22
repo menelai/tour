@@ -55,7 +55,7 @@
 
     <div class="mt15">
       <div class="tac ttu">Услуги в отеле</div>
-      <div class="f vtop hcen ws-r mt5 grey777 fz10 hotel-icons">
+      <div class="f vtop d ws-r mt5 grey777 fz10 hotel-icons">
         <div class="tac">
           <img src="i/wifi.png">
           <div>Бесплатный<br>
@@ -90,6 +90,16 @@
           <div>Детский<br>
             клуб</div>
         </div>
+        <div class="tac">
+          <img src="i/wifi.png">
+          <div>Бесплатный<br>
+            Wi-Fi</div>
+        </div>
+        <div class="tac">
+          <img src="i/children.png">
+          <div>Детский<br>
+            клуб</div>
+        </div>
       </div>
     </div>
     <div class="mt20">
@@ -102,11 +112,11 @@
       <img src="i/kurort.jpg" class="w100">
     </div>
 
-    <div class="mt20">
+    <div class="mt20 tour-flights">
       <div class="space10 mb5">
         <span class="ttu">Авиаперелет</span> <span class="orange fwm fz12">25 июня - 02 июля</span>
       </div>
-      <div class="fz12 result-flights f ws-r d stretch" ng-click="showF = !showF">
+      <div class="fz12 result-flights f ws-r d stretch" ng-class="'shown'+showF" ng-click="showF = !showF">
         <div class="airlogo f vcen hcen">
           <img src="i/airlogo.png">
         </div>
@@ -149,18 +159,18 @@
     <div id="responses" class="mt20">
       <h2 id="resp-title" class="tac fwn ttu">Отзывы покупателей</h2>
       <ul class="slides">
-        <li ng-repeat="l in [1,1,1,1,1,1,1] track by $index" class="fi r vcen space10">
-          <div class="tac">
+        <li ng-repeat="l in [1,1,1,1,1,1,1] track by $index" class="fi r stretch space20">
+          <div class="tac bybounds">
             <img src="i/default.png">
             <div class="mt5 fz12">28.09.2014<br>Алексей</div>
           </div>
-          <div class="flex1">
+          <div class="flex1 bybounds">
             <div class="fz13">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
             <div class="f r vcen space10 mt10">
               <div class="flex1 tar">
-                <a href="/" class="orange"><div class="fz11">Проверить отзыв</div></a>
+                <!--a href="/" class="orange"><div class="fz11">Проверить отзыв</div></a-->
               </div>
               <a href="/" class="grey-button aib h22 fz13">Прочесть полностью</a>
             </div>
@@ -217,19 +227,19 @@
         <li class="bybounds fi" ng-repeat="l in ['Экскурсия на остров Skirathos Skirathos', 'Экскурсия на остров Skirathos Skirathos Экскурсия ', 'Экскурсия на остров Skirathos Skirathos', 'Экскурсия на остров Skirathos Skirathos', 'Экскурсия на остров Skirathos Skirathos'] track by $index">
           <div class="flex1">
             <div class="excursion-image">
-              <img src="i/exex.png">
+              <img src="i/exex{{$index ? 0 : 1}}.png">
             </div>
             <div class="tac mt10 fz12">{{l}}</div>
           </div>
-          <div class="mt10">
+          <div class="">
             <div class="f">
               <a href="/" class="grey-button aib flex1 h30">Подробнее</a>
             </div>
-            <div style="height:36px;" ng-if="$index==0" class="mt5 f vcen space6 fz10 hcen fwm">
+            <div style="height:25px;" ng-if="$index==0" class="mt5 f vcen space6 fz10 hcen fwm">
               <div><img src="i/galka.png"></div>
               <div class="lh11 grey777">Включено в<br>стоимость тура</div>
             </div>
-            <label style="height:36px;" ng-if="$index!=0" class="mt5 f vcen space2 fz10 hcen fwm">
+            <label style="height:25px;" ng-if="$index!=0" class="mt5 f vcen space2 fz10 hcen fwm space6">
               <div><input type="checkbox"></div>
               <div class="grey777">Добавить к&nbsp;туру</div>
             </label>
@@ -238,38 +248,38 @@
       </ul>
     </div>
 
-    <div class="mt20">
+    <div class="mt20 extra-services">
       <h2 class="tac fwn ttu mb10">Дополнительные услуги</h2>
-      <div class="f d vcen space10 fz10 grey777">
+      <div class="f d vcen space10 fz10 grey777 additional-services-title">
         <div class="bg-orange starter"></div>
         <div class="flex1"></div>
-        <div class="tac fwm mb4" style="width:74px;">Стоимость</div>
-        <div class="tac fwm mb4" style="width:78px;">Количество</div>
-        <div style="width:82px;"></div>
+        <div class="tac fwm mb4">Стоимость</div>
+        <div class="tac fwm mb4">Количество</div>
+        <div></div>
       </div>
       <div class="additional-services">
         <div class="f d vcen space10">
           <div class="bg-orange starter"></div>
-          <div class="flex1 fz15">Визовая поддержка</div>
-          <div class="tac fwb fz13" style="width:74px;"><span class="orange">55 785 <span class="rub">Р</span></span></div>
+          <div class="fz15">Визовая поддержка</div>
+          <div class="tac fwb fz13"><span class="orange">55 785 <span class="rub">Р</span></span></div>
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
           <div><input type="button" value="Добавить" class="grey-button aib h22"></div>
         </div>
       </div>
-      <div class="f d vcen space10 fz10 grey777">
+      <div class="f d vcen space10 fz10 grey777 additional-services-title">
         <div class="bg-cyan starter"></div>
         <div class="flex1"></div>
-        <div class="tac fwm mb4" style="width:74px;">Стоимость</div>
-        <div class="tac fwm mb4" style="width:78px;">Количество</div>
-        <div style="width:82px;"></div>
+        <div class="tac fwm mb4">Стоимость</div>
+        <div class="tac fwm mb4">Количество</div>
+        <div></div>
       </div>
       <div class="additional-services">
         <div class="f d vcen space10">
           <div class="bg-cyan starter"></div>
-          <div class="flex1 fz15">Конкретизация рейса</div>
-          <div class="tac fwb fz13" style="width:74px;"><span class="orange">155 785 <span class="rub">Р</span></span></div>
+          <div class="fz15">Конкретизация рейса</div>
+          <div class="tac fwb fz13"><span class="orange">155 785 <span class="rub">Р</span></span></div>
           <div>
             <div class="number-with-spinners"><span class="minus" ng-click="ad=ad-1;">−</span><input type="number" ng-model="ad" ng-init="ad=1;" step="1" min="1"><span class="plus" ng-click="ad=ad+1;">+</span></div>
           </div>
@@ -287,14 +297,14 @@
         25 сентября — 2 сентября
       </div>
       <div class=" tar fz13 grey777">
-        <img src="i/adult-cyan.png" class="vab"> Взрослых×2 <img src="i/child-green.png" class="vab"> Детей×2
+        <img src="i/adult-cyan.png" class="vab" style="height:26px;"> Взрослых×2 <img src="i/child-green.png" class="vab" style="height:18px;"> Детей×2
       </div>
     </div>
 
     <div class="f d vtop ws-r mt10 space10">
       <div class="flex1 mw0">
         <div class="orange fwb fz12 mb5">Тип питания</div>
-        <select class="selectric grey multiline hasprice">
+        <select class="selectric grey hasprice h30">
           <option value="5 000 — 7 000" data-price="55000">Ультра всё включено</option>
           <option value="15 000 — 17 000" data-price="155000">Всё включено</option>
           <option value="25 000 — 27 000" data-price="255000">HB — завтрак, ужин</option>
@@ -302,7 +312,7 @@
       </div>
       <div class="flex1 mw0">
         <div class="orange fwb fz12 mb5">Тип номера</div>
-        <select class="selectric grey multiline hasprice">
+        <select class="selectric grey hasprice h30">
           <option value="5 000 — 7 000" data-price="55000">Семейный номер,
             2 комнаты,
             боковой вид на море</option>
@@ -316,7 +326,7 @@
     </div>
 
     <div class="mt20">
-      <div class="f d vcen ws-r turoperators-table fz10 tac grey777 space10 header fwm">
+      <div class="f d vcen ws-r turoperators-table fz10 tac grey777 space14 header fwm">
         <div class="starter"></div>
         <div class="flex1">Туроператор</div>
         <div>Стоимость</div>
@@ -326,43 +336,43 @@
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-orange"></div>
-        <div class="flex1"><img src="i/intourist.png"/></div>
+        <div class=""><img src="i/intourist.png"/></div>
         <div>55 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
-        <div class="rounded4 b-1 border-green-itogo green-itogo"><b>54 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
+        <div class="rounded4 b-1 border-green green-itogo"><b>54 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30 fwm"></div>
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-cyan"></div>
-        <div class="flex1"><img src="i/bib.png"/></div>
+        <div class=""><img src="i/bib.png"/></div>
         <div>55 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
-        <div class="rounded4 b-1 border-green-itogo green-itogo"><b>54 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
+        <div class="rounded4 b-1 border-green green-itogo"><b>54 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30 fwm"></div>
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-green"></div>
-        <div class="flex1"><img src="i/anex.png"/></div>
+        <div class=""><img src="i/anex.png"/></div>
         <div>255 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">10 000 <span class="rub">Р</span></div>
-        <div class="rounded4 b-1 border-green-itogo green-itogo"><b>254 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
+        <div class="rounded4 b-1 border-green green-itogo"><b>254 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30 fwm"></div>
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-cyan"></div>
-        <div class="flex1"><img src="i/bib.png"/></div>
+        <div class=""><img src="i/bib.png"/></div>
         <div>55 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">1 000 <span class="rub">Р</span></div>
-        <div class="rounded4 b-1 border-green-itogo green-itogo"><b>54 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
+        <div class="rounded4 b-1 border-green green-itogo"><b>54 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30 fwm"></div>
       </div>
       <div class="f d vcen ws-r turoperators-table space10">
         <div class="starter bg-green"></div>
-        <div class="flex1"><img src="i/anex.png"/></div>
+        <div class=""><img src="i/anex.png"/></div>
         <div>255 870 <span class="rub">Р</span></div>
         <div class="rounded4 b-1 border-cyan cyan">10 000 <span class="rub">Р</span></div>
-        <div class="rounded4 b-1 border-green-itogo green-itogo"><b>254 000</b> <span class="rub">Р</span></div>
-        <div><input type="button" value="Выбрать" class="grey-button aib h30"></div>
+        <div class="rounded4 b-1 border-green green-itogo"><b>254 000</b> <span class="rub">Р</span></div>
+        <div><input type="button" value="Выбрать" class="grey-button aib h30 fwm"></div>
       </div>
     </div>
 
@@ -404,8 +414,8 @@
             </div>
           </div>
           <div class="bybounds fl130 fz11">
-            <div><a href="/" class="grey-button aib multiline"><div class="fwm">Оплатить 50%, остальное позже</div></a></div>
-            <div class="mt5 f"><a href="/" class="grey-button aib flex1 fwm">Купить в кредит</a></div>
+            <div><a href="/" class="grey-button aib multiline h30"><div class="fwm">Оплатить 50%, остальное позже</div></a></div>
+            <div class="mt5 f"><a href="/" class="grey-button aib flex1 fwm h30">Купить в кредит</a></div>
           </div>
         </div>
       </div>
@@ -417,7 +427,8 @@
     </div>
 
     <div class="mt10 border-orange b-1 p10">
-      <div class="f d ws-r space30 vcen">
+      <div class="f d ws-r space20 vcen">
+        <img src="i/buyer.png">
         <div class="orange ttu">Покупатель</div>
         <div class="flex1 f "><input type="text" class="flex1 b-1 h30"></div>
       </div>
@@ -466,8 +477,8 @@
         </div>
         <div class="flex1">
           <div class="f d vtop space10">
-            <div class="flex1 f"><input type="text" class="flex1 b-1 h30" placeholder="Ваш Email"></div>
-            <div class="flex1 f"><input type="text" class="flex1 b-1 h30" placeholder="Ваш Email"></div>
+            <div class="flex1 f"><input type="text" class="flex1 b-1 h30" placeholder="Фамилия"></div>
+            <div class="flex1 f"><input type="text" class="flex1 b-1 h30" placeholder="Имя"></div>
           </div>
           <div class="mt10 f d vcen space10">
             <div class="flex1 tar">Гражданство</div>
@@ -555,7 +566,7 @@
     <div class="mt20">
       <label class="f d vcen space6">
         <div><input type="checkbox"></div>
-        <div class="fz13 flex1">Я ознакомлен и согласен с правилами публичной оферты
+        <div class="fz13 flex1">Я ознакомлен и согласен с правилами публичной оферты<br>
           и условиями применения тарифа</div>
       </label>
     </div>
@@ -586,7 +597,7 @@
       <div class="mt20">
         <label class="f d vcen space6">
           <div><input type="checkbox"></div>
-          <div class="fz13 flex1">Спасибо, на данный этап времени я не имею возможности
+          <div class="fz13 flex1">Спасибо, на данный этап времени я не имею возможности<br>
             спланировать время визита. Я приду, когда мне будет удобно</div>
         </label>
       </div>

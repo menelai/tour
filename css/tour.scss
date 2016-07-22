@@ -80,6 +80,26 @@
   @include align-self(stretch);
 }
 
+.extra-services {
+  .starter {
+    @include flex(0 0 12px);
+  }
+  .additional-services-title>div, .additional-services>div>div {
+    &:nth-child(2) {
+      @include flex(0 0 40%);
+    }
+    &:nth-child(3) {
+      @include flex(0 0 78px);
+    }
+    &:nth-child(4) {
+      @include flex(0 0 78px);
+    }
+    &:nth-child(5) {
+      @include flex(0 0 84px);
+    }
+  }
+}
+
 .additional-services {
   >div {
     >*:not(.starter) {
@@ -87,12 +107,14 @@
     }
   }
 
+
   input[type=button] {
     width:82px;
   }
 }
 
 .turoperators-table {
+  white-space: nowrap;
   padding:0 0 5px 0;
   &:not(.header) {
     padding-top:5px;
@@ -110,8 +132,12 @@
 
   >div {
     &:nth-child(1) {
-      @include flex(0 0 10px);
+      @include flex(0 0 12px);
       margin:-5px 0;
+    }
+    &:nth-child(2) {
+      margin-left:10px;
+      @include flex(0 1 30%);
     }
     &:nth-child(3) {
       @include flex(0 0 70px);
@@ -143,7 +169,7 @@
 
 
 .fl130 {
-  @include flex(0 0 140px);
+  @include flex(0 0 150px);
 }
 
 .please-title {
@@ -211,7 +237,7 @@ input[type="text"].cellular {
 }
 
 #responses, .exslider {
-  padding:0 30px;
+  padding:0 50px;
 }
 
 .exslider {
@@ -227,6 +253,38 @@ input[type="text"].cellular {
     }
     .flex-next {
       background: url(../i/white-slider-right.png) right center no-repeat;
+    }
+  }
+}
+
+.tour-flights {
+  .result-flights {
+    padding-bottom:20px;
+
+    .thik-arrow {
+      position: absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      background: none;
+      &:before {
+        position: absolute;
+        top:50%;
+        height:1px;
+        left:0;
+        right:24px;
+        background: #118eaa;
+        content:'';
+
+      }
+      > div {
+        left:auto;
+        right:0px;
+        background-image: url(../i/small-arrow-down.png);
+        width:24px;
+        height:24px;
+        margin:-12px 0 0 -12px;
+      }
     }
   }
 }

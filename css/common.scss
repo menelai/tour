@@ -323,6 +323,10 @@ a.orange {
   border-color:$orange;
 }
 
+.border-green {
+  border-color:$green;
+}
+
 .border-grey {
   border-color:$grey;
 }
@@ -1733,4 +1737,5 @@ input[type=checkbox] {
 input[type="text"].calendar {
   background: #fff url(../i/calendar.png) right center no-repeat;
   background-origin: content-box;
+  padding-right:4px;
 }
