@@ -1,12 +1,67 @@
 @font-face{
-  font-family: 'wf_SegoeUILight';
+  font-family: 'SUI';
   src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot');
   src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot?#iefix') format('embedded-opentype'),
   url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.woff') format('woff'),
   url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.ttf') format('truetype'),
   url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.svg#web') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'SUI';
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.eot');
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.eot?#iefix') format('embedded-opentype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.woff') format('woff'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.ttf') format('truetype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.svg#web') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face{
+  font-family: 'SUI';
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold/latest.eot');
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold/latest.eot?#iefix') format('embedded-opentype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold/latest.woff') format('woff'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold/latest.ttf') format('truetype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold/latest.svg#web') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'SUI';
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold-Italic/latest.eot');
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold-Italic/latest.eot?#iefix') format('embedded-opentype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold-Italic/latest.woff') format('woff'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold-Italic/latest.ttf') format('truetype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Semibold-Italic/latest.svg#web') format('svg');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: 'SUI';
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.eot');
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.eot?#iefix') format('embedded-opentype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.woff') format('woff'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.ttf') format('truetype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.svg#web') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'SUI';
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold-Italic/latest.eot');
+  src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold-Italic/latest.eot?#iefix') format('embedded-opentype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold-Italic/latest.woff') format('woff'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold-Italic/latest.ttf') format('truetype'),
+  url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold-Italic/latest.svg#web') format('svg');
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
@@ -44,7 +99,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
+  font-family: 'SUI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
   font-size: 14px;
   background: #fff;
   color: #000;
@@ -53,7 +108,7 @@ body {
 }
 
 input, select, textarea {
-  font-family: 'Segoe UI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
+  font-family: 'SUI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
 }
 
 a, .pseudolink {
@@ -945,6 +1000,7 @@ input[type=text] {
 
 #date-input-1 {
   input {
+    width:130px;
     background-image: url(../i/calendar-there.png);
     background-position: right center;
     background-repeat: no-repeat;
@@ -955,6 +1011,7 @@ input[type=text] {
 
 #date-input-2 {
   input {
+    width:130px;
     background-image: url(../i/calendar-back.png);
     background-position: right center;
     background-repeat: no-repeat;

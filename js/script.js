@@ -170,7 +170,8 @@
             $( "#amount" ).val( "" + $( "#slider-range" ).slider( "values", 0 ) +
             " — " + $( "#slider-range" ).slider( "values", 1 )  + ' дней');
 
-            $("#nav-col").sticky({topSpacing:0});
+
+            $("#bn-l").sticky({topSpacing:-65}).css({height: $("#uniqueoffers").outerHeight()});
 
             var lastId,
               topMenu = $("#nav-col"),
