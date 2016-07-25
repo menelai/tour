@@ -185,6 +185,20 @@ $dark-blue: #07466a;
   height: 40px;
   line-height: 40px;
 
+  &.h45 {
+    height: 45px;
+    line-height: 45px;
+
+    &[type=button], &[type=submit] {
+      line-height: 40px;
+    }
+
+    &.aib {
+      &.multiline {
+        min-height: 45px;
+      }
+    }
+  }
   &.h30 {
     height: 30px;
     line-height: 30px;
@@ -1075,6 +1089,17 @@ input[type=text] {
       -moz-appearance: none;
       appearance: none;
       margin: 0;
+    }
+  }
+
+  &.h30 {
+    .minus, .plus {
+      height:30px;
+      width:30px;
+    }
+
+    input {
+      height: 30px;
     }
   }
 }

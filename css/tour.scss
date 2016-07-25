@@ -52,7 +52,7 @@
 
 .tour-contents {
   background: #f4f4f4;
-  padding:10px;
+  padding:5px 10px 10px;
 }
 
 .excursion-image {
@@ -227,8 +227,12 @@ input[type="text"].cellular {
 
 .payment-ways {
   >label {
-    @include flex(0 0 200px);
+    //@include flex(0 0 200px);
+    >div:first-child {
+      margin-top:-9px;
+    }
   }
+
 }
 
 #tour-columns {
@@ -287,4 +291,97 @@ input[type="text"].cellular {
       }
     }
   }
+}
+
+.excursion-list {
+  margin:0 -5px;
+  >li {
+    min-width: 120px;
+    padding:0 5px;
+    &:first-child {
+      @include transition(margin-left 300ms);
+    }
+  }
+}
+
+@media screen and (max-width:1220px) {
+  .excursion-list {
+    >li {
+      @include flex(0 0 33.3%);
+    }
+  }
+}
+
+@media screen and (min-width: 1221px) and (max-width:1450px) {
+  .excursion-list {
+    >li {
+      @include flex(0 0 25%);
+    }
+  }
+}
+
+@media screen and (min-width:1451px) {
+  .excursion-list {
+    >li {
+      @include flex(0 0 20%);
+    }
+  }
+}
+
+.response-name, .response-photo {
+  @include flex(0 0 76px);
+}
+
+.response-photo {
+  width:76px;
+  height:76px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin:0 auto;
+  img {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    -webkit-transform: translateX(50%) translateY(50%);
+    transform: translateX(50%) translateY(50%);
+    min-width: 101%;
+    min-height: 101%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    max-height: 102%;
+    max-width: 102%;
+  }
+}
+
+.bb6 {
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+}
+
+.bl6 {
+  border-left-width: 6px;
+  border-left-style: solid;
+}
+
+.response-text {
+  max-height: 5.2em;
+  overflow: hidden;
+}
+
+.response-full {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(white, 0.8);
+  z-index: 3000;
+}
+
+.response-full-text {
+  width:600px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: white;
 }
