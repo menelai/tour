@@ -61,6 +61,7 @@
   border-radius: 50px;
   overflow: hidden;
   margin:0 auto;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
   img {
     position: absolute;
     bottom: 50%;
@@ -384,4 +385,24 @@ input[type="text"].cellular {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: white;
+}
+
+input[type=radio].male {
+  &:checked {
+    +.pseudo-radio {
+      &:after {
+        background: #42BCDF;
+      }
+    }
+  }
+}
+
+input[type=radio].female {
+  &:checked {
+    +.pseudo-radio {
+      &:after {
+        background: $orange;
+      }
+    }
+  }
 }

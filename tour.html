@@ -30,7 +30,7 @@
   <div class="flex1 mw0">
     <div class="col-header">Информация о туре</div>
 
-    <div class="f ws-r hcen mt5">
+    <div class="f ws-r hcen mt7">
       <div class="fz16 f ws-r vtop space10">
         <div class="ttu">
           Sheraton Moscow Sheremetyevo Hotel
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div class="f mt5">
+    <div class="f mt7">
       <a href="/" class="grey-button aib flex1 h30">Подробнее об отеле</a>
     </div>
 
@@ -190,7 +190,7 @@
             <br>
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
 
-          <div class="tac mt20"><input type="button" value="Закрыть" class="grey-button h30" ng-click="hide=true"></div>
+          <div class="tac mt20"><input type="button" value="Закрыть" class="grey-button h30" ng-click="hide=true" style="width:120px;"></div>
         </div>
       </div>
     </div>
@@ -309,7 +309,7 @@
   <div class="flex1 mw0">
     <div class="col-header">Бронирование тура</div>
 
-    <div class="f d stretch ws-r mt10 space10">
+    <div class="f d stretch ws-r mt14 space10">
       <div class="flex1 tac fz18 f hcen vcen border-orange bb6 p5">
         <div>25 сентября — 2 сентября</div>
       </div>
@@ -318,7 +318,7 @@
       </div>
     </div>
 
-    <div class="f d vtop ws-r mt10 space10">
+    <div class="f d vtop ws-r mt15 space10">
       <div class="flex1 mw0">
         <div class="orange fwb fz12 mb5">Тип питания</div>
         <select class="selectric grey hasprice h30">
@@ -488,8 +488,8 @@
           <div><img ng-init="src='male';" src="i/{{src}}.png" style="height:40px;"></div>
           <div class="lh1">
             <div class="fz12 grey777">Пол</div>
-            <div class="mt4"><label><input type="radio" name="s" checked ng-click="src='male'"> М</label></div>
-            <div class="mt4"><label><input type="radio" name="s" ng-click="src='female'"> Ж</label></div>
+            <div class="mt4"><label><input type="radio" name="s" checked ng-click="src='male'" class="male"> М</label></div>
+            <div class="mt4"><label><input type="radio" name="s" ng-click="src='female'" class="female"> Ж</label></div>
           </div>
         </div>
         <div class="flex1">
@@ -586,38 +586,40 @@
     <div class="mt20">
       <label class="f vcen hcen space6">
         <div><input type="checkbox"></div>
-        <div class="fz13">Я ознакомлен и согласен с правилами публичной оферты<br>
+        <div class="fz13" style="max-width:430px;">Я ознакомлен и согласен с правилами публичной оферты
           и условиями применения тарифа</div>
       </label>
     </div>
   </div>
 
     <div class="mt20 border-orange b-1 p10">
-      <div class="tac">
+      <div class="tac" >
         Уважаемые Клиенты!<br>
         Мы ценим Ваше время, при желании Вы можете выбрать удобное для Вас время посещения офиса
       </div>
-      <div class="f hcen vcen mt20 space10">
-        <div>
-          <input type="text" class="b-1 datepicker h30 calendar" placeholder="Дата">
-        </div>
-        <div>
-          <select class="selectric grey h30">
-            <option>09:00—11:00</option>
-            <option>09:00—11:00</option>
-            <option>09:00—11:00</option>
-            <option>09:00—11:00</option>
-            <option>09:00—11:00</option>
-            <option>09:00—11:00</option>
-            <option>09:00—11:00</option>
-          </select>
+      <div class="f hcen vcen mt20">
+        <div class="f space10 datepicker-width">
+          <div>
+            <input type="text" class="b-1 datepicker h30 calendar dpw" placeholder="Дата">
+          </div>
+          <div>
+            <select class="selectric grey h30">
+              <option>09:00—11:00</option>
+              <option>09:00—11:00</option>
+              <option>09:00—11:00</option>
+              <option>09:00—11:00</option>
+              <option>09:00—11:00</option>
+              <option>09:00—11:00</option>
+              <option>09:00—11:00</option>
+            </select>
+          </div>
         </div>
       </div>
 
       <div class="mt20">
         <label class="f vcen hcen space6">
           <div><input type="checkbox"></div>
-          <div class="fz13">Спасибо, на данный этап времени я не имею возможности<br>
+          <div class="fz13" style="max-width:430px;">Спасибо, на данный этап времени я не имею возможности
             спланировать время визита. Я приду, когда мне будет удобно</div>
         </label>
       </div>

@@ -13887,8 +13887,9 @@ input[type="text"].calendar {
   border-radius: 50px;
   overflow: hidden;
   margin: 0 auto;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
-/* line 64, tour.scss */
+/* line 65, tour.scss */
 .excursion-image img {
   position: absolute;
   bottom: 50%;
@@ -13902,222 +13903,222 @@ input[type="text"].calendar {
   overflow: hidden;
 }
 
-/* line 78, tour.scss */
+/* line 79, tour.scss */
 .starter {
   width: 10px;
   -webkit-align-self: stretch;
   align-self: stretch;
 }
 
-/* line 84, tour.scss */
+/* line 85, tour.scss */
 .extra-services .starter {
   -webkit-flex: 0 0 12px;
   flex: 0 0 12px;
 }
-/* line 88, tour.scss */
+/* line 89, tour.scss */
 .extra-services .additional-services-title > div:nth-child(2), .extra-services .additional-services > div > div:nth-child(2) {
   -webkit-flex: 0 0 40%;
   flex: 0 0 40%;
 }
-/* line 91, tour.scss */
+/* line 92, tour.scss */
 .extra-services .additional-services-title > div:nth-child(3), .extra-services .additional-services > div > div:nth-child(3) {
   -webkit-flex: 0 0 78px;
   flex: 0 0 78px;
 }
-/* line 94, tour.scss */
+/* line 95, tour.scss */
 .extra-services .additional-services-title > div:nth-child(4), .extra-services .additional-services > div > div:nth-child(4) {
   -webkit-flex: 0 0 78px;
   flex: 0 0 78px;
 }
-/* line 97, tour.scss */
+/* line 98, tour.scss */
 .extra-services .additional-services-title > div:nth-child(5), .extra-services .additional-services > div > div:nth-child(5) {
   -webkit-flex: 0 0 84px;
   flex: 0 0 84px;
 }
 
-/* line 105, tour.scss */
+/* line 106, tour.scss */
 .additional-services > div > *:not(.starter) {
   padding: 0 0 10px 0;
 }
-/* line 111, tour.scss */
+/* line 112, tour.scss */
 .additional-services input[type=button] {
   width: 82px;
 }
 
-/* line 116, tour.scss */
+/* line 117, tour.scss */
 .turoperators-table {
   white-space: nowrap;
   padding: 0 0 5px 0;
 }
-/* line 119, tour.scss */
+/* line 120, tour.scss */
 .turoperators-table:not(.header) {
   padding-top: 5px;
 }
-/* line 122, tour.scss */
+/* line 123, tour.scss */
 .turoperators-table:not(.header) > div:nth-child(3), .turoperators-table:not(.header) > div:nth-child(4), .turoperators-table:not(.header) > div:nth-child(5) {
   line-height: 28px;
   text-align: center;
 }
-/* line 127, tour.scss */
+/* line 128, tour.scss */
 .turoperators-table:not(.header) > div:nth-child(4), .turoperators-table:not(.header) > div:nth-child(5) {
   padding: 0 6px;
 }
-/* line 134, tour.scss */
+/* line 135, tour.scss */
 .turoperators-table > div:nth-child(1) {
   -webkit-flex: 0 0 12px;
   flex: 0 0 12px;
   margin: -5px 0;
 }
-/* line 138, tour.scss */
+/* line 139, tour.scss */
 .turoperators-table > div:nth-child(2) {
   margin-left: 10px;
   -webkit-flex: 0 1 30%;
   flex: 0 1 30%;
 }
-/* line 142, tour.scss */
+/* line 143, tour.scss */
 .turoperators-table > div:nth-child(3) {
   -webkit-flex: 0 0 70px;
   flex: 0 0 70px;
 }
-/* line 145, tour.scss */
+/* line 146, tour.scss */
 .turoperators-table > div:nth-child(4) {
   -webkit-flex: 0 0 70px;
   flex: 0 0 70px;
 }
-/* line 148, tour.scss */
+/* line 149, tour.scss */
 .turoperators-table > div:nth-child(5) {
   -webkit-flex: 0 0 80px;
   flex: 0 0 80px;
 }
-/* line 151, tour.scss */
+/* line 152, tour.scss */
 .turoperators-table > div:nth-child(6) {
   -webkit-flex: 0 0 80px;
   flex: 0 0 80px;
 }
-/* line 156, tour.scss */
+/* line 157, tour.scss */
 .turoperators-table input.grey-button {
   height: 30px;
   line-height: 20px;
 }
 
-/* line 162, tour.scss */
+/* line 163, tour.scss */
 .tour-total {
   border-top: solid 1px #bebebe;
   padding-top: 20px;
 }
-/* line 165, tour.scss */
+/* line 166, tour.scss */
 .tour-total > .sep {
   -webkit-align-self: stretch;
   align-self: stretch;
 }
 
-/* line 171, tour.scss */
+/* line 172, tour.scss */
 .fl130 {
   -webkit-flex: 0 0 150px;
   flex: 0 0 150px;
 }
 
-/* line 175, tour.scss */
+/* line 176, tour.scss */
 .please-title {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   color: white;
 }
 
-/* line 181, tour.scss */
+/* line 182, tour.scss */
 input[type="text"].cellular {
   padding-left: 50px;
 }
 
-/* line 184, tour.scss */
+/* line 185, tour.scss */
 .selectric-countrycode {
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -20px;
 }
-/* line 189, tour.scss */
+/* line 190, tour.scss */
 .selectric-countrycode .selectric {
   border: none;
   background: none;
   box-shadow: none;
 }
-/* line 194, tour.scss */
+/* line 195, tour.scss */
 .selectric-countrycode .selectric .label {
   margin-right: 15px;
 }
-/* line 196, tour.scss */
+/* line 197, tour.scss */
 .selectric-countrycode .selectric .label .flag {
   margin: 3px;
 }
-/* line 198, tour.scss */
+/* line 199, tour.scss */
 .selectric-countrycode .selectric .label .flag img {
   border: solid 1px #cccccc;
 }
-/* line 203, tour.scss */
+/* line 204, tour.scss */
 .selectric-countrycode .selectric .button {
   width: 15px;
 }
-/* line 205, tour.scss */
+/* line 206, tour.scss */
 .selectric-countrycode .selectric .button:after {
   border-width: 4px;
 }
 
-/* line 212, tour.scss */
+/* line 213, tour.scss */
 .flag {
   margin-right: 15px;
 }
-/* line 214, tour.scss */
+/* line 215, tour.scss */
 .flag.country-code-flag {
   margin-right: 5px;
 }
-/* line 217, tour.scss */
+/* line 218, tour.scss */
 .flag img {
   border: solid 1px #cccccc;
   display: inline-block;
   vertical-align: -2px;
 }
 
-/* line 224, tour.scss */
+/* line 225, tour.scss */
 .selectric-citizenship {
   width: 250px;
 }
 
-/* line 231, tour.scss */
+/* line 232, tour.scss */
 .payment-ways > label > div:first-child {
   margin-top: -9px;
 }
 
-/* line 238, tour.scss */
+/* line 239, tour.scss */
 #tour-columns {
   padding-top: 0px;
   padding-bottom: 30px;
 }
 
-/* line 243, tour.scss */
+/* line 244, tour.scss */
 #responses, .exslider {
   padding: 0 50px;
 }
 
-/* line 248, tour.scss */
+/* line 249, tour.scss */
 .exslider .flex-direction-nav a {
   top: 80px;
 }
 
-/* line 255, tour.scss */
+/* line 256, tour.scss */
 .hotel-photos .flex-direction-nav .flex-prev {
   background: url(../i/white-slider-left.png) left center no-repeat;
 }
-/* line 258, tour.scss */
+/* line 259, tour.scss */
 .hotel-photos .flex-direction-nav .flex-next {
   background: url(../i/white-slider-right.png) right center no-repeat;
 }
 
-/* line 265, tour.scss */
+/* line 266, tour.scss */
 .tour-flights .result-flights {
   padding-bottom: 20px;
 }
-/* line 268, tour.scss */
+/* line 269, tour.scss */
 .tour-flights .result-flights .thik-arrow {
   position: absolute;
   bottom: 0;
@@ -14125,7 +14126,7 @@ input[type="text"].cellular {
   right: 0;
   background: none;
 }
-/* line 274, tour.scss */
+/* line 275, tour.scss */
 .tour-flights .result-flights .thik-arrow:before {
   position: absolute;
   top: 50%;
@@ -14135,7 +14136,7 @@ input[type="text"].cellular {
   background: #118eaa;
   content: '';
 }
-/* line 284, tour.scss */
+/* line 285, tour.scss */
 .tour-flights .result-flights .thik-arrow > div {
   left: auto;
   right: 0px;
@@ -14145,16 +14146,16 @@ input[type="text"].cellular {
   margin: -12px 0 0 -12px;
 }
 
-/* line 296, tour.scss */
+/* line 297, tour.scss */
 .excursion-list {
   margin: 0 -5px;
 }
-/* line 298, tour.scss */
+/* line 299, tour.scss */
 .excursion-list > li {
   min-width: 120px;
   padding: 0 5px;
 }
-/* line 301, tour.scss */
+/* line 302, tour.scss */
 .excursion-list > li:first-child {
   -moz-transition: margin-left 300ms;
   -o-transition: margin-left 300ms;
@@ -14163,33 +14164,33 @@ input[type="text"].cellular {
 }
 
 @media screen and (max-width: 1220px) {
-  /* line 309, tour.scss */
+  /* line 310, tour.scss */
   .excursion-list > li {
     -webkit-flex: 0 0 33.3%;
     flex: 0 0 33.3%;
   }
 }
 @media screen and (min-width: 1221px) and (max-width: 1450px) {
-  /* line 317, tour.scss */
+  /* line 318, tour.scss */
   .excursion-list > li {
     -webkit-flex: 0 0 25%;
     flex: 0 0 25%;
   }
 }
 @media screen and (min-width: 1451px) {
-  /* line 325, tour.scss */
+  /* line 326, tour.scss */
   .excursion-list > li {
     -webkit-flex: 0 0 20%;
     flex: 0 0 20%;
   }
 }
-/* line 331, tour.scss */
+/* line 332, tour.scss */
 .response-name, .response-photo {
   -webkit-flex: 0 0 76px;
   flex: 0 0 76px;
 }
 
-/* line 335, tour.scss */
+/* line 336, tour.scss */
 .response-photo {
   width: 76px;
   height: 76px;
@@ -14197,7 +14198,7 @@ input[type="text"].cellular {
   overflow: hidden;
   margin: 0 auto;
 }
-/* line 341, tour.scss */
+/* line 342, tour.scss */
 .response-photo img {
   position: absolute;
   bottom: 50%;
@@ -14213,25 +14214,25 @@ input[type="text"].cellular {
   max-width: 102%;
 }
 
-/* line 357, tour.scss */
+/* line 358, tour.scss */
 .bb6 {
   border-bottom-width: 6px;
   border-bottom-style: solid;
 }
 
-/* line 362, tour.scss */
+/* line 363, tour.scss */
 .bl6 {
   border-left-width: 6px;
   border-left-style: solid;
 }
 
-/* line 367, tour.scss */
+/* line 368, tour.scss */
 .response-text {
   max-height: 5.2em;
   overflow: hidden;
 }
 
-/* line 372, tour.scss */
+/* line 373, tour.scss */
 .response-full {
   position: fixed;
   top: 0;
@@ -14242,10 +14243,20 @@ input[type="text"].cellular {
   z-index: 3000;
 }
 
-/* line 382, tour.scss */
+/* line 383, tour.scss */
 .response-full-text {
   width: 600px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: white;
+}
+
+/* line 393, tour.scss */
+input[type=radio].male:checked + .pseudo-radio:after {
+  background: #42BCDF;
+}
+
+/* line 403, tour.scss */
+input[type=radio].female:checked + .pseudo-radio:after {
+  background: #ff6700;
 }

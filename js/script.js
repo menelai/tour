@@ -70,7 +70,11 @@
                 if($(this).attr('id') == 'datepicker-back') {
                   margin = 'margin-left:-'+($(this).outerWidth()*1+4)+'px;';
                 }
-                $("#datepickerstyle").html('.ui-datepicker {width:'+($(this).outerWidth()*2+4)+'px; '+margin+'}');
+
+                if($(this).hasClass('dpw')) {
+                  $("#datepickerstyle").html('.ui-datepicker {width:'+($(this).parents('.datepicker-width:first').outerWidth())+'px;}');
+                } else
+                  $("#datepickerstyle").html('.ui-datepicker {width:'+($(this).outerWidth()*2+4)+'px; '+margin+'}');
               }
             });
 
