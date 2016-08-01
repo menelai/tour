@@ -329,3 +329,17 @@
     min-width: 0;
   }
 }
+
+.pager {
+  .pages {
+    a {
+      width:22px;
+    }
+  }
+
+  .showallpages {
+    position: absolute;
+    right:0;
+    top:0;
+  }
+}
