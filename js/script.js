@@ -238,6 +238,8 @@
 
             $("#bn-l").sticky({topSpacing:-65}).css({height: $("#uniqueoffers").outerHeight()});
 
+            $("#about-tabs").sticky({topSpacing:15});
+
             var lastId,
               topMenu = $("#nav-col"),
               topMenuHeight = 0;//topMenu.outerHeight()+15,

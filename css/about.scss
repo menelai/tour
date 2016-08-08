@@ -1,0 +1,168 @@
+.h10 {
+  height: 9px;
+}
+
+body.page-about {
+  padding-bottom: 0;
+}
+
+#about-tabs-sticky-wrapper {
+  z-index: 20;
+  position: absolute;
+  top:15px;
+  left:20px;
+  right:20px;
+
+  a {
+    color:white;
+  }
+}
+
+#about-tabs {
+  background: rgba(#252525, 0.82);
+}
+
+.about-tab {
+  padding-top:85px;
+  padding-bottom:70px;
+  min-height: 100vh;
+  .bgimg {
+    position: absolute;
+    right:100%;
+    margin-right:-240px;
+    width:1200px;
+    top:0;
+    bottom:0;
+    background: red;
+  }
+  .bggrad {
+    position: absolute;
+    left:240px;
+    width:2000px;
+    top:0;
+    bottom:0;
+    background: green;
+  }
+
+  .about-tab-contents {
+    margin-left:240px;
+  }
+}
+
+.white-plate {
+  background: rgba(white, 0.9);
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#about {
+  .bgimg {
+    background: #1f2830 url(../i/about-tab.jpg) right top no-repeat;
+  }
+  .bggrad {
+    // Needs latest Compass, add '@import "compass"' to your scss
+    // Permalink - use to edit and share this gradient:
+    // http://colorzilla.com/gradient-editor/#e4e4ee+0,84a3bb+12,1f2830+100
+    background-color: #e4e4ee; // Old browsers
+    @include filter-gradient(#e4e4ee, #1f2830, vertical); // IE6-9
+    @include background-image(linear-gradient(top, #e4e4ee 0%,#84a3bb 12%,#1f2830 100%));
+  }
+}
+
+#collective {
+  .bgimg {
+    background: #1f2830 url(../i/yacht.jpg) right top no-repeat;
+  }
+  .bggrad {
+    // Needs latest Compass, add '@import "compass"' to your scss
+    // Permalink - use to edit and share this gradient:
+    // http://colorzilla.com/gradient-editor/#e7e2da+0,90ae9a+50,013870+100
+    background-color: #e7e2da; // Old browsers
+    @include filter-gradient(#e7e2da, #013870, vertical); // IE6-9
+    @include background-image(linear-gradient(top,  #e7e2da 0%,#90ae9a 50%,#013870 100%));
+  }
+
+  .about-tab-contents {
+    /*position: absolute;
+    top:85px;
+    bottom:70px;
+    left:20px;
+    right:20px;*/
+  }
+}
+
+#trust-us {
+  .bgimg {
+    background: url(../i/globe.jpg) right top no-repeat;
+  }
+  .bggrad {
+    background: #030e25;
+  }
+}
+
+#whywe {
+  .bgimg {
+    background: url(../i/whywe.jpg) right top no-repeat;
+  }
+  .bggrad {
+    // Needs latest Compass, add '@import "compass"' to your scss
+    // Permalink - use to edit and share this gradient:
+    // http://colorzilla.com/gradient-editor/#62696f+0,375285+100
+    background-color: #62696f; // Old browsers
+    @include filter-gradient(#62696f, #375285, vertical); // IE6-9
+    @include background-image(linear-gradient(top,  #62696f 0%,#375285 100%));
+
+  }
+}
+
+#payment-ways {
+  .bgimg {
+    background: url(../i/payment-ways.jpg) right top no-repeat;
+  }
+  .bggrad {
+    // Needs latest Compass, add '@import "compass"' to your scss
+    // Permalink - use to edit and share this gradient:
+    // http://colorzilla.com/gradient-editor/#1a4f91+0,4585bb+77,dac9ae+93
+    background-color: #1a4f91; // Old browsers
+    @include filter-gradient(#1a4f91, #dac9ae, vertical); // IE6-9
+    @include background-image(linear-gradient(top,  #1a4f91 0%,#4585bb 77%,#dac9ae 93%));
+  }
+}
+
+.employee-image {
+  width:170px;
+  height:170px;
+  border-radius: 90px;
+  overflow: hidden;
+  margin:0 auto;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  img {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    -webkit-transform: translateX(50%) translateY(50%);
+    transform: translateX(50%) translateY(50%);
+    min-width: 101%;
+    min-height: 101%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.ender {
+  height:9px;
+}
+
+.whywe-steps {
+  >div:not(.arr) {
+    width:165px;
+  }
+  
+  .arr {
+    background: url(../i/icons-arrow.png);
+    width:18px;
+    height:46px;
+    margin-top: 5px;
+  }
+}

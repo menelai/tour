@@ -209,7 +209,7 @@ img {
   right:0;
 }
 
-@for $i from 1 through 60 {
+@for $i from 1 through 90 {
   .fz#{$i} {
     font-size: #{$i}px;
   }

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html ng-app="tourApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tour</title>
+  <link href="js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/selectric.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <style>
+    .max-width {
+      max-width: {{width}}px;
+    }
+  </style>
+</head>
+<body class="page-about" ng-init="hideWhere=true;">
+<ng-include src="'top.html'"></ng-include>
+<div class="bg-orange tac fz13 white ttu p4 fwm">Поиск лучших — лучшие цены в России, найдёте дешевле, вернём разницу + 10%*</div>
+<ng-include src="'searchform.html'"></ng-include>
+<div>
+  <div class="max-width">
+    <div id="about-tabs" class=" f d stretch fwb fz15 tac">
+      <div class="f bybounds flex1">
+        <a href="#" class="tdn lh40">О компании</a>
+        <div class="h10 bg-cyan"></div>
+      </div>
+      <div class="f bybounds flex1">
+        <a href="#" class="tdn lh40">Наш коллектив</a>
+        <div class="h10 bg-orange"></div>
+      </div>
+      <div class="f bybounds flex1">
+        <a href="#" class="tdn lh40">Нам можно доверять</a>
+        <div class="h10 bg-green"></div>
+      </div>
+
+      <div class="f bybounds flex1">
+        <a href="#" class="tdn lh40">Почему именно мы</a>
+        <div class="h10 bg-cyan"></div>
+      </div>
+      <div class="f bybounds flex1">
+        <a href="#" class="tdn lh40">Способы оплаты</a>
+        <div class="h10 bg-orange"></div>
+      </div>
+      <div class="f bybounds flex1">
+        <a href="#" class="tdn lh40">Контакты</a>
+        <div class="h10 bg-green"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="max-width about-tab">
+    <div class="bgimg"></div>
+    <div class="bggrad"></div>
+    <div class="about-tab-contents">
+      <div class="white-plate p20">
+        <div class="fz20 fwm tac">Уважаемые Клиенты, мы благодарим вас<br>
+          за проявленный интерес к нашей компании!</div>
+
+        <div class="tac mt20">Мы — это команда из (уже) 20 человек, которая за 2 года онлайн-сервис по продаже чартерных авиабилетов <a href="/">biletideshevo.ru</a> сделала лидером рынка в своём сегменте.</div>
+
+        <div class="mt20 f hcen vtop space20">
+          <div class="tac">
+            Решив не останавливаться<br>
+            на достигнутом, в партнёрстве с<br>
+            <img src="i/muzenid.png" class="mt5">,
+          </div>
+          <div class="tac">
+            мы создали агентств путешествий<br>
+            для успешных людей<br>
+            <img src="i/lto.png" class="mt5">
+          </div>
+        </div>
+
+        <div class="mt20 tac">
+          Название проекта говорит само за себя - Мы продаём туры только крупнейших туроператоров России, более того, каждый тур, который Мы рекомендуем проходит тщательную экспертизу.
+          <br><br>
+          Ежедневно специальный отдел нашей компании путём профессионального независимого аудита, а иногда и выездом в страну путешествия проводит отбор отелей, авиакомпаний, туроператоров и принимающих сторон, которые в итоге будут организовывать ваш отдых.
+        </div>
+      </div>
+
+      <div class="mt20 white fz15" style="max-width:600px;">
+        <div class="f d stretch space20">
+          <div class="starter bg-cyan"></div>
+          <div class=""><img src="i/dish.png"></div>
+          <div class="flex1 mb30">Мы всегда предупредим Вас, соответствует ли отель, выбранный вами,
+            количеству звёзд, заявленных в названии.</div>
+        </div>
+        <div class="f d stretch space20">
+          <div class="starter bg-cyan"></div>
+          <div class=""><img src="i/hat.png"></div>
+          <div class="mb30 flex1">Мы обязательно расскажем вам о качестве питания, количестве ресторанов,
+            наличии детского стола в отеле, который рекомендуем вам.</div>
+        </div>
+        <div class="f d stretch space20">
+          <div class="starter bg-cyan"></div>
+          <div class=""><img src="i/plane.png"></div>
+          <div class="mb30 flex1">Мы знаем всё о авиакомпаниях и обязательно предупредим вас о качестве
+            самолётов и соблюдении пунктуальности времени рейсов.</div>
+        </div>
+        <div class="f d stretch space20">
+          <div class="starter bg-cyan"></div>
+          <div class=""><img src="i/map.png"></div>
+          <div class="mb30 flex1">Качество гидов, качество организаций экскурсий - мы порекомендуем вам
+            туроператора, который организует ваш отдых.</div>
+        </div>
+        <div class="f d stretch space20">
+          <div class="starter bg-cyan"></div>
+          <div class=""><img src="i/thumb.png"></div>
+          <div class=" flex1">Вас интересует отдых с детьми; Вы желаете спокойный уединённый отель;
+            для Вас важно наличие дискотек; детский клуб; анимация для детей и взрослых -
+            мы и здесь прийдём вам на помощь, на этапе подбора тура мы предоставим вам
+            информацию, что ожидает вас по прибытию.</div>
+        </div>
+      </div>
+
+      <div class="white-plate p20 mt30">
+        <div class="fz20 fwm tac ttu"><span class="orange">ОНЛАЙН</span> в названии означает следующее:</div>
+        <div class="mt20">наша система бронирования полностью интегрирована со шлюзами ведущих туроператоров, благодаря чему при поиске тура вы получите актуальну информацию о ничии и цене тура, а благодаря нашему сотрудничеству с ПАО Сбербанк России при желании Вы можете оплатить тур откуда вам будет удобно в любое время дня и ночи с помощью банковкой карты. Сразу же после оплаты на emailб указанный при бронировании будет направлен пакет документов, который позволит вам совершить путешествие без приезда в наш офис.
+        </div>
+        <div class="mt20 tac fz16">
+          Если же вы желаете забронировать тур и оплатить наличными, мы рады вас видеть
+          в нашем уютном офисе.
+          Для вас вкуснейший швейцарский кофе, не менее вкусный цейлонский чай,
+          для ваших деток - детская площадка.
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="collective" class="max-width about-tab f hcen vcen">
+    <div class="bgimg"></div>
+    <div class="bggrad"></div>
+    <div class="about-tab-contents flex1">
+      <div class="white-plate p20">
+        <div class="f d vtop space20">
+          <div class="tac flex1">
+            <div class="employee-image"><img src="i/employee.jpg"></div>
+            <div class="fz16">Терехов Александр</div>
+            <div class="">менеджер колл-центра</div>
+          </div>
+          <div class="tac flex1">
+            <div class="employee-image"><img src="i/employee.jpg"></div>
+            <div class="fz16">Терехов Александр</div>
+            <div class="">менеджер колл-центра</div>
+          </div>
+          <div class="tac flex1">
+            <div class="employee-image"><img src="i/employee.jpg"></div>
+            <div class="fz16">Терехов Александр</div>
+            <div class="">менеджер колл-центра</div>
+          </div>
+        </div>
+        <div class="f d vtop space20 mt20">
+          <div class="tac flex1">
+            <div class="employee-image"><img src="i/employee.jpg"></div>
+            <div class="fz16">Терехов Александр</div>
+            <div class="">менеджер колл-центра</div>
+          </div>
+          <div class="tac flex1">
+            <div class="employee-image"><img src="i/employee.jpg"></div>
+            <div class="fz16">Терехов Александр</div>
+            <div class="">менеджер колл-центра</div>
+          </div>
+          <div class="tac flex1">
+            <div class="employee-image"><img src="i/employee.jpg"></div>
+            <div class="fz16">Терехов Александр</div>
+            <div class="">менеджер колл-центра</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="trust-us" class="max-width about-tab f hcen vcen">
+    <div class="bgimg"></div>
+    <div class="bggrad"></div>
+    <div class="about-tab-contents flex1">
+      <div class="white-plate p20">
+        <div class="f d stretch space20">
+          <div class="tac flex1 bybounds">
+            <div>Мы уполномоченное
+            агентство
+            компании</div>
+            <div class="mt40"><img src="i/muzenid.png"></div>
+          </div>
+          <div class="tac flex1 bybounds">
+            <div>Оплата банковской картой
+            проводится через авторизационный
+            сервер Процессингового центра</div>
+            <div class="mt40"><img src="i/sberbank.png"></div>
+          </div>
+          <div class="tac flex1 bybounds">
+            <div class="flex1">Наш партнёр с 2014 года
+            метапоисковик
+            мирового уровня</div>
+            <div class="mt40"><img src="i/momondo.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="f vtop hcen space20 white mt40">
+        <div class="tar">с апреля 2014 года<br>
+          клиентами нашей компании<br>
+          стали более</div>
+        <div>
+          <div class="fz70" style="margin-top:-0.3em;">9000</div>
+          <div>человек</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="whywe" class="max-width about-tab f hcen vcen">
+    <div class="bgimg"></div>
+    <div class="bggrad"></div>
+    <div class="about-tab-contents flex1">
+      <div class="white-plate p20">
+        <div class="fz20 tac">Уникальная ситема поиска туров от лучших туроператоров России</div>
+        <div class="mt20 f d vtop space20 fz13 tac">
+          <div class="flex1">
+            <div class="mb10"><img src="i/employee.jpg"></div>
+            Вы видите
+            возможные даты
+            начала и окончания
+            тура
+          </div>
+          <div class="flex1">
+            <div class="mb10"><img src="i/employee.jpg"></div>
+            Вы можете выбрать
+            место отдыха, указав в поиске:
+            страну, город,
+            название курорта,
+            посёлок или название отеля
+          </div>
+          <div class="flex1">
+            <div class="mb10"><img src="i/employee.jpg"></div>
+            К вашим услугам
+            более 10 фильтров,
+            которые помогут
+            выбрать именно то,
+            что нужно Вам
+          </div>
+          <div class="flex1">
+            <div class="mb10"><img src="i/employee.jpg"></div>
+            Удобный доступ
+            к информации
+            о стоимости тура
+            по вашим параметрам
+            на альтернативные даты
+          </div>
+        </div>
+      </div>
+      <div class="mt20 white">
+        <div class="tac fz20">Благодаря нашему сотрудничеству с ПАО Сбербанк России
+          при желании вы можете оплатить тур онлайн. </div>
+        <div class="mt10 fz15 tac">Экономьте время, платите онлайн откуда удобно и когда хочется.</div>
+
+        <div class="f around stretch tac fz13 space20 mt30 whywe-steps">
+          <div class="bybounds">
+            <div><img src="i/icon-docs.png"></div>
+            <div class="flex1 mt10">Сразу же после оплаты
+              на ваш email поступит
+              необходимый комплект
+              документов</div>
+            <div class="bg-cyan ender mt10"></div>
+          </div>
+          <div class="arr"></div>
+          <div class="bybounds">
+            <div><img src="i/rocket.png"></div>
+            <div class="flex1 mt10">Курьер нашей компании
+              приедет к вам, заберёт документы
+              для визы, по готовности
+              привезёт вам готовые визы</div>
+            <div class="bg-orange ender mt10"></div>
+          </div>
+          <div class="arr"></div>
+          <div class="bybounds">
+            <div><img src="i/sandclock.png"></div>
+            <div class="flex1 mt10">Вы можете купить тур,
+              воспользовавшись
+              доверительным платежом,
+              оплатите сейчас 50%,
+              оставшуюся часть -
+              за 14 дней до начала тура</div>
+            <div class="bg-green ender mt10"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="payment-ways" class="max-width about-tab f hcen vcen">
+    <div class="bgimg"></div>
+    <div class="bggrad"></div>
+    <div class="about-tab-contents flex1">
+      <div class="white-plate p20">
+        <div class="f d stretch space20 tac">
+          <div class="flex1 bybounds">
+            <div class="orange fz20">Банковской картой</div>
+            <div class="mt20">Экономьте время, платите
+            банковской картой онлайн
+            откуда удобно и когда хочется.</div>
+
+            <div class="fz15 mt10">Абсолютная гарантия платежей.<br>
+            К оплате принимаются:</div>
+
+            <div class="f around vtop mt20 flex1">
+              <img src="i/visa.png">
+              <img src="i/visa-electron.png">
+              <img src="i/mastercard.png">
+              <img src="i/maestro.png">
+            </div>
+
+            <div class="fz13 fwl mt40">Оплата происходит через авторизизационный сервер
+              Процессингового цетра ПАО «Сбербанк России».</div>
+          </div>
+          <div class="flex1 bybounds">
+            <div class="orange fz20">Наличными в офисе</div>
+            <div class="mt20">Экономьте деньги,
+              пейте бесплатный кофе,
+              площадка для детей, документы в руки</div>
+            <div class="mt20 flex1">
+              <img src="i/pig.png">
+            </div>
+            <div>
+              <div class="fz16">Если вам не выдали фискальный чек,
+              скидка на тур 7%</div>
+              <div class="fz13"><a href="mailto:direktor@luchshietury.online" class="orange">direktor@luchshietury.online</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contacts" class="about-tab">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2236.6424792127414!2d37.3825231162639!3d55.903559480593906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b538c823e07155%3A0xb7d5d83a63f7ddc5!2z0KHQvtC60L7Qu9C-0LLQvi3QnNC10YnQtdGA0YHQutCw0Y8g0YPQuy4sIDI1LCDQnNC-0YHQutCy0LAsIDEyNTQ2Ng!5e0!3m2!1sru!2sru!4v1470675315373" frameborder="0" style="border:0;position: absolute; top:0; left:0; width:100%; height:100%;" allowfullscreen></iframe>
+  </div>
+</div>
+<ng-include src="'bottom.html'"></ng-include>
+</body>
+</html>
