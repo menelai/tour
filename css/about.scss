@@ -1,6 +1,9 @@
 .h10 {
   height: 9px;
 }
+.h7 {
+  height: 7px;
+}
 
 body.page-about {
   padding-bottom: 0;
@@ -164,5 +167,110 @@ body.page-about {
     width:18px;
     height:46px;
     margin-top: 5px;
+  }
+}
+
+#contact-tabs {
+  &.ui-widget {
+    font-family: SUI;
+    font-size: 1em;
+  }
+  .ui-tabs-nav {
+    &.ui-widget-header {
+      border:none;
+      background: none;
+      border-radius: 0;
+      padding:0;
+      margin:0;
+
+      li {
+        float:none;
+        margin:0;
+        top:0;
+        width:45px;
+        text-align: center;
+        &.ui-tabs-active {
+          padding-bottom: 0;
+        }
+
+        +li {
+          margin-top:1px;
+        }
+      }
+
+      .ui-state-default {
+        border:none;
+        background: none;
+      }
+      .ui-state-active {
+        border:none;
+        background: none;
+      }
+
+      .ui-state-hover {
+        border:none;
+        background: none;
+        top:0;
+      }
+
+      .ui-tabs-anchor {
+        float:none;
+        padding:5px 0;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .ui-tabs-panel {
+    padding:0;
+    min-width: 590px;
+    min-height: 512px;
+  }
+}
+
+#map {
+  position: absolute; top:0; left:0; right:0; bottom:45px;
+  transition: transform 0.3s;
+  &.mapdisabled {
+    transform: translateX(-100vw);
+  }
+}
+
+#contact-gal {
+  position: absolute; top:0; left:0; right:0; bottom:45px;
+  transition: transform 0.3s;
+  &.galdisabled {
+    transform: translateX(100vw);
+  }
+
+  .flex-viewport {
+    height:100%;
+  }
+
+  .slides {
+    height:100%;
+    >li {
+      position: relative;
+      overflow: hidden;
+      width:100%;
+      height:100%;
+       img {
+         position: absolute;
+         bottom: 50%;
+         right: 50%;
+         -webkit-transform: translateX(50%) translateY(50%);
+         transform: translateX(50%) translateY(50%);
+         min-width: 101%;
+         min-height: 101%;
+         width: auto;
+         height: auto;
+         overflow: hidden;
+       }
+    }
   }
 }

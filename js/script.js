@@ -38,10 +38,10 @@
           $(function() {
 
             var n = {
-              zoom: 15,
+              zoom: 17,
               disableDefaultUI: !1,
               scrollwheel: !1,
-              center: new google.maps.LatLng(55.9037981,37.3700205),
+              center: new google.maps.LatLng(55.7598933,37.6370998),
               styles: [
                 {
                   "featureType": "administrative",
@@ -164,7 +164,7 @@
               ]*/
             }, s = new google.maps.Map(document.getElementById("map"), n);
 
-            var pos = new google.maps.LatLng(55.9028601,37.3846551);
+            var pos = new google.maps.LatLng(55.7596271,37.6329016);
             var marker = new google.maps.Marker({
               position: pos,
               map: s,
@@ -179,11 +179,13 @@
               'д. 25, торговый центр Даниэль'
             });
 
-            infowindow.open(s, marker);
+            /*infowindow.open(s, marker);
 
             marker.addListener('click', function() {
               infowindow.open(s, marker);
-            });
+            });*/
+
+            $("#contact-tabs").tabs();
 
             $("input[type=radio]").after('<div class="pseudo-radio"></div>');
             $("input[type=checkbox]").after('<div class="pseudo-checkbox"></div>');

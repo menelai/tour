@@ -341,43 +341,93 @@
       </div>
     </div>
   </div>
-  <div id="contacts" class="about-tab f hcen vcen">
-    <div id="map" style="position: absolute; top:0; left:0; right:0; bottom:45px;"></div>
+  <div id="contacts" class="about-tab f hrig vcen">
+    <div id="map" ng-init="showMap='mapenabled'" ng-class="showMap"></div>
+    <div id="contact-gal" class="slider" ng-class="showMap == 'mapenabled' ? 'galdisabled' : 'galenabled'">
+      <ul class="slides">
+        <li><img src="i/Стена 1 с колонной.png"></li>
+        <li><img src="i/Стена 2.png"></li>
+        <li><img src="i/Стена 3.png"></li>
+        <li><img src="i/Стена 4.png"></li>
+      </ul>
+    </div>
     <div class="max-width f vcen flex1">
-      <div class="white-plate p20" style="position: absolute; transform: translateY(-50%);">
-        <div class="fz16 tac">
-          МЫ РАДЫ ВАС СЛЫШАТЬ ЕЖЕДНЕВНО<br>
-          с 8 до 2 часов
-        </div>
+      <div id="contact-tabs" class="white-plate p20 f d vtop" style="position: absolute; transform: translateY(-50%); right:20px;">
+        <ul class="ul">
+          <li><a ng-click="showMap='mapenabled'" href="#tab-1" class="bg-grey"><img src="i/tab-marker.png"></a></li>
+          <li><a ng-click="showMap='mapdisabled'" href="#tab-2" class="bg-cyan"><img src="i/tab-metro.png"></a></li>
+          <li><a ng-click="showMap='mapdisabled'" href="#tab-3" class="bg-orange"><img src="i/tab-bus.png"></a></li>
+          <li><a ng-click="showMap='mapdisabled'" href="#tab-4" class="bg-green"><img src="i/tab-car.png"></a></li>
+        </ul>
+        <div id="tab-1">
+          <div class="f d stretch space10">
+            <div class="bg-white b-1 border-grey p10">
+              <img src="i/building.jpg">
+              <div class="fz13 tac mt20">Москва, Армянский пер., д. 9</div>
+              <div class="mt40 f hcen">
+                <div>
+                  <div class="d f space10 stretch">
+                    <div style="width:60px;">
+                      <div class="bg-orange h7"></div>
+                      <div class="bg-orange h7 mt3"></div>
+                      <div class="bg-orange h7 mt3"></div>
+                      <div class="bg-orange h7 mt3"></div>
+                      <div class="bg-orange h7 mt3"></div>
+                    </div>
+                    <div class="sep"></div>
+                    <div class="flex1 f vcen"><div class="lh1">10:00 — 21:00</div></div>
+                  </div>
+                  <div class="d f space10 stretch mt5">
+                    <div style="width:60px;">
+                      <div class="bg-cyan h7"></div>
+                      <div class="bg-cyan h7 mt3"></div>
+                    </div>
+                    <div class="sep"></div>
+                    <div class="flex1 f vcen"><div class="lh1">12:00 — 21:00</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex1">
+              <div class="fz16 tac">
+                МЫ РАДЫ ВАС СЛЫШАТЬ ЕЖЕДНЕВНО<br>
+                с 8 до 2 часов
+              </div>
 
-        <div class="tac mt30"><p class="fz26 fwl cyan">+ 7 (495) 150-11-82</p>
-        <p class="fz13">Для обращения из Москвы<br>
-        и из-за пределов России</p></div>
+              <div class="tac mt30"><p class="fz26 fwl cyan">+7 (495) 150-11-82</p>
+              <p class="fz13">Для обращения из Москвы<br>
+              и из-за пределов России</p></div>
 
 
-        <div class="tac mt30"><p class="fz26 fwl cyan">8 (800) 777-3-88-2</p>
-          <p class="fz13">Бесплатный вызов из других<br>
-        регионов России</p></div>
+              <div class="tac mt30"><p class="fz26 fwl cyan">8 (800) 777-3-88-2</p>
+                <p class="fz13">Бесплатный вызов из других<br>
+              регионов России</p></div>
 
-        <div class="tac mt30 fz13">
-          <div class="f hcen">
-            <div style="width:130px;" class="f d"><img src="i/viber-contacts.png"> <img src="i/whatsapp-contacts.png"> <img src="i/skype-contacts.png"></div>
+              <div class="tac mt30 fz13">
+                <div class="f hcen">
+                  <div style="width:130px;" class="f d"><img src="i/viber-contacts.png"> <img src="i/whatsapp-contacts.png"> <img src="i/skype-contacts.png"></div>
+                </div>
+                <p class="mt10">Позвонить онлайн</p>
+              </div>
+
+              <div class="tac fz13 mt30">
+                Для обращения по вопросам возврата,<br>
+                смены даты вылета авиабилетов<br>
+                <a href="mailto:zapros@luchshietury.online" class="orange">zapros@luchshietury.online</a><br>
+                <br>
+                Для обращения<br>
+                к генеральному директору компании<br>
+                <a href="mailto:direktor@luchshietury.online" class="orange">direktor@luchshietury.online</a><br>
+                <br>
+                Для обращения по всем остальным вопросам<br>
+                <a href="mailto:info@luchshietury.online" class="orange">info@luchshietury.online</a>
+              </div>
+            </div>
           </div>
-          <p class="mt10">Позвонить онлайн</p>
         </div>
-
-        <div class="tac fz13 mt30">
-          Для обращения по вопросам возврата,<br>
-          смены даты вылета авиабилетов<br>
-          <a href="mailto:zapros@luchshietury.online" class="orange">zapros@luchshietury.online</a><br>
-          <br>
-          Для обращения<br>
-          к генеральному директору компании<br>
-          <a href="mailto:direktor@luchshietury.online" class="orange">direktor@luchshietury.online</a><br>
-          <br>
-          Для обращения по всем остальным вопросам<br>
-          <a href="mailto:info@luchshietury.online" class="orange">info@luchshietury.online</a>
-        </div>
+        <div id="tab-2">lo</div>
+        <div id="tab-3">lo3</div>
+        <div id="tab-4">lo4</div>
       </div>
     </div>
   </div>
