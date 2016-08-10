@@ -23,6 +23,23 @@ body.page-about {
 
 #about-tabs {
   background: rgba(#252525, 0.82);
+  >.active {
+    &.cyan {
+      a {
+        color:$cyan;
+      }
+    }
+    &.orange {
+      a {
+        color:$orange;
+      }
+    }
+    &.green {
+      a {
+        color:$green;
+      }
+    }
+  }
 }
 
 .about-tab {
@@ -201,6 +218,20 @@ body.page-about {
       .ui-state-default {
         border:none;
         background: none;
+        overflow: hidden;
+        border-top-right-radius: 0;
+        &:not(.ui-state-active) {
+          a {
+            &:after {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              box-shadow: 0 0 7px 2px rgba(black, 0.4);
+            }
+          }
+        }
       }
       .ui-state-active {
         border:none;

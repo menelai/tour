@@ -41,7 +41,7 @@
               zoom: 17,
               disableDefaultUI: !1,
               scrollwheel: !1,
-              center: new google.maps.LatLng(55.7598933,37.6370998),
+              center: new google.maps.LatLng(55.759682,37.6414128),
               styles: [
                 {
                   "featureType": "administrative",
@@ -164,7 +164,7 @@
               ]*/
             }, s = new google.maps.Map(document.getElementById("map"), n);
 
-            var pos = new google.maps.LatLng(55.7596271,37.6329016);
+            var pos = new google.maps.LatLng(55.7594416,37.6371829);
             var marker = new google.maps.Marker({
               position: pos,
               map: s,
@@ -391,8 +391,8 @@
             $("#about-tabs").sticky({topSpacing:15});
 
             var lastId,
-              topMenu = $("#nav-col"),
-              topMenuHeight = 0;//topMenu.outerHeight()+15,
+              topMenu = $("#about-tabs"),
+              topMenuHeight = 1;//topMenu.outerHeight()+15,
 
             menuItems = topMenu.find("a"),
 
@@ -416,7 +416,7 @@
 
 
               var cur = scrollItems.map(function(){
-                if ($(this).offset().top < fromTop)
+                if ($(this).offset().top <= fromTop)
                   return this;
               });
 
