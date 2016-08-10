@@ -191,6 +191,9 @@ body.page-about {
   &.ui-widget {
     font-family: SUI;
     font-size: 1em;
+    border: none;
+    border-top-left-radius:0;
+    border-bottom-right-radius: 0;
   }
   .ui-tabs-nav {
     &.ui-widget-header {
@@ -260,12 +263,12 @@ body.page-about {
   .ui-tabs-panel {
     padding:0;
     min-width: 250px;
-    min-height: 450px;
+    min-height: 440px;
   }
 }
 
 #map {
-  position: absolute; top:0; left:0; right:0; bottom:45px;
+  position: absolute; top:0; left:0; right:0; bottom:35px;
   transition: transform 0.3s;
   &.mapdisabled {
     transform: translateX(-100vw);

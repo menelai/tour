@@ -14807,8 +14807,11 @@ body.page-about {
 #contact-tabs.ui-widget {
   font-family: SUI;
   font-size: 1em;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
-/* line 196, about.scss */
+/* line 199, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header {
   border: none;
   background: none;
@@ -14816,7 +14819,7 @@ body.page-about {
   padding: 0;
   margin: 0;
 }
-/* line 203, about.scss */
+/* line 206, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header li {
   float: none;
   margin: 0;
@@ -14824,22 +14827,22 @@ body.page-about {
   width: 45px;
   text-align: center;
 }
-/* line 209, about.scss */
+/* line 212, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header li.ui-tabs-active {
   padding-bottom: 0;
 }
-/* line 213, about.scss */
+/* line 216, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header li + li {
   margin-top: 1px;
 }
-/* line 218, about.scss */
+/* line 221, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header .ui-state-default {
   border: none;
   background: none;
   overflow: hidden;
   border-top-right-radius: 0;
 }
-/* line 225, about.scss */
+/* line 228, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header .ui-state-default:not(.ui-state-active) a:after {
   content: '';
   position: absolute;
@@ -14848,50 +14851,50 @@ body.page-about {
   bottom: 0;
   box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.4);
 }
-/* line 236, about.scss */
+/* line 239, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header .ui-state-active {
   border: none;
   background: none;
 }
-/* line 241, about.scss */
+/* line 244, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header .ui-state-hover {
   border: none;
   background: none;
   top: 0;
 }
-/* line 247, about.scss */
+/* line 250, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header .ui-tabs-anchor {
   float: none;
   padding: 5px 0;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
-/* line 254, about.scss */
+/* line 257, about.scss */
 #contact-tabs .ui-tabs-nav.ui-widget-header a {
   display: block;
 }
-/* line 260, about.scss */
+/* line 263, about.scss */
 #contact-tabs .ui-tabs-panel {
   padding: 0;
   min-width: 250px;
-  min-height: 450px;
+  min-height: 440px;
 }
 
-/* line 267, about.scss */
+/* line 270, about.scss */
 #map {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 45px;
+  bottom: 35px;
   transition: transform 0.3s;
 }
-/* line 270, about.scss */
+/* line 273, about.scss */
 #map.mapdisabled {
   transform: translateX(-100vw);
 }
 
-/* line 275, about.scss */
+/* line 278, about.scss */
 #contact-gal {
   position: absolute;
   top: 0;
@@ -14900,26 +14903,26 @@ body.page-about {
   bottom: 45px;
   transition: transform 0.3s;
 }
-/* line 278, about.scss */
+/* line 281, about.scss */
 #contact-gal.galdisabled {
   transform: translateX(100vw);
 }
-/* line 282, about.scss */
+/* line 285, about.scss */
 #contact-gal .flex-viewport {
   height: 100%;
 }
-/* line 286, about.scss */
+/* line 289, about.scss */
 #contact-gal .slides {
   height: 100%;
 }
-/* line 288, about.scss */
+/* line 291, about.scss */
 #contact-gal .slides > li {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
-/* line 293, about.scss */
+/* line 296, about.scss */
 #contact-gal .slides > li img {
   position: absolute;
   bottom: 50%;
