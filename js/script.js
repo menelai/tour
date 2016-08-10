@@ -44,6 +44,21 @@
               center: new google.maps.LatLng(55.9037981,37.3700205),
               styles: [
                 {
+                  "featureType": "administrative",
+                  "elementType": "labels.text",
+                  "stylers": [
+                    { "visibility": "off" }
+                  ]
+                },
+                {
+                  "featureType": "poi",
+                  "stylers": [
+                    { "visibility": "off" }
+                  ]
+                }
+              ]/*,
+              styles: [
+                {
                   "featureType": "landscape.man_made",
                   "elementType": "geometry.fill",
                   "stylers": [
@@ -146,18 +161,29 @@
                     { "color": "#ffffff" }
                   ]
                 }
-              ]
+              ]*/
             }, s = new google.maps.Map(document.getElementById("map"), n);
 
             var pos = new google.maps.LatLng(55.9028601,37.3846551);
-            u = new google.maps.Marker({
+            var marker = new google.maps.Marker({
               position: pos,
               map: s,
               icon: new google.maps.MarkerImage('i/marker.png', null, null, null, new google.maps.Size(19, 28)),
               title: 'lol',
               zIndex: 1
             });
-            u.infoContent = 'lolo';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: 'ТЦ ДАНИЭЛЬ<br>' +
+              'г. Москва, ул. Соколово-Мещерская,<br>' +
+              'д. 25, торговый центр Даниэль'
+            });
+
+            infowindow.open(s, marker);
+
+            marker.addListener('click', function() {
+              infowindow.open(s, marker);
+            });
 
             $("input[type=radio]").after('<div class="pseudo-radio"></div>');
             $("input[type=checkbox]").after('<div class="pseudo-checkbox"></div>');
