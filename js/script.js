@@ -41,7 +41,7 @@
               zoom: 17,
               disableDefaultUI: !1,
               scrollwheel: !1,
-              center: new google.maps.LatLng(55.759682,37.6414128),
+              center: new google.maps.LatLng(55.7597846,37.6328621),
               styles: [
                 {
                   "featureType": "administrative",
