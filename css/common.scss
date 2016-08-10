@@ -309,6 +309,10 @@ $dark-blue: #07466a;
   @include justify-content(center);
 }
 
+.hrig {
+  @include justify-content(flex-end);
+}
+
 .vcen {
   @include align-items(center);
 }
