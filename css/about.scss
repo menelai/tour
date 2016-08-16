@@ -324,7 +324,6 @@ body.page-about {
   }
 
   .flex-control-nav {
-    z-index: 50;
     display: block;
     position: absolute;
     bottom:10px;
@@ -339,7 +338,7 @@ body.page-about {
       }
       a {
         text-align: left;
-        text-indent: -1000px;
+        text-indent: -9000px;
         width:16px;
         height:16px;
         border-radius: 8px;
