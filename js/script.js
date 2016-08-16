@@ -38,10 +38,10 @@
           $(function() {
 
             var n = {
-              zoom: 17,
+              zoom: 16,
               disableDefaultUI: !1,
               scrollwheel: !1,
-              center: new google.maps.LatLng(55.759441,37.6415312),
+              center: new google.maps.LatLng(55.759157,37.642475),
               styles: [
                 {
                   "featureType": "administrative",

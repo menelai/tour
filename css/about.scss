@@ -9,6 +9,11 @@ body.page-about {
   padding-bottom: 0;
 }
 
+.max-width-wo-padding {
+  max-width: 1600px;
+  margin:0 auto;
+}
+
 #about-tabs-sticky-wrapper {
   z-index: 20;
   position: absolute;
@@ -49,7 +54,7 @@ body.page-about {
   .bgimg {
     position: absolute;
     right:100%;
-    margin-right:-240px;
+    margin-right:-25%;
     width:1200px;
     top:0;
     bottom:0;
@@ -57,7 +62,7 @@ body.page-about {
   }
   .bggrad {
     position: absolute;
-    left:240px;
+    left:25%;
     width:2000px;
     top:0;
     bottom:0;
@@ -65,7 +70,8 @@ body.page-about {
   }
 
   .about-tab-contents {
-    margin-left:240px;
+    margin-left:25%;
+    padding-left:20px;
   }
 }
 
@@ -175,6 +181,9 @@ body.page-about {
 }
 
 .whywe-steps {
+  max-width: 800px;
+  margin-left:auto;
+  margin-right: auto;
   >div:not(.arr) {
     width:165px;
   }
@@ -239,6 +248,10 @@ body.page-about {
       .ui-state-active {
         border:none;
         background: none;
+
+        a {
+          background: #b7b7b7;
+        }
       }
 
       .ui-state-hover {
@@ -262,8 +275,10 @@ body.page-about {
 
   .ui-tabs-panel {
     padding:0;
-    min-width: 390px;
-    min-height: 440px;
+    min-width: 620px;
+    >div {
+      min-height: 440px;
+    }
   }
 }
 
@@ -305,6 +320,36 @@ body.page-about {
          height: auto;
          overflow: hidden;
        }
+    }
+  }
+
+  .flex-control-nav {
+    z-index: 50;
+    display: block;
+    position: absolute;
+    bottom:10px;
+    left:0;
+    right:0;
+    list-style: none;
+    text-align: center;
+    >li {
+      display: inline-block;
+      +li {
+        margin-left:10px;
+      }
+      a {
+        text-align: left;
+        text-indent: -1000px;
+        width:16px;
+        height:16px;
+        border-radius: 8px;
+        border:solid 1px white;
+        background: $green;
+        display: block;
+        &.flex-active {
+          background: $orange;
+        }
+      }
     }
   }
 }
