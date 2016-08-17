@@ -79,6 +79,8 @@ body.page-about {
   background: rgba(white, 0.9);
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
+  margin-left:20px;
+  margin-right: 20px;
 }
 
 #about {
@@ -197,6 +199,7 @@ body.page-about {
 }
 
 #contact-tabs {
+  margin-left:-20px;
   &.ui-widget {
     font-family: SUI;
     font-size: 1em;
@@ -327,10 +330,14 @@ body.page-about {
     display: block;
     position: absolute;
     bottom:10px;
-    left:0;
-    right:0;
+    left:50%;
+    transform: translateX(-50%);
+    width:100%;
+    max-width: 1600px;
+    padding:0 20px;
     list-style: none;
-    text-align: center;
+    text-align: right;
+    margin:0;
     >li {
       display: inline-block;
       +li {
@@ -339,8 +346,8 @@ body.page-about {
       a {
         text-align: left;
         text-indent: -9000px;
-        width:16px;
-        height:16px;
+        width:10px;
+        height:10px;
         border-radius: 8px;
         border:solid 1px white;
         background: $green;
