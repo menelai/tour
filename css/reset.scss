@@ -257,6 +257,20 @@ img {
 }
 
 @media all and (min-width:800px) {
+  @for $i from 1 through 100 {
+    .ws-mt#{$i} {
+      margin-top: #{$i}px;
+    }
+
+    .ws-mb#{$i} {
+      margin-bottom: #{$i}px;
+    }
+
+    .ws-p#{$i} {
+      padding: #{$i}px;
+    }
+  }
+
   @for $i from 2 through 200 {
     .ws-split#{$i} {
       >*:not(:first-child) {
@@ -274,6 +288,10 @@ img {
       >*:not(:last-child) {
         margin-right:#{$i*1/2}px;
       }
+    }
+
+    .ws-nd {
+      display: none;
     }
   }
 }
@@ -315,4 +333,114 @@ img {
 
 .mw0 {
   min-width: 0;
+}
+
+@media all and (max-width: 800px) {
+  @for $i from 1 through 100 {
+    .ss-mt#{$i} {
+      margin-top: #{$i}px;
+    }
+
+    .ss-mb#{$i} {
+      margin-bottom: #{$i}px;
+    }
+
+    .ss-p#{$i} {
+      padding: #{$i}px;
+    }
+  }
+
+  @for $i from 2 through 200 {
+    .ss-split#{$i} {
+      >*:not(:first-child) {
+        padding-left:#{$i*1/2}px;
+      }
+      >*:not(:last-child) {
+        padding-right:#{$i*1/2}px;
+      }
+    }
+
+    .ss-space#{$i} {
+      >*:not(:first-child) {
+        margin-left:#{$i*1/2}px;
+      }
+      >*:not(:last-child) {
+        margin-right:#{$i*1/2}px;
+      }
+    }
+
+    .ss-c.split#{$i}, .ss-c.ss-split#{$i} {
+      >*:not(:first-child) {
+        padding-top:#{$i*1/2}px;
+        padding-left:0;
+      }
+      >*:not(:last-child) {
+        padding-bottom:#{$i*1/2}px;
+        padding-right:0;
+      }
+    }
+
+    .ss-c.space#{$i}, .ss-c.ss-space#{$i} {
+      >*:not(:first-child) {
+        margin-top:#{$i*1/2}px;
+        margin-left:0;
+      }
+      >*:not(:last-child) {
+        margin-bottom:#{$i*1/2}px;
+        margin-right:0;
+      }
+    }
+  }
+
+  .ss-cr {
+    @include flex-direction(column-reverse);
+  }
+
+  .ss-rr {
+    @include flex-direction(row-reverse);
+
+    @for $i from 2 through 200 {
+      &.ss-split#{$i} {
+        > *:not(:first-child) {
+          padding-right: #{$i*1/2}px;
+          padding-left: 0;
+        }
+        > *:not(:last-child) {
+          padding-left: #{$i*1/2}px;
+          padding-right: 0;
+        }
+      }
+
+      &.ss-space#{$i} {
+        > *:not(:first-child) {
+          margin-left: 0;
+          margin-right: #{$i*1/2}px;
+        }
+        > *:not(:last-child) {
+          margin-left: #{$i*1/2}px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .ss-flex1 {
+    @include flex(1);
+  }
+
+  .ss-flex100 {
+    @include flex(0 0 100%);
+  }
+
+  .ss-tac {
+    text-align: center;
+  }
+
+  .ss-tal {
+    text-align: left;
+  }
+
+  .ss-wrap {
+    @include flex-wrap(wrap);
+  }
 }

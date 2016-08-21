@@ -26,7 +26,7 @@
 <body>
 <ng-include src="'top.html'"></ng-include>
 <ng-include src="'searchform.html'"></ng-include>
-<div id="alternate-price" class="mt15">
+<div id="alternate-price" class="mt15 ss-nd">
   <div class="max-width">
     <div class="bysides" id="alternate-header">
       <div id="alt-title">цена туров на альтернативные даты. Длительность тура — 7 дней</div>
@@ -107,17 +107,17 @@
 </div>
 
 <div id="search-results">
-  <div id="results-header">
+  <div id="results-header" class="ss-mt20">
     <div class="max-width">
       <span id="src-dst">
         САНКТ-ПЕТЕРБУРГ     <span class="gt"></span>  КОСТА-ДЕЛЬ-СОЛЬ (Бенальмадена)
         <span class="gt"></span>    САНКТ-ПЕТЕРБУРГ
       </span>
-      <span id="res-dates">25 ИЮНЯ - 5 ИЮЛЯ</span>
+      <span id="res-dates" class=" ss-mt10">25 ИЮНЯ - 5 ИЮЛЯ</span>
     </div>
   </div>
 
-  <div class="bysides vtop max-width ws-space30 mt20">
+  <div class="f d vtop max-width ws-space30 mt20 ws-r ss-c ss-stretch">
     <div id="left-col" class="fz13">
       <div class="block">
         <h2>Количество звезд</h2>
@@ -285,8 +285,8 @@
       </div>
     </div>
     <div class="flex1">
-      <div class="bysides stretch space20">
-        <div class="flex1 f d stretch split4 main-selects">
+      <div class="f d stretch space20 ws-r ss-c">
+        <div class="flex1 f d stretch split4 main-selects ss-c ss-split20">
           <div class="bybounds">
             <div class="mb5">Диапазон цен, <span class="rub">Р</span></div>
             <div class="like-select rng f vcen h30">
@@ -402,14 +402,14 @@
             </div>
           </div>
         </div>
-        <label class="tac bybounds">
-          <div>Free <br>Wi-FI</div>
+        <label class="tac bybounds ss-rr ss-tal ss-split6">
+          <div class="ss-flex1">Free <br class="ss-nd">Wi-FI</div>
           <div><input type="checkbox"></div>
         </label>
       </div>
 
       <div class="mt10 mb20" id="results">
-        <div class="result f ws-r d stretch" ng-repeat="l in [1, 1] track by $index">
+        <div class="result f ws-r ss-c d stretch" ng-repeat="l in [1, 1] track by $index">
           <div class="bg-cyan result-starter"></div>
           <div class="result-photo">
             <img src="i/ex.jpg">
@@ -428,8 +428,8 @@
                 <!--div class="orange result-period tar">25 сентября — 22 сентября</div-->
               </div>
 
-              <div class="f d stretch space10 mt10">
-                <div class="kurort-photo"><img src="i/polpol.png"></div>
+              <div class="f d stretch space10 mt10 ss-c">
+                <div class="kurort-photo ss-nd"><img src="i/polpol.png"></div>
                 <div class="bybounds flex1">
                   <div class="ttu fz11 fwb">Курорт «Красная поляна» или более длинное название курорта</div>
                   <div>
@@ -487,9 +487,9 @@
                 </div>
               </div>
 
-              <div class="mt10 f d vcen space10">
-                <div class="flex1 f vcen hotel-features">
-                  <div class="fz12 grey777">Услуги<br> отеля</div>
+              <div class="mt10 f d vcen space10 ss-c">
+                <div class="flex1 f vcen hotel-features ss-wrap">
+                  <div class="fz12 grey777 ss-flex100 ss-mb10 ss-tac">Услуги<br class="ss-nd"> отеля</div>
                   <div class="tac">
                     <img src="i/wifi.png">
                     <div>Бесплатный Wi-Fi</div>
@@ -564,9 +564,9 @@
 
       </div>
 
-    <div class="mt20 mb20 pager fz12">
+    <div class="mt20 ws-mb20 pager fz12">
       <div class="f vcen hcen space24">
-        <div><a href="/" class="grey-button h22 aib">Предыдущая</a></div>
+        <div><a href="/" class="grey-button h22 aib"><span class="ss-nd">Предыдущая</span><span class="ws-nd">«</span></a></div>
         <div class="f vcen hcen space4 pages">
           <a class="grey-button h22 aib">1</a>
           <a class="grey-button h22 aib">2</a>
@@ -574,7 +574,7 @@
           <a class="grey-button h22 aib">4</a>
           <a class="grey-button h22 aib">5</a>
         </div>
-        <div><a href="/" class="grey-button h22 aib">Следующая</a></div>
+        <div><a href="/" class="grey-button h22 aib"><span class="ss-nd">Следующая</span><span class="ws-nd">»</span></a></a></div>
       </div>
       <div class="showallpages"><a href="/" class="grey-button h22 aib">Показать все</a></div>
     </div>

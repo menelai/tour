@@ -343,3 +343,65 @@
     top:0;
   }
 }
+
+@media all and (max-width:800px) {
+  #left-col {
+    @include flex(auto);
+  }
+
+  #results {
+    margin-left:-10px;
+    margin-right: -10px;
+  }
+
+  .result-contents {
+    border:solid 1px $lightgrey;
+  }
+
+  .result-photo {
+    overflow: hidden;
+    @include flex(auto);
+    min-height: 200px;
+    img {
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
+      -webkit-transform: translateX(50%) translateY(50%);
+      transform: translateX(50%) translateY(50%);
+      min-width: 101%;
+      min-height: 101%;
+      width: auto;
+      height: auto;
+      overflow: hidden;
+    }
+  }
+
+  .tour-price {
+    @include flex(auto);
+    width:100%;
+  }
+
+  .recommended-tour {
+    bottom:auto;
+    top:0px;
+    left:10px;
+    width:auto;
+    right:0;
+  }
+
+  .result:not(:last-child) {
+    .extra-flights {
+      top: 100%;
+    }
+  }
+
+  .pager {
+    .showallpages {
+      margin-top:10px;
+      position: relative;
+      top:auto;
+      right: auto;
+      text-align: center;
+    }
+  }
+}

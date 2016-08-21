@@ -1,11 +1,11 @@
 <div id="top-search-form" ng-init="class=false" class="search{{class}}">
   <div class="max-width">
-    <form class="f d ws-r ss-c ws-space4 vcen">
+    <form class="f d ws-r ss-c ws-space4 vcen" ng-class="'search'+class">
       <div id="new-search" ng-click="class = !class">
-        <div>Новый<br>поиск</div>
+        <div>Новый <br class="ss-nd"> поиск</div>
         <div class="drop-down mobile no-display"></div>
       </div>
-      <div id="from-input">
+      <div id="from-input" class=" ss-mt10">
         <select class="selectric city">
           <option value="+7" >Из: Санкт-Петербург</option>
           <option value="+90" >Грузия</option>
@@ -15,9 +15,9 @@
           <option value="+800" data-flag="i/greece.png">Зимбабве</option>
         </select>
       </div>
-      <div id="to-input" class="flex1 f">
+      <div id="to-input" class="flex1 f ss-mt10">
         <input type="text" placeholder="Куда: страна, курорт или отель" class="flex1">
-        <div id="destination-popup" class="b-1 border-orange" ng-hide="hideWhere">
+        <div id="destination-popup" class="b-1 border-orange" ng-hide="true || hideWhere">
           <div class="p10 f ws-r space20 vcen d">
             <div class="fz12 grey777">Популярные направления</div>
             <div><input type="button" value="Применить" class="grey-button h22" ng-click="hideWhere = true;"></div>
@@ -91,7 +91,7 @@
          </div>
         </div>
       </div>
-      <div id="passengers-input">
+      <div id="passengers-input" class="ss-mt10">
         <div class="pass-border" ng-click="show=!show" ng-init="show=false;">
           <div><!--img src="i/adult-cyan.png" class="" style="height:26px;"-->4 пассажира<!-- <img src="i/child-green.png" class="" style="height:15px;">×2--></div>
         </div>
@@ -136,14 +136,14 @@
           </div>
         </div>
       </div>
-      <div id="date-input-1">
+      <div id="date-input-1" class="ss-mt10">
         <input type="text" class="datepicker" placeholder="Туда">
       </div>
-      <div id="date-input-2">
+      <div id="date-input-2" class="ss-mt10">
         <input id="datepicker-back" type="text" class="datepicker" placeholder="Обратно">
         <div class="close"></div>
       </div>
-      <div id="search-submit">
+      <div id="search-submit" class="ss-mt10">
         <input type="submit" value="Найти" class="orange-button ttu">
       </div>
     </form>
