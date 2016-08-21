@@ -9,6 +9,11 @@ body.page-about {
   padding-bottom: 0;
 }
 
+.max-width-wo-padding {
+  max-width: 1600px;
+  margin:0 auto;
+}
+
 #about-tabs-sticky-wrapper {
   z-index: 20;
   position: absolute;
@@ -49,7 +54,7 @@ body.page-about {
   .bgimg {
     position: absolute;
     right:100%;
-    margin-right:-240px;
+    margin-right:-25%;
     width:1200px;
     top:0;
     bottom:0;
@@ -57,7 +62,7 @@ body.page-about {
   }
   .bggrad {
     position: absolute;
-    left:240px;
+    left:25%;
     width:2000px;
     top:0;
     bottom:0;
@@ -65,7 +70,8 @@ body.page-about {
   }
 
   .about-tab-contents {
-    margin-left:240px;
+    margin-left:25%;
+    padding-left:20px;
   }
 }
 
@@ -73,11 +79,13 @@ body.page-about {
   background: rgba(white, 0.9);
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
+  margin-left:20px;
+  margin-right: 20px;
 }
 
 #about {
   .bgimg {
-    background: #1f2830 url(../i/about-tab.jpg) right top no-repeat;
+    background: #1f2830 url(../i/O-kompanii.jpg) right top no-repeat;
   }
   .bggrad {
     // Needs latest Compass, add '@import "compass"' to your scss
@@ -91,7 +99,7 @@ body.page-about {
 
 #collective {
   .bgimg {
-    background: #1f2830 url(../i/yacht.jpg) right top no-repeat;
+    background: #1A4D78 url(../i/Kollektiv.jpg) right top no-repeat;
   }
   .bggrad {
     // Needs latest Compass, add '@import "compass"' to your scss
@@ -113,7 +121,7 @@ body.page-about {
 
 #trust-us {
   .bgimg {
-    background: url(../i/globe.jpg) right top no-repeat;
+    background: #020822 url(../i/Nam-mojno-doveriat.jpg) right top no-repeat;
   }
   .bggrad {
     background: #030e25;
@@ -122,7 +130,7 @@ body.page-about {
 
 #whywe {
   .bgimg {
-    background: url(../i/whywe.jpg) right top no-repeat;
+    background: #61686E url(../i/Pochemu-mi.jpg) right top no-repeat;
   }
   .bggrad {
     // Needs latest Compass, add '@import "compass"' to your scss
@@ -137,7 +145,7 @@ body.page-about {
 
 #payment-ways {
   .bgimg {
-    background: url(../i/payment-ways.jpg) right top no-repeat;
+    background: #D4C8AE url(../i/Oplata.jpg) right top no-repeat;
   }
   .bggrad {
     // Needs latest Compass, add '@import "compass"' to your scss
@@ -150,8 +158,8 @@ body.page-about {
 }
 
 .employee-image {
-  width:170px;
-  height:170px;
+  width:120px;
+  height:120px;
   border-radius: 90px;
   overflow: hidden;
   margin:0 auto;
@@ -175,6 +183,9 @@ body.page-about {
 }
 
 .whywe-steps {
+  max-width: 800px;
+  margin-left:auto;
+  margin-right: auto;
   >div:not(.arr) {
     width:165px;
   }
@@ -188,6 +199,7 @@ body.page-about {
 }
 
 #contact-tabs {
+  margin-left:-20px;
   &.ui-widget {
     font-family: SUI;
     font-size: 1em;
@@ -239,6 +251,10 @@ body.page-about {
       .ui-state-active {
         border:none;
         background: none;
+
+        a {
+          background: #b7b7b7;
+        }
       }
 
       .ui-state-hover {
@@ -262,8 +278,10 @@ body.page-about {
 
   .ui-tabs-panel {
     padding:0;
-    min-width: 250px;
-    min-height: 430px;
+    min-width: 620px;
+    >div {
+      min-height: 440px;
+    }
   }
 }
 
@@ -305,6 +323,39 @@ body.page-about {
          height: auto;
          overflow: hidden;
        }
+    }
+  }
+
+  .flex-control-nav {
+    display: block;
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    transform: translateX(-50%);
+    width:100%;
+    max-width: 1600px;
+    padding:0 20px;
+    list-style: none;
+    text-align: right;
+    margin:0;
+    >li {
+      display: inline-block;
+      +li {
+        margin-left:10px;
+      }
+      a {
+        text-align: left;
+        text-indent: -9000px;
+        width:10px;
+        height:10px;
+        border-radius: 8px;
+        border:solid 1px white;
+        background: $green;
+        display: block;
+        &.flex-active {
+          background: $orange;
+        }
+      }
     }
   }
 }

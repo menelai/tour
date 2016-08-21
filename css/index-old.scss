@@ -1,6 +1,3 @@
-body.front {
-  padding-bottom: 0;
-}
 .front, .page-about {
   overflow-x: hidden;
   #new-search {
@@ -9,35 +6,20 @@ body.front {
 }
 
 #bn-l-sticky-wrapper {
-  //@include flex(0 0 190px);
-  //width:190px;
+  @include flex(0 0 190px);
+  width:190px;
   //min-height: 750px;
-  width:25%;
-  position: absolute;
-  z-index: 4;
+
 }
 
 #bn-l {
-  height:100vh;
   >div {
-    position: absolute;
-    top:25px;
-    left:25px;
-    right:25px;
-    bottom:75px;
-    border:solid 1px #ffffff;
-    padding:20px;
-
-    // Needs latest Compass, add '@import "compass"' to your scss
-    // Permalink - use to edit and share this gradient:
-    // http://colorzilla.com/gradient-editor/#33445b+0,33445b+100&0.57+0,0+100
-    @include filter-gradient(#33445b, #33445b, vertical); // IE6-9
-    @include background-image(linear-gradient(top,  rgba(51,68,91,0.57) 0%,rgba(51,68,91,0) 100%));
+    height: 100%;
   }
 }
 
 
-/*#bnbg {
+#bnbg {
   position: absolute;
   right:0;
   top:0;
@@ -50,7 +32,12 @@ body.front {
     top: -230px;
     right: -850px;
   }
-}*/
+}
+
+#uniqueoffers {
+  //min-height: 750px;
+  padding: 10px 0;
+}
 
 #uobg {
   background: #193f90;
@@ -68,7 +55,6 @@ body.front {
 }
 
 .offers-table {
-  margin-left:-20px;
   >.row, >.header {
     padding:0 0 0 9px;
   }
@@ -121,13 +107,13 @@ body.front {
       .offer-hotels {
         >div:nth-child(2n) {
           .offer-date {
-            /*background: #dbe5f1;
+            background: #dbe5f1;
 
             .d-t, .d-b {
               &:before {
                 background: #dbe5f1;
               }
-            }*/
+            }
           }
         }
       }
@@ -137,21 +123,21 @@ body.front {
       .offer-hotels {
         >div:nth-child(2n+1) {
           .offer-date {
-            /*background: #dbe5f1;
+            background: #dbe5f1;
 
             .d-t, .d-b {
               &:before {
                 background: #dbe5f1;
               }
-            }*/
+            }
           }
         }
       }
     }
 
     .offer-date {
-      //background: #FFFFFF;
-      //color:black;
+      background: #FFFFFF;
+      color:black;
     }
 
     &:before {
@@ -166,20 +152,13 @@ body.front {
       position: absolute;
       top:0;
       bottom:0;
-      width:9px;
+      width:3px;
       left:100%;
       content: '';
     }
   }
 
   .offer-date {
-    @include flex(0 0 150px);
-    line-height: 40px;
-    text-align: left;
-    padding-left:10px;
-  }
-
-  /*.offer-date {
     padding-left:10px;
     text-align: left;
     @include flex(0 0 150px);
@@ -222,37 +201,30 @@ body.front {
         transform: skewX(-30deg);
       }
     }
-  }*/
+  }
 }
 
 .hotels-bg {
-  >div:nth-child(n+2) {
-    &:before {
-      position: absolute;
-      top:5px;
-      bottom:5px;
-      width:1px;
-      left:0;
-      content:'';
-    }
-  }
+
   >div {
-    //background: rgba(white, 0.1);
+    background: rgba(white, 0.1);
     +div {
-      //margin-left:1px;
+      margin-left:1px;
     }
   }
 }
 
 .offer-hotels {
   >div {
-    &:nth-child(2n+1) {
-      background: rgba(#323232, 0.2);
+    +div {
+      margin-top:1px;
     }
   }
 }
 
 .row-price {
+  width:90px;
+  border-bottom: solid 7px;
 }
 
 .discount {
@@ -297,14 +269,6 @@ body.front {
   .row-price {
     border-color: $cyan;
   }
-
-  .hotels-bg {
-    >div:nth-child(n+2) {
-      &:before {
-        background: $cyan;
-      }
-    }
-  }
 }
 
 .row-orange {
@@ -314,14 +278,6 @@ body.front {
   .row-price {
     border-color: $orange;
   }
-
-  .hotels-bg {
-    >div:nth-child(n+2) {
-      &:before {
-        background: $orange;
-      }
-    }
-  }
 }
 
 .row-green {
@@ -330,14 +286,6 @@ body.front {
   }
   .row-price {
     border-color: $green;
-  }
-
-  .hotels-bg {
-    >div:nth-child(n+2) {
-      &:before {
-        background: $green;
-      }
-    }
   }
 }
 
@@ -441,7 +389,7 @@ body.front {
       @include flex(0 0 100%);
       margin-left:-1px;
       margin-right:-1px;
-      //background: #8e8e8e;
+      background: #8e8e8e;
     }
     >.month-day {
       -webkit-flex: 1 0 auto;
@@ -471,80 +419,4 @@ body.front {
 
 .lh08 {
   line-height: 0.8;
-}
-
-.index-tab {
-  padding-bottom:70px;
-  min-height: 100vh;
-
-  .bgimg {
-    position: absolute;
-    right:100%;
-    margin-right:-25%;
-    width:1200px;
-    top:0;
-    bottom:0;
-    background: red;
-  }
-  .bggrad {
-    position: absolute;
-    left:25%;
-    width:2000px;
-    top:0;
-    bottom:0;
-    background: green;
-  }
-
-  .index-tab-contents {
-    margin-left:25%;
-    padding-left:20px;
-  }
-}
-
-#uniqueoffers {
-  background: url(../i/unique.jpg) left center no-repeat;
-  background-size: cover;
-  .bgimg {
-    background: none;
-  }
-  .bggrad {
-    background: rgba(#2c64af, 0.6);
-  }
-}
-
-#tours-truth {
-  .bggrad {
-    // Needs latest Compass, add '@import "compass"' to your scss
-    // Permalink - use to edit and share this gradient:
-    // http://colorzilla.com/gradient-editor/#c1a97a+0,73502c+100
-    background-color: rgb(193,169,122); // Old browsers
-    @include filter-gradient(#c1a97a, #73502c, vertical); // IE6-9
-    @include background-image(linear-gradient(top,  rgba(193,169,122,1) 0%,rgba(115,80,44,1) 100%));
-  }
-
-  .bgimg {
-    background: url(../i/truth.jpg) right center no-repeat;
-    background-size: auto 100%;
-  }
-}
-
-.front .white-plate {
-  margin-left:0;
-  margin-right: 0;
-}
-
-#tours-types {
-  .bggrad {
-    // Needs latest Compass, add '@import "compass"' to your scss
-    // Permalink - use to edit and share this gradient:
-    // http://colorzilla.com/gradient-editor/#56770e+0,007481+100
-    background-color: rgb(86,119,14); // Old browsers
-    @include filter-gradient(#56770e, #007481, vertical); // IE6-9
-    @include background-image(linear-gradient(top,  rgba(86,119,14,1) 0%,rgba(0,116,129,1) 100%));
-  }
-
-  .bgimg {
-    background: url(../i/pine.jpg) right center no-repeat;
-    background-size: auto 100%;
-  }
 }
