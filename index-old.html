@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html ng-app="tourApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tour</title>
+  <link href="js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/selectric.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&signed_in=false"></script>
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <style>
+    .max-width {
+      max-width: {{width}}px;
+    }
+  </style>
+</head>
+<body class="front" ng-init="hideWhere=true;">
+<ng-include src="'top.html'"></ng-include>
+<div class="bg-orange tac fz13 white ttu p4 fwm">Поиск лучших — лучшие цены в России, найдёте дешевле, вернём разницу + 10%*</div>
+<ng-include src="'searchform.html'"></ng-include>
+<div class="max-width">
+  <div class="f d stretch ws-r">
+    <div id="bn-l">
+      <div>
+        <div id="bnbg"><img src="i/indb.jpg"></div>
+        <div class="white" style="padding-top:65px;">
+          <span class="afut fz22">лучшиетуры.</span><span class="afut fz14">онлайн</span>
+          <div class="fwl fz26 lh08">агентство путешествий для</div>
+          <img src="i/positive.png" style="margin-left:-50px; margin-top:-18px; margin-bottom: -15px;">
+          <div class="fwl fz26 lh08">мы осуществляем ваши мечты</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex1">
+      <div id="uniqueoffers">
+      <div id="uobg"><img src="i/indb.jpg"></div>
+      <div class="tac fz20 ttu white fwm">Уникальные предложения на лучшие туры <span class="fwl">с вылетом из Москвы</span></div>
+
+      <div class="offers-table white">
+        <div class="header f d stretch ws-r">
+          <div class="offer-pic"></div>
+          <div class="flex1 tac f d vcen fz12 fwm">
+            <div class="offer-date">Дата начала тура</div>
+            <div class="flex1">
+              Отель
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+            </div>
+            <div class="flex1">
+              Отель
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+            </div>
+            <div class="flex1">
+              Отель
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+              <img class="vab" src="i/small-star-orange.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="row f d stretch ws-r row-{{l.bg}}" ng-repeat="l in [{c:'Италия', flag:'flag', city:'Римини', photo: 'rimini', bg: 'cyan'}, {c:'Кипр', flag:'cyprus', city:'Ларнака', photo: 'larnaka', bg: 'orange'}, {c:'Россия', flag:'russia', city:'Сочи', photo: 'sochi', bg: 'green'}, {c:'Италия', flag:'flag', city:'Римини', photo: 'barcelona', bg: 'cyan'}, {c:'Кипр', flag:'cyprus', city:'Ларнака', photo: 'korfu', bg: 'orange'}] track by $index">
+          <div class="offer-pic">
+            <div class="offer-pic-wrapper"><img src="i/{{l.photo}}.png"></div>
+            <div class="f vtop space6">
+              <div style="margin-top:3px;"><img src="i/{{l.flag}}.jpg"></div>
+              <div class="fwl">
+                <div class="fz21">{{l.city}}</div>
+                <div class="fz12">{{l.c}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex1 offer-hotels">
+            <div class="tac f d stretch">
+              <div class="offer-date fwm">
+                26 июля 2016
+                <div class="d-t"></div>
+                <div class="d-b"></div>
+              </div>
+              <div class="hotels-bg flex1 d f stretch ws-r">
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">125 000 <span class="rub">Р</span></div>
+                </div>
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">325 000 <span class="rub">Р</span></div>
+                </div>
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">25 000 <span class="rub">Р</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="tac f d stretch">
+              <div class="offer-date fwm">
+                26 сентября 2016
+                <div class="d-t"></div>
+                <div class="d-b"></div>
+              </div>
+              <div class="hotels-bg flex1 d f stretch ws-r">
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">125 000 <span class="rub">Р</span></div>
+                </div>
+                <div class="flex1 f vcen hcen">
+                  <div class="fwm">Нет предложения</div>
+                </div>
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">125 000 <span class="rub">Р</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="tac f d stretch">
+              <div class="offer-date fwm">
+                26 декабря 2016
+                <div class="d-t"></div>
+                <div class="d-b"></div>
+              </div>
+              <div class="hotels-bg flex1 d f stretch ws-r">
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">
+                    25 000 <span class="rub">Р</span>
+                    <div class="discount fwn fz20">
+                      %
+                      <div class="discount-popup tac fz12">
+                        <div class="fwb orange">Скидка: 5000 <span class="rub">Р</span></div>
+                        <div class="fwb grey777">Старая цена: <s>300 000 <span class="rub">Р</span></s></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">25 000 <span class="rub">Р</span></div>
+                </div>
+                <div class="flex1 f vcen hcen">
+                  <div class="fz18 fwb wsn row-price">25 000 <span class="rub">Р</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div id="front-info" class="mt20">
+        <div>
+          <div class="tac fz20 ttu fwm">Самые дешёвые туры <span class="fwl">на лучшиетуры.онлайн — это правда</span></div>
+          <div class="mt5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
+        </div>
+
+        <div class="f d stretch ws-r space4 mt20">
+          <div class="flex1">
+            <div class="f ws-r split4 best-offers">
+              <div class="month" ng-attr-style="width:{{9/30*100}}%;">
+                <div class="month-title white tac mb5">февраль</div>
+                <div class="month-day" ng-attr-style="width:{{100/9*3}}%;" ng-repeat="day in [{day:'25', price:'12&thinsp;338'},{day:'26', price:'12&thinsp;338'},{day:'27', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'27', price:'12&thinsp;338', recommended:true},{day:'27', price:'12&thinsp;338', recommended:true},{day:'27', price:'12&thinsp;338', recommended:true}, {}, {}]">
+                  <h2 ng-show="day.day">{{day.day}}<span> фев</span></h2>
+                  <div ng-show="day.day" class="fz12 fwb">Греция</div>
+                  <div ng-show="day.day" class="fz12 fwb">5 дней</div>
+                  <div class="fz14 orange" ng-show="day.price">{{day.price}}</div>
+                </div>
+              </div>
+              <div class="month" ng-attr-style="width:{{21/30*100}}%;">
+                <div class="month-title white tac mb5">март</div>
+                <div class="month-day"  ng-attr-style="width:{{100/21*3}}%;" ng-repeat="day in [{day:'25', price:'12&thinsp;338'},{day:'26', price:'12&thinsp;338'},{day:'27', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338', cheap:true},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'},{day:'28', price:'12&thinsp;338'}, {}, {}, {}, {}, {}]">
+                  <h2>{{day.day}}<span> мар</span></h2>
+                  <div class="fz12 fwb">Греция</div>
+                  <div class="fz12 fwb">5 дней</div>
+                  <div class="fz14 orange">{{day.price}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bybounds subscribe-form-wrapper">
+            <div class="bg-orange">&nbsp;</div>
+            <div class="flex1 mt5 tac fz13 f vcen hcen">
+              <div>Цены на туры
+              меняются каждые
+              30 минут
+              </div>
+            </div>
+            <form class="mt5">
+              <input type="text" placeholder="Ваш Email" class="b-1" style="width:100%;">
+              <button class="mt5 grey-button aib multiline" style="width:100%;"><div>Оформить подписку</div></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="mt20 f d stretch" style="height:10px;">
+          <div class="flex1 bg-orange"></div>
+          <div class="flex1 bg-cyan"></div>
+          <div class="flex1 bg-green"></div>
+        </div>
+
+        <div class="mt20 tac fz20 ttu fwl">Типы туров, которые предлагает наша компания</div>
+        <div class="mt5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
+
+        <div class="our-types mt20">
+          <div class="our-type" ng-repeat="l in [{c:'Италия', flag:'flag', city:'Римини', photo: 'rimini', bg: 'cyan'}, {c:'Кипр', flag:'cyprus', city:'Ларнака', photo: 'larnaka', bg: 'orange'}, {c:'Россия', flag:'russia', city:'Сочи', photo: 'sochi', bg: 'green'}, {c:'Италия', flag:'flag', city:'Римини', photo: 'barcelona', bg: 'cyan'}, {c:'Кипр', flag:'cyprus', city:'Ларнака', photo: 'korfu', bg: 'orange'}] track by $index">
+            <div class="type-title">Пляжный отдых в Греции</div>
+            <div class="type-photo"><img src="i/{{l.photo}}.png"></div>
+            <div class="mt10 f">
+              <a class="grey-button flex1 h30 tac fwm" href="/">Подробнее</a>
+            </div>
+          </div>
+          <div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<ng-include src="'bottom.html'"></ng-include>
+</body>
+</html>
