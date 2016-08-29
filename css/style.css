@@ -29839,10 +29839,23 @@ body.front {
 
 /* line 476, index.scss */
 .index-tab {
-  padding-bottom: 70px;
-  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-/* line 480, index.scss */
+/* line 479, index.scss */
+.index-tab:not(.last) {
+  min-height: -webkit-calc(100vh - 50px);
+  min-height: -moz-calc(100vh - 50px);
+  min-height: -ms-calc(100vh - 50px);
+  min-height: -o-calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
+}
+/* line 482, index.scss */
+.index-tab.last {
+  min-height: 100vh;
+  padding-bottom: 70px;
+}
+/* line 487, index.scss */
 .index-tab .bgimg {
   position: absolute;
   right: 100%;
@@ -29852,7 +29865,7 @@ body.front {
   bottom: 0;
   background: red;
 }
-/* line 489, index.scss */
+/* line 496, index.scss */
 .index-tab .bggrad {
   position: absolute;
   left: 25%;
@@ -29861,27 +29874,27 @@ body.front {
   bottom: 0;
   background: green;
 }
-/* line 498, index.scss */
+/* line 505, index.scss */
 .index-tab .index-tab-contents {
   margin-left: 25%;
   padding-left: 20px;
 }
 
-/* line 504, index.scss */
+/* line 511, index.scss */
 #uniqueoffers {
   background: url(../i/unique.jpg) left center no-repeat;
   background-size: cover;
 }
-/* line 507, index.scss */
+/* line 514, index.scss */
 #uniqueoffers .bgimg {
   background: none;
 }
-/* line 510, index.scss */
+/* line 517, index.scss */
 #uniqueoffers .bggrad {
   background: rgba(44, 100, 175, 0.6);
 }
 
-/* line 516, index.scss */
+/* line 523, index.scss */
 #tours-truth .bggrad {
   background-color: #c1a97a;
   *zoom: 1;
@@ -29893,19 +29906,19 @@ body.front {
   background-image: -webkit-linear-gradient(top, #c1a97a 0%, #73502c 100%);
   background-image: linear-gradient(to bottom, #c1a97a 0%, #73502c 100%);
 }
-/* line 525, index.scss */
+/* line 532, index.scss */
 #tours-truth .bgimg {
   background: url(../i/truth.jpg) right center no-repeat;
   background-size: auto 100%;
 }
 
-/* line 531, index.scss */
+/* line 538, index.scss */
 .front .white-plate {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 537, index.scss */
+/* line 544, index.scss */
 #tours-types .bggrad {
   background-color: #56770e;
   *zoom: 1;
@@ -29917,7 +29930,7 @@ body.front {
   background-image: -webkit-linear-gradient(top, #56770e 0%, #007481 100%);
   background-image: linear-gradient(to bottom, #56770e 0%, #007481 100%);
 }
-/* line 546, index.scss */
+/* line 553, index.scss */
 #tours-types .bgimg {
   background: url(../i/pine.jpg) right center no-repeat;
   background-size: auto 100%;
