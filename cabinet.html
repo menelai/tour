@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html ng-app="tourApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tour</title>
+  <link href="js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/selectric.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&signed_in=false"></script>
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <style>
+    .max-width {
+      max-width: {{width}}px;
+    }
+  </style>
+</head>
+<body class="page-cabinet bybounds" ng-init="hideWhere=true;">
+<ng-include src="'top.html'"></ng-include>
+<div class="bg-orange tac fz13 white ttu p4 fwm">Поиск лучших — лучшие цены в России, найдёте дешевле, вернём разницу + 10%*</div>
+<ng-include src="'searchform.html'"></ng-include>
+<div class="flex1 bybounds">
+  <div class="max-width w100">
+    <div id="about-tabs" class=" f d stretch fwb fz15 tac" ng-init="tab='your-notebook'">
+      <div class="f bybounds flex1 cyan">
+        <a href="#about" target="_self" class="tdn lh40" ng-click="tab='your-profile'">Мой профиль</a>
+        <div class="h10 bg-cyan"></div>
+      </div>
+      <div class="f bybounds flex1 orange">
+        <a href="#collective" target="_self" class="tdn lh40" ng-click="tab='your-orders'">Мои заказы</a>
+        <div class="h10 bg-orange"></div>
+      </div>
+      <div class="f bybounds flex1 green">
+        <a href="#trust-us" target="_self" class="tdn lh40" ng-click="tab='your-notebook'">Записная книжка</a>
+        <div class="h10 bg-green"></div>
+      </div>
+
+      <div class="f bybounds flex1 cyan">
+        <a href="#whywe" target="_self" class="tdn lh40">Аннулировать тур</a>
+        <div class="h10 bg-cyan"></div>
+      </div>
+      <div class="f bybounds flex1 orange">
+        <a href="#payment-ways" target="_self" class="tdn lh40">Изменить даты тура</a>
+        <div class="h10 bg-orange"></div>
+      </div>
+      <div class="f bybounds flex1 green">
+        <a href="#contacts" target="_self" class="tdn lh40">Мои бонусы</a>
+        <div class="h10 bg-green"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="your-orders f c stretch  flex1" ng-show="tab=='your-orders'">
+    <div class="tac white ttu p30 fz16">Ваши заказы</div>
+    <div class="your-orders-wrapper flex1">
+      <div class="max-width">
+        <div class="p10 rounded5 bg-grey">
+          <div class="f d ws-r space4">
+            <div class="flex1 f">
+              <a class="orange-button h30 aib flex1" href="/">Оплаченные</a>
+            </div>
+            <div class="flex1 f">
+              <a class="orange-button h30 aib flex1" href="/">Неоплаченные</a>
+            </div>
+            <div class="flex1 f">
+              <a class="orange-button h30 aib flex1 active" href="/">Архив</a>
+            </div>
+          </div>
+
+          <div class="mt10" id="results">
+            <div class="result f ws-r ss-c d stretch bg-white" ng-repeat="l in [1, 1] track by $index">
+              <div class="bg-cyan result-starter"></div>
+              <div class="result-photo">
+                <img src="i/ex.jpg">
+              </div>
+              <div class="flex1 bybounds  mw0">
+                <div class="result-contents p10">
+                  <div class="f ws-r d space10 vtop">
+                    <div class="flex1 fz16 f ws-r vtop space10 ">
+                      <div class="ttu">
+                        Sheraton Moscow Sheremetyevo Hotel
+                      </div>
+                      <div class="mt3">
+                        <div class="rating r3"></div>
+                      </div>
+                    </div>
+                    <!--div class="orange result-period tar">25 сентября — 22 сентября</div-->
+                  </div>
+
+                  <div class="f d stretch space10 mt10 ss-c">
+                    <div class="kurort-photo ss-nd"><img src="i/polpol.png"></div>
+                    <div class="bybounds flex1">
+                      <div class="ttu fz11 fwb">Курорт «Красная поляна» или более длинное название курорта</div>
+                      <div>
+                        <div class="cyan fz12 fwb">Состав тура:</div>
+                        <div class="f around vtop tac grey777 fz10">
+                          <div>
+                            <img src="i/r-plane.png">
+                            <div class="mt5">Авиа-<br>перелет</div>
+                          </div>
+                          <div>
+                            <img src="i/r-bus.png">
+                            <div class="mt5">Групповой<br>трансфер</div>
+                          </div>
+                          <div>
+                            <img src="i/r-compass.png">
+                            <div class="mt5">Услуги<br>гида</div>
+                          </div>
+                          <div>
+                            <img src="i/r-doctor.png">
+                            <div class="mt5">Медицинская<br>страховка</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-grey p10 tour-price">
+                      <div class="tac fz12 orange fwb">25 сентября — 22 сентября</div>
+                      <div class="tac mt10"><img src="i/adult.png" class="vab">×2 <img src="i/child.png" class="vab">×2</div>
+                      <div class="mt10 tac fz24 fwb">
+                        212 338 <span class="rub">Р</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="f d vtop ws-r mt10 space10">
+                    <div class="flex1 mw0">
+                      <div class="fz12 mb5 orange fwb">Тип питания</div>
+                      <select class="selectric grey hasprice h30">
+                        <option value="5 000 — 7 000" data-price="55000">Ультра всё включено</option>
+                        <option value="15 000 — 17 000" data-price="155000">Всё включено</option>
+                        <option value="25 000 — 27 000" data-price="255000">HB — завтрак, ужин</option>
+                      </select>
+                    </div>
+                    <div class="flex1 mw0">
+                      <div class="fz12 mb5 orange fwb">Тип номера</div>
+                      <select class="selectric grey hasprice h30">
+                        <option value="5 000 — 7 000" data-price="55000">Семейный номер,
+                          2 комнаты,
+                          боковой вид на море</option>
+                        <option value="15 000 — 17 000" data-price="55000">Двойной номер,
+                          боковой вид на море</option>
+                        <option value="25 000 — 27 000" data-price="55000">Одиночный номер,
+                          1 комната,
+                          боковой вид на море</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mt10 f d vcen space10 ss-c">
+                    <div class="flex1 f vcen hotel-features ss-wrap">
+                      <div class="fz12 grey777 ss-flex100 ss-mb10 ss-tac">Услуги<br class="ss-nd"> отеля</div>
+                      <div class="tac">
+                        <img src="i/wifi.png">
+                        <div>Бесплатный Wi-Fi</div>
+                      </div>
+                      <div class="tac">
+                        <img src="i/children.png">
+                        <div>Бесплатный Wi-Fi</div>
+                      </div>
+                      <div class="tac">
+                        <img src="i/ac.png">
+                        <div>Бесплатный Wi-Fi</div>
+                      </div>
+                      <div class="tac">
+                        <img src="i/pool.png">
+                        <div>Бесплатный Wi-Fi</div>
+                      </div>
+                      <div class="tac">
+                        <img src="i/child-beach.png">
+                        <div>Бесплатный Wi-Fi</div>
+                      </div>
+                      <div class="tac">
+                        <img src="i/child-beach.png">
+                        <div>Бесплатный Wi-Fi</div>
+                      </div>
+                    </div>
+                    <!--div class="tour-price"><a href="/" class="green-button ttu tac">Подробнее</a></div-->
+                  </div>
+                </div>
+
+                <div class="result-flights f ws-r d stretch shown{{show}}" ng-click="show=!show">
+                  <div class="airlogo f vcen hcen">
+                    <img src="i/airlogo.png">
+                  </div>
+                  <div class="flex1 f c hcen">
+                    <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+                    <div class="flight-back mt2"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+                  </div>
+                  <div class="thik-arrow"><div></div></div>
+                </div>
+                <div class="extra-flights fz13" ng-show="show">
+                  <div class="f ws-r d stretch">
+                    <div class="airlogo f vcen hcen">
+                      <img src="i/zzz.png">
+                    </div>
+                    <div class="flex1 f c hcen">
+                      <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+                      <div class="flight-back mt5"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+                    </div>
+                    <div class="bybounds choose-extra">
+                      <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+                      <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+                    </div>
+                  </div>
+                  <div class="f ws-r d stretch">
+                    <div class="airlogo f vcen hcen">
+                      <img src="i/zzz.png">
+                    </div>
+                    <div class="flex1 f c hcen">
+                      <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+                      <div class="flight-back mt5"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+                    </div>
+                    <div class="bybounds choose-extra">
+                      <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+                      <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="your-profile f c stretch  flex1" ng-show="tab=='your-profile'">
+    <div class="tac white ttu p30 fz16">Профиль покупателя</div>
+    <div class="your-profile-wrapper flex1">
+      <div class="max-width f hcen vcen">
+        <div class="your-profile-contents white-plate p20 flex1">
+          <div class="f d stretch space30">
+            <div class="f d stretch bg-grey fz16 flex1">
+              <div class="starter bg-orange"></div>
+              <div class="p10">
+                <div class="mb10">Александр Терехов</div>
+                <div><img src="i/russia.jpg"> +7 (495) 456-34-78 ceo@biletideshevo.ru</div>
+              </div>
+              <div class="f vbot p10">
+                <a href="/" class="h30 grey-button aib pencil">
+                  <img src="i/pencil.png">
+                </a>
+              </div>
+            </div>
+            <div class="bybounds policy-div tac">
+              <div>
+                Пожалуйста, ознакомьтесь с нашей политикой безопасности
+              </div>
+              <div class="f">
+                <a href="/" class="grey-button flex1 aib h30">Изменить пароль</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="f d r vtop mt20">
+            <div class="fwb">Ваш персональный менеджер:</div>
+            <div>Тайденова Дарья</div>
+            <div>
+              <img src="i/russia.jpg"> +7 (495) 456-34-78 | ceo@biletideshevo.ru
+            </div>
+          </div>
+
+          <div class="tac mt40">
+            <div class="ttu">Ваши банковские карты</div>
+            <div class="fwb mt20">У вас нет привязанных карт</div>
+            <div style="margin-left:auto; margin-right:auto; width:190px;" class="mt20 f">
+              <a href="/" class="aib grey-button h30 flex1">Отмена</a>
+            </div>
+          </div>
+
+          <div class="f d stretch space40 mt20">
+            <div class="rounded10 flex1 credit-face bybounds">
+              <div class="bg-white f d vcen p10-3">
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/visa.png" style="width:35px;"></label>
+                </div>
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/visa-electron.png" style="width:35px;"></label>
+                </div>
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/mastercard.png" style="width:25px;"></label>
+                </div>
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/maestro.png" style="width:25px;"></label>
+                </div>
+              </div>
+              <div class="f ph10">
+                <input type="text" placeholder="Номер карты" class="b-1 flex1  h30">
+              </div>
+              <div class="f d vcen space10 ph10">
+                <div class="white">Срок действия</div>
+                <div class="flex1">
+                  <select class="selectric grey h30">
+                    <option>Январь</option>
+                  </select>
+                </div>
+                <div class="flex1">
+                  <select class="selectric grey  h30">
+                    <option>2016</option>
+                  </select>
+                </div>
+              </div>
+              <div class="f ph10">
+                <input type="text" placeholder="Фамилия Имя (как на карте)" class="b-1 flex1 h30">
+              </div>
+            </div>
+            <div class="rounded10 bg-orange flex1">
+              <div class="mt20 bg-white p10-3">Код безопасности</div>
+              <div class="f ph10 mt12">
+                <input type="text" placeholder="CVC/CVV" class="b-1 flex1 h30">
+              </div>
+            </div>
+          </div>
+
+          <div class="f d stretch mt20 space20">
+            <div class="flex1 fz11">
+              Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ОАО "Сбербанк России". Введенная информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платежных систем Visa Int. и MasterCard Europe Sprl
+            </div>
+            <div class="bybounds saves">
+              <div class="f">
+                <input type="submit" value="Сохранить" class="green-button aib h30 flex1">
+              </div>
+              <div class="f">
+                <a href="/" class="grey-button flex1 aib h30">Добавить карту</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="your-notebook f r vcen flex1" ng-show="tab=='your-notebook'">
+    <div class="max-width flex1">
+      <div class="fz16 ttu tac">Записная книжка</div>
+      <div class="white-plate mt10">
+        <div class="f d stretch ws-r space6">
+          <div class="bg-grey flex1 f d stretch space10">
+            <div class="starter bg-orange"></div>
+            <div class="bybounds flex1 p10">
+              <div class="fz16">Турист 1: Александр Александрпович Терехов</div>
+              <div class="f d ws-r space30 vtop mt20">
+                <div>
+                  <div class="fz12 fwl">Дата рождения</div>
+                  <div>12.09.1978</div>
+                </div>
+                <div>
+                  <div class="fz12 fwl">Серия и номер загранпаспорта</div>
+                  <div>77 8890998</div>
+                </div>
+                <div>
+                  <div class="fz12 fwl">Срок действия загранпаспорта</div>
+                  <div>12.09.2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bybounds nb-buttons">
+            <div class="f">
+              <a href="/" class="grey-button aib h30 flex1">Редактировать данные <img src="i/pencil.png" style="margin-top:-2px;"></a>
+            </div>
+            <div class="f mt5">
+              <a href="/" class="grey-button aib h30 flex1">Удалить <img src="i/cross.png" style="margin-top:-2px;"></a>
+            </div>
+            <div class="f mt5">
+              <a href="/" class="grey-button aib h30 flex1">Добавить туриста <img src="i/nb-tourist.png" style="margin-top:-2px;"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<ng-include src="'bottom.html'"></ng-include>
+</body>
+</html>
