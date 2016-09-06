@@ -72,7 +72,7 @@ body.page-cabinet {
   //min-height: 100vh;
   background: url(../i/notebook.jpg) center center no-repeat;
   background-size: cover;
-  padding: 60px 0 90px;
+  padding: 90px 0 90px;
 
   .white-plate {
     max-width: 850px;
@@ -85,4 +85,63 @@ body.page-cabinet {
 
 .nb-buttons {
   @include flex(0 0 210px);
+}
+
+.grey-bubble, .white-bubble {
+  margin-left:10px;
+  background: #e6e9ea;
+  &:before {
+    content:'';
+    position: absolute;
+    top:20px;
+    left:-6px;
+    background: #e6e9ea;
+    width:10px;
+    height:8px;
+    @include transform(skewX(-50deg));
+  }
+  &:after {
+    content:'';
+    position: absolute;
+    top:28px;
+    left:-6px;
+    background: #e6e9ea;
+    width:10px;
+    height:8px;
+    @include transform(skewX(50deg));
+  }
+}
+
+.white-bubble {
+  background: white;
+  border:solid 1px #e6e9ea;
+  &:before, &:after {
+    background: white;
+    border-left:solid 1px #e6e9ea;
+  }
+
+  textarea {
+    border:none;
+    background: none;
+    resize: none;
+    padding:0;
+    outline: none !important;
+  }
+}
+
+.messages-date-and-name {
+  @include flex(0 0 160px);
+}
+.flex-answer {
+  @include flex(0 0 110px);
+}
+
+.form-label {
+  @include flex(0 0 240px);
+}
+
+.cabinet-bill {
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
 }

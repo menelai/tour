@@ -31332,7 +31332,7 @@ body.page-cabinet {
 .your-notebook {
   background: url(../i/notebook.jpg) center center no-repeat;
   background-size: cover;
-  padding: 60px 0 90px;
+  padding: 90px 0 90px;
 }
 /* line 77, cabinet.scss */
 .your-notebook .white-plate {
@@ -31346,4 +31346,82 @@ body.page-cabinet {
 .nb-buttons {
   -webkit-flex: 0 0 210px;
   flex: 0 0 210px;
+}
+
+/* line 90, cabinet.scss */
+.grey-bubble, .white-bubble {
+  margin-left: 10px;
+  background: #e6e9ea;
+}
+/* line 93, cabinet.scss */
+.grey-bubble:before, .white-bubble:before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -6px;
+  background: #e6e9ea;
+  width: 10px;
+  height: 8px;
+  -moz-transform: skewX(-50deg);
+  -ms-transform: skewX(-50deg);
+  -webkit-transform: skewX(-50deg);
+  transform: skewX(-50deg);
+}
+/* line 103, cabinet.scss */
+.grey-bubble:after, .white-bubble:after {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: -6px;
+  background: #e6e9ea;
+  width: 10px;
+  height: 8px;
+  -moz-transform: skewX(50deg);
+  -ms-transform: skewX(50deg);
+  -webkit-transform: skewX(50deg);
+  transform: skewX(50deg);
+}
+
+/* line 115, cabinet.scss */
+.white-bubble {
+  background: white;
+  border: solid 1px #e6e9ea;
+}
+/* line 118, cabinet.scss */
+.white-bubble:before, .white-bubble:after {
+  background: white;
+  border-left: solid 1px #e6e9ea;
+}
+/* line 123, cabinet.scss */
+.white-bubble textarea {
+  border: none;
+  background: none;
+  resize: none;
+  padding: 0;
+  outline: none !important;
+}
+
+/* line 132, cabinet.scss */
+.messages-date-and-name {
+  -webkit-flex: 0 0 160px;
+  flex: 0 0 160px;
+}
+
+/* line 135, cabinet.scss */
+.flex-answer {
+  -webkit-flex: 0 0 110px;
+  flex: 0 0 110px;
+}
+
+/* line 139, cabinet.scss */
+.form-label {
+  -webkit-flex: 0 0 240px;
+  flex: 0 0 240px;
+}
+
+/* line 143, cabinet.scss */
+.cabinet-bill {
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
 }
