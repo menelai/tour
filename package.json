@@ -1,0 +1,19 @@
+{
+  "name": "SH",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-dependencies": "^0.1.1",
+    "gulp-if": "^2.0.1"
+  },
+  "dependencies": {
+  }
+}

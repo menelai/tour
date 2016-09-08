@@ -404,6 +404,9 @@ body.front {
   margin-right: -8px;
   >div {
     @include flex(1);
+    .mac & {
+      @include flex(1 1 auto);
+    }
     min-width: 250px;
     margin:0 8px;
     &.our-type {

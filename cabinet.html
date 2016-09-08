@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html ng-app="tourApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tour</title>
+  <link href="js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/selectric.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&signed_in=false"></script>
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <style>
+    .max-width {
+      max-width: {{width}}px;
+    }
+  </style>
+</head>
+<body class="page-cabinet bybounds" ng-init="hideWhere=true;">
+<ng-include src="'top.html'"></ng-include>
+<div class="bg-orange tac fz13 white ttu p4 fwm">Поиск лучших — лучшие цены в России, найдёте дешевле, вернём разницу + 10%*</div>
+<ng-include src="'searchform.html'"></ng-include>
+<div class="flex1 bybounds">
+  <div class="max-width w100">
+    <div id="about-tabs" class=" f d stretch fwb fz15 tac" ng-init="tab='your-orders'">
+      <div class="f bybounds flex1 cyan">
+        <a href="#about" target="_self" class="tdn lh40" ng-click="tab='your-profile'">Мой профиль</a>
+        <div class="h10 bg-cyan"></div>
+      </div>
+      <div class="f bybounds flex1 orange">
+        <a href="#collective" target="_self" class="tdn lh40" ng-click="tab='your-orders'">Мои заказы</a>
+        <div class="h10 bg-orange"></div>
+      </div>
+      <div class="f bybounds flex1 green">
+        <a href="#trust-us" target="_self" class="tdn lh40" ng-click="tab='your-notebook'">Записная книжка</a>
+        <div class="h10 bg-green"></div>
+      </div>
+
+      <div class="f bybounds flex1 cyan">
+        <a href="#whywe" target="_self" class="tdn lh40">Аннулировать тур</a>
+        <div class="h10 bg-cyan"></div>
+      </div>
+      <div class="f bybounds flex1 orange">
+        <a href="#payment-ways" target="_self" class="tdn lh40">Изменить даты тура</a>
+        <div class="h10 bg-orange"></div>
+      </div>
+      <div class="f bybounds flex1 green">
+        <a href="#contacts" target="_self" class="tdn lh40">Мои бонусы</a>
+        <div class="h10 bg-green"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="your-orders f c stretch  flex1" ng-show="tab=='your-orders'">
+    <div class="tac white ttu p30 fz16">Ваши заказы</div>
+    <div class="your-orders-wrapper flex1">
+      <div class="max-width">
+        <div class="p10 rounded5 bg-grey">
+          <div class="f d ws-r space4" ng-init="orders='unpaid'">
+            <div class="flex1 f">
+              <a class="orange-button h30 aib flex1" ng-click="orders='paid'" ng-class="orders=='paid' ? 'active' : ''">Оплаченные</a>
+            </div>
+            <div class="flex1 f">
+              <a class="orange-button h30 aib flex1" ng-click="orders='unpaid'" ng-class="orders=='unpaid' ? 'active' : ''">Неоплаченные</a>
+            </div>
+            <div class="flex1 f">
+              <a class="orange-button h30 aib flex1" ng-click="orders='archive'" ng-class="orders=='archive' ? 'active' : ''">Архив</a>
+            </div>
+          </div>
+
+          <div class="mt10" ng-show="orders=='archive'">
+            <div ng-repeat="l in [1, 1] track by $index" ng-include="'result.html'"></div>
+          </div>
+
+          <div class="mt10" ng-show="orders=='paid'">
+            <div class="f d stretch space10">
+              <div class="flex1" ng-include="'result.html'"></div>
+              <div class="saves bybounds">
+                <div>
+                  <div class="bg-white p5 tac fz13">
+                    Подтверждение отела:<br>
+                    <span class="orange ttu">Ожидается</span>
+                  </div>
+                  <div class="bg-white p5 tac fz13 mt10">
+                    Авиабилеты:<br>
+                    <span class="green ttu">Подтверждены</span>
+                  </div>
+                  <div class="bg-white p5 tac fz13 mt10">
+                    Статус визы:<br>
+                    <span class="green ttu">Одобрена</span>
+                  </div>
+
+                  <div class="mt10 f">
+                    <a href="/" class="h30 grey-button aib flex1">Аннулировать тур</a>
+                  </div>
+                  <div class="mt10 f">
+                    <a href="/" class="h30 grey-button aib flex1">Изменить даты тура</a>
+                  </div>
+                </div>
+                <div class="mt10">
+                  <div class="f vcen hcen space10">
+                    <img src="i/communicatemanager.png">
+                    <div class="orange fz13 fwb">
+                      Связаться<br>
+                      с менеджером
+                    </div>
+                  </div>
+                  <div class="mt10 f hcen space20">
+                    <img src="i/viber-contacts.png">
+                    <img src="i/skype-contacts.png">
+                    <img src="i/whatsapp-contacts.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt10" ng-show="orders=='unpaid'">
+            <div class="f d stretch space10">
+              <div class="flex1" ng-include="'result.html'"></div>
+              <div class="saves bybounds">
+                <div>
+                  <div class="tac">
+                    <div class="fz13">Оплатить до:</div>
+                    <div class="fz18">
+                      12:30<br>
+                      21 июля 2016
+                    </div>
+                  </div>
+
+                  <a class="f d mt20 space10 vcen orange tdn lh16" href="/">
+                    <img src="i/paywithcard.png">
+                    <span class="flex1">Оплатить<br>банковской картой</span>
+                  </a>
+
+                  <a class="f d mt20 space10 vcen orange tdn lh16" href="/">
+                    <img src="i/paywithcash.png">
+                    <span class="flex1">Оплатить<br>наличными в офисе</span>
+                  </a>
+
+                  <a class="f d mt20 space10 vcen orange tdn lh16" href="/">
+                    <img src="i/paywithbill.png">
+                    <span class="flex1">Безналичная оплата.<br>Получить счёт.</span>
+                  </a>
+                </div>
+                <div class="mt10">
+                  <div class="f vcen hcen space10">
+                    <img src="i/communicatemanager.png">
+                    <div class="orange fz13 fwb">
+                      Связаться<br>
+                      с менеджером
+                    </div>
+                  </div>
+                  <div class="mt10 f hcen space20">
+                    <img src="i/viber-contacts.png">
+                    <img src="i/skype-contacts.png">
+                    <img src="i/whatsapp-contacts.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt20" ng-show="orders=='paid' && tab=='your-orders'">
+          <div class="ttu fz16 tac">Аннулировать тур</div>
+          <div class="mt20">
+            <div class="f d stretch space20">
+              <div class="messages-date-and-name">
+                <div>18 сентября 2016</div>
+                <div class="fwl fz12 mt10">Ваш персональный менеджер</div>
+                <div>Дарья Сергеева</div>
+                <div class="h10 bg-green"></div>
+              </div>
+              <div class="flex1 f stretch">
+                <div class="grey-bubble p20 rounded10 fz15 flex1">
+                  dsd
+                </div>
+              </div>
+              <div class="f vbot flex-answer">
+                <div class="f flex1">
+                  <input type="submit" class="grey-button h30 flex1 aib" value="Ответить">
+                </div>
+              </div>
+            </div>
+
+            <div class="f d stretch space20 mt20">
+              <div class="messages-date-and-name">
+                <div>18 сентября 2016</div>
+                <div class="mt10">Кондратенко Дарья Сергеева</div>
+                <div class="h10 bg-orange"></div>
+              </div>
+              <div class="flex1 f stretch">
+                <div class="white-bubble p20 rounded10 fz15 flex1 f stretch">
+                  <textarea class="flex1 b-0" placeholder="Текст сообщения" rows="10"></textarea>
+                </div>
+              </div>
+              <div class="f vbot flex-answer">
+                <div class="f flex1">
+                  <input type="submit" class="grey-button h30 flex1 aib" value="Отправить">
+                </div>
+              </div>
+            </div>
+
+            <div class="f d stretch space20 mt20">
+              <div class="messages-date-and-name">
+                <div>18 сентября 2016</div>
+                <div class="mt10">Кондратенко Дарья Сергеева</div>
+                <div class="h10 bg-orange"></div>
+              </div>
+              <div class="flex1 f stretch">
+                <div class="grey-bubble p20 rounded10 fz15 flex1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                  voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </div>
+              </div>
+              <div class="f vbot flex-answer">
+                <div class="flex1 bg-grey grey777 tac rounded4 lh30 fwm">
+                  Отправлено
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt20" ng-show="orders=='unpaid' && tab=='your-orders'">
+          <div class="tac fz16 ttu mb20">Безналичная оплата</div>
+
+          <form class="cabinet-bill">
+            <div class="tac fz16"> Для автоматического формирования счёта укажите пожалуйста следующие параметры:</div>
+            <div class="tac fwl mb20">В течении нескольких минут счёт будет отправлен на email, указанный при бронировании.
+              Оригиналы Договора, счёта, акта Вы сможете забрать в нашем офисе,
+              если Вы желаете, чтобы Мы привезли пакет документов вам, сообщите пожалуйста об этом вашему менеджеру.
+            </div>
+
+            <div class="f d space10 vcen">
+              <div class="form-label tar">Наименование ООО, ИП, ФИО физического лица</div>
+              <div class="flex1 f">
+                <input type="text" class="b-1 flex1" placeholder="ООО «Ромашка или ИП Терехов Александр Сергеевич или Иванов Сергей Николаевич">
+              </div>
+            </div>
+            <div class="f d space10 vcen mt10">
+              <div class="form-label tar">ИНН</div>
+              <div class="flex1 f d vcen space10">
+                <input type="text" class="b-1 flex1" placeholder="777372846">
+                <div>&nbsp;&nbsp;&nbsp;КПП (для ООО):</div>
+                <input type="text" class="b-1 flex1" placeholder="324523543245">
+              </div>
+            </div>
+            <div class="f d space10 vcen mt10">
+              <div class="form-label tar">Юридический адрес
+                (для ООО и ИП)</div>
+              <div class="flex1 f">
+                <input type="text" class="b-1 flex1" placeholder="125466, г. Москва, ул. Соколово-Мещерская, д. 25">
+              </div>
+            </div>
+            <div class="f d space10 vcen mt10">
+              <div class="form-label tar">Данные паспорта гражданина РФ
+                (для ИП и физического лица)</div>
+              <div class="flex1 f">
+                <input type="text" class="b-1 flex1" placeholder="45 97 067089, выдан 153 отделением милиции ОВД МО «Бирюлёво-Восточное">
+              </div>
+            </div>
+            <div class="f d space10 vcen mt10">
+              <div class="form-label tar">Адрес регистрации
+                (для физического лица)</div>
+              <div class="flex1 f">
+                <input type="text" class="b-1 flex1" placeholder="136456, г. Москва, ул. Родионовская, д. 24, кв. 38">
+              </div>
+            </div>
+            <div class="f d space10 vcen mt10">
+              <div class="form-label tar">Адрес регистрации
+                (для физического лица)</div>
+              <div class="flex1 f">
+                <input type="text" class="b-1 flex1" placeholder="136456, г. Москва, ул. Родионовская, д. 24, кв. 38">
+              </div>
+            </div>
+            <div class="f d space10 vcen mt20">
+              <div class="form-label tar"><input type="reset" value="Отмена" class="grey-button h30 aib"></div>
+              <div class="flex1 f d vcen">
+                <input type="submit" value="Сформировать и отправить на email@vasyapupkin.ru" class="green-button h30 aib ttu">
+                <div class="f d space6 vcen">
+                  <div class="tar fz12 lh12">Другой<br>Email</div>
+                  <a href="/" class="grey-button aib h30"><img src="i/pencil.png" style="margin:-2px -4px 0;"></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="your-profile f c stretch  flex1" ng-show="tab=='your-profile'">
+    <div class="tac white ttu p30 fz16">Профиль покупателя</div>
+    <div class="your-profile-wrapper flex1">
+      <div class="max-width f hcen vcen">
+        <div class="your-profile-contents white-plate p20 flex1">
+          <div class="f d stretch space30">
+            <div class="f d stretch bg-grey fz16 flex1">
+              <div class="starter bg-orange"></div>
+              <div class="p10">
+                <div class="mb10">Александр Терехов</div>
+                <div><img src="i/russia.jpg"> +7 (495) 456-34-78 ceo@biletideshevo.ru</div>
+              </div>
+              <div class="f vbot p10">
+                <a href="/" class="h30 grey-button aib pencil">
+                  <img src="i/pencil.png">
+                </a>
+              </div>
+            </div>
+            <div class="bybounds policy-div tac">
+              <div>
+                Пожалуйста, ознакомьтесь с нашей политикой безопасности
+              </div>
+              <div class="f">
+                <a href="/" class="grey-button flex1 aib h30">Изменить пароль</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="f d r vtop mt20">
+            <div class="fwb">Ваш персональный менеджер:</div>
+            <div>Тайденова Дарья</div>
+            <div>
+              <img src="i/russia.jpg"> +7 (495) 456-34-78 | ceo@biletideshevo.ru
+            </div>
+          </div>
+
+          <div class="tac mt40">
+            <div class="ttu">Ваши банковские карты</div>
+            <div class="fwb mt20">У вас нет привязанных карт</div>
+            <div style="margin-left:auto; margin-right:auto; width:190px;" class="mt20 f">
+              <a href="/" class="aib grey-button h30 flex1">Отмена</a>
+            </div>
+          </div>
+
+          <div class="f d stretch space40 mt20">
+            <div class="rounded10 flex1 credit-face bybounds">
+              <div class="bg-white f d vcen p10-3">
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/visa.png" style="width:35px;"></label>
+                </div>
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/visa-electron.png" style="width:35px;"></label>
+                </div>
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/mastercard.png" style="width:25px;"></label>
+                </div>
+                <div>
+                  <label class="f vcen"><input type="radio" name="cardtype">&nbsp;<img src="i/maestro.png" style="width:25px;"></label>
+                </div>
+              </div>
+              <div class="f ph10">
+                <input type="text" placeholder="Номер карты" class="b-1 flex1  h30">
+              </div>
+              <div class="f d vcen space10 ph10">
+                <div class="white">Срок действия</div>
+                <div class="flex1">
+                  <select class="selectric grey h30">
+                    <option>Январь</option>
+                  </select>
+                </div>
+                <div class="flex1">
+                  <select class="selectric grey  h30">
+                    <option>2016</option>
+                  </select>
+                </div>
+              </div>
+              <div class="f ph10">
+                <input type="text" placeholder="Фамилия Имя (как на карте)" class="b-1 flex1 h30">
+              </div>
+            </div>
+            <div class="rounded10 bg-orange flex1">
+              <div class="mt20 bg-white p10-3">Код безопасности</div>
+              <div class="f ph10 mt12">
+                <input type="text" placeholder="CVC/CVV" class="b-1 flex1 h30">
+              </div>
+            </div>
+          </div>
+
+          <div class="f d stretch mt20 space20">
+            <div class="flex1 fz11">
+              Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ОАО "Сбербанк России". Введенная информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платежных систем Visa Int. и MasterCard Europe Sprl
+            </div>
+            <div class="bybounds saves">
+              <div class="f">
+                <input type="submit" value="Сохранить" class="green-button aib h30 flex1">
+              </div>
+              <div class="f">
+                <a href="/" class="grey-button flex1 aib h30">Добавить карту</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="your-notebook f r vcen flex1" ng-show="tab=='your-notebook'">
+    <div class="max-width flex1">
+      <div class="fz16 ttu tac">Записная книжка</div>
+      <div class="white-plate mt10">
+        <div class="f d stretch ws-r space6">
+          <div class="bg-grey flex1 f d stretch space10">
+            <div class="starter bg-orange"></div>
+            <div class="bybounds flex1 p10">
+              <div class="fz16">Турист 1: Александр Александрпович Терехов</div>
+              <div class="f d ws-r space30 vtop mt20">
+                <div>
+                  <div class="fz12 fwl">Дата рождения</div>
+                  <div>12.09.1978</div>
+                </div>
+                <div>
+                  <div class="fz12 fwl">Серия и номер загранпаспорта</div>
+                  <div>77 8890998</div>
+                </div>
+                <div>
+                  <div class="fz12 fwl">Срок действия загранпаспорта</div>
+                  <div>12.09.2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bybounds nb-buttons">
+            <div class="f">
+              <a href="/" class="grey-button aib h30 flex1">Редактировать данные <img src="i/pencil.png" style="margin-top:-2px;"></a>
+            </div>
+            <div class="f mt5">
+              <a href="/" class="grey-button aib h30 flex1">Удалить <img src="i/cross.png" style="margin-top:-2px;"></a>
+            </div>
+            <div class="f mt5">
+              <a href="/" class="grey-button aib h30 flex1">Добавить туриста <img src="i/nb-tourist.png" style="margin-top:-2px;"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<ng-include src="'bottom.html'"></ng-include>
+</body>
+</html>

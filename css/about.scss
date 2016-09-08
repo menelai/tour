@@ -199,6 +199,15 @@ body.page-about {
 }
 
 #contact-tabs {
+  position: absolute;
+  top:50%;
+  -webkit-transform:translateY(-50%) translateX(-100%);
+  transform: translateY(-50%);
+  -moz-transform:translateY(-50%) translateX(-100%);
+  .mac & {
+    -webkit-transform:translateY(-50%) translateX(-100%);
+    transform: translateY(-50%) translateX(-100%);
+  }
   margin-left:-20px;
   &.ui-widget {
     font-family: SUI;

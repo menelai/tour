@@ -1,0 +1,150 @@
+<div class="result f ws-r ss-c d stretch bg-white">
+  <div class="bg-cyan result-starter"></div>
+  <div class="result-photo">
+    <img src="i/ex.jpg">
+  </div>
+  <div class="flex1 bybounds  mw0">
+    <div class="result-contents p10">
+      <div class="f ws-r d space10 vtop">
+        <div class="flex1 fz16 f ws-r vtop space10 ">
+          <div class="ttu">
+            Sheraton Moscow Sheremetyevo Hotel
+          </div>
+          <div class="mt3">
+            <div class="rating r3"></div>
+          </div>
+        </div>
+        <!--div class="orange result-period tar">25 сентября — 22 сентября</div-->
+      </div>
+
+      <div class="f d stretch space10 mt10 ss-c">
+        <div class="kurort-photo ss-nd"><img src="i/polpol.png"></div>
+        <div class="bybounds flex1">
+          <div class="ttu fz11 fwb">Курорт «Красная поляна» или более длинное название курорта</div>
+          <div>
+            <div class="cyan fz12 fwb">Состав тура:</div>
+            <div class="f around vtop tac grey777 fz10">
+              <div>
+                <img src="i/r-plane.png">
+                <div class="mt5">Авиа-<br>перелет</div>
+              </div>
+              <div>
+                <img src="i/r-bus.png">
+                <div class="mt5">Групповой<br>трансфер</div>
+              </div>
+              <div>
+                <img src="i/r-compass.png">
+                <div class="mt5">Услуги<br>гида</div>
+              </div>
+              <div>
+                <img src="i/r-doctor.png">
+                <div class="mt5">Медицинская<br>страховка</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-grey p10 tour-price">
+          <div class="tac fz12 orange fwb">25 сентября — 22 сентября</div>
+          <div class="tac mt10"><img src="i/adult.png" class="vab">×2 <img src="i/child.png" class="vab">×2</div>
+          <div class="mt10 tac fz24 fwb">
+            212 338 <span class="rub">Р</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="f d vtop ws-r mt10 space10">
+        <div class="flex1 mw0">
+          <div class="fz12 mb5 orange fwb">Тип питания</div>
+          <select class="selectric grey hasprice h30">
+            <option value="5 000 — 7 000" data-price="55000">Ультра всё включено</option>
+            <option value="15 000 — 17 000" data-price="155000">Всё включено</option>
+            <option value="25 000 — 27 000" data-price="255000">HB — завтрак, ужин</option>
+          </select>
+        </div>
+        <div class="flex1 mw0">
+          <div class="fz12 mb5 orange fwb">Тип номера</div>
+          <select class="selectric grey hasprice h30">
+            <option value="5 000 — 7 000" data-price="55000">Семейный номер,
+              2 комнаты,
+              боковой вид на море</option>
+            <option value="15 000 — 17 000" data-price="55000">Двойной номер,
+              боковой вид на море</option>
+            <option value="25 000 — 27 000" data-price="55000">Одиночный номер,
+              1 комната,
+              боковой вид на море</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt10 f d vcen space10 ss-c">
+        <div class="flex1 f vcen hotel-features ss-wrap">
+          <div class="fz12 grey777 ss-flex100 ss-mb10 ss-tac">Услуги<br class="ss-nd"> отеля</div>
+          <div class="tac">
+            <img src="i/wifi.png">
+            <div>Бесплатный Wi-Fi</div>
+          </div>
+          <div class="tac">
+            <img src="i/children.png">
+            <div>Бесплатный Wi-Fi</div>
+          </div>
+          <div class="tac">
+            <img src="i/ac.png">
+            <div>Бесплатный Wi-Fi</div>
+          </div>
+          <div class="tac">
+            <img src="i/pool.png">
+            <div>Бесплатный Wi-Fi</div>
+          </div>
+          <div class="tac">
+            <img src="i/child-beach.png">
+            <div>Бесплатный Wi-Fi</div>
+          </div>
+          <div class="tac">
+            <img src="i/child-beach.png">
+            <div>Бесплатный Wi-Fi</div>
+          </div>
+        </div>
+        <!--div class="tour-price"><a href="/" class="green-button ttu tac">Подробнее</a></div-->
+      </div>
+    </div>
+
+    <div class="result-flights f ws-r d stretch shown{{show}}" ng-click="show=!show">
+      <div class="airlogo f vcen hcen">
+        <img src="i/airlogo.png">
+      </div>
+      <div class="flex1 f c hcen">
+        <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+        <div class="flight-back mt2"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+      </div>
+      <div class="thik-arrow"><div></div></div>
+    </div>
+    <div class="extra-flights fz13" ng-show="show">
+      <div class="f ws-r d stretch">
+        <div class="airlogo f vcen hcen">
+          <img src="i/zzz.png">
+        </div>
+        <div class="flex1 f c hcen">
+          <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+          <div class="flight-back mt5"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+        </div>
+        <div class="bybounds choose-extra">
+          <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+          <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+        </div>
+      </div>
+      <div class="f ws-r d stretch">
+        <div class="airlogo f vcen hcen">
+          <img src="i/zzz.png">
+        </div>
+        <div class="flex1 f c hcen">
+          <div class="flight-there"><b>11:50</b>, Санкт-Петербург (DME) — <b>11:50</b>, Бургас (BOJ)</div>
+          <div class="flight-back mt5"><b>11:50</b>, Бургас (BOJ) — <b>11:50</b>, Санкт-Петербург (DME)</div>
+        </div>
+        <div class="bybounds choose-extra">
+          <div class="fwb">+ 55 000 <span class="rub">Р</span></div>
+          <div class="mt5"><a class="grey-button aib" href="/">Выбрать</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

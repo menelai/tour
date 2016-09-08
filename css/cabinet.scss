@@ -1,0 +1,147 @@
+body.page-cabinet {
+  padding-bottom: 0;
+}
+
+.your-orders {
+  //min-height: 100vh;
+  background: url(../i/your-orders.jpg) center top no-repeat;
+  background-size: 100% auto;
+  padding: 60px 0 90px;
+}
+
+.your-orders-wrapper {
+  background: rgba(white, 0.8);
+  padding: 20px 0;
+}
+
+.your-profile {
+  //min-height: 100vh;
+  background: url(../i/your-profile.jpg) center bottom no-repeat;
+  background-size: cover;
+  padding: 60px 0 90px;
+}
+
+.your-profile-wrapper {
+  >.max-width {
+    padding: 0 60px;
+  }
+}
+
+.your-profile-contents {
+  max-width: 850px;
+  padding-left:90px;
+  padding-right:90px;
+}
+
+.pencil {
+  width:30px;
+  position: relative;
+  img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.policy-div {
+  @include flex(0 0 230px);
+}
+
+.credit-face {
+  background: url(../i/mainform.png) left center no-repeat;
+  background-size: auto 100%;
+  padding:20px 0;
+  height: 190px;
+}
+
+.p10-3 {
+  padding:3px 10px;
+}
+
+.ph10 {
+ padding: 0 10px;
+}
+
+.saves {
+  @include flex(0 0 190px);
+}
+
+.your-notebook {
+  //min-height: 100vh;
+  background: url(../i/notebook.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 90px 0 90px;
+
+  .white-plate {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    padding:60px 40px;
+
+  }
+}
+
+.nb-buttons {
+  @include flex(0 0 210px);
+}
+
+.grey-bubble, .white-bubble {
+  margin-left:10px;
+  background: #e6e9ea;
+  &:before {
+    content:'';
+    position: absolute;
+    top:20px;
+    left:-6px;
+    background: #e6e9ea;
+    width:10px;
+    height:8px;
+    @include transform(skewX(-50deg));
+  }
+  &:after {
+    content:'';
+    position: absolute;
+    top:28px;
+    left:-6px;
+    background: #e6e9ea;
+    width:10px;
+    height:8px;
+    @include transform(skewX(50deg));
+  }
+}
+
+.white-bubble {
+  background: white;
+  border:solid 1px #e6e9ea;
+  &:before, &:after {
+    background: white;
+    border-left:solid 1px #e6e9ea;
+  }
+
+  textarea {
+    border:none;
+    background: none;
+    resize: none;
+    padding:0;
+    outline: none !important;
+  }
+}
+
+.messages-date-and-name {
+  @include flex(0 0 160px);
+}
+.flex-answer {
+  @include flex(0 0 110px);
+}
+
+.form-label {
+  @include flex(0 0 240px);
+}
+
+.cabinet-bill {
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -210,7 +210,8 @@
               $(this).keydown();
             });
 
-            if (navigator.appVersion.indexOf("Mac")!=-1) {
+            console.log(navigator.appVersion);
+            if (navigator.appVersion.indexOf("Mac")!=-1 && navigator.appVersion.indexOf('Chrome') == -1) {
               $("body").addClass('mac');
             }
 
