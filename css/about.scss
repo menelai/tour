@@ -287,16 +287,20 @@ body.page-about {
 
 #map {
   position: absolute; top:0; left:0; right:0; bottom:35px;
+  -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   &.mapdisabled {
+    -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
   }
 }
 
 #contact-gal {
   position: absolute; top:0; left:0; right:0; bottom:45px;
+  -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   &.galdisabled {
+    -webkit-transform: translateX(100vw);
     transform: translateX(100vw);
   }
 
@@ -331,6 +335,7 @@ body.page-about {
     position: absolute;
     bottom:10px;
     left:50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width:100%;
     max-width: 1600px;
