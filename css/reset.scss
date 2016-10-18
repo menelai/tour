@@ -294,6 +294,9 @@ img {
       display: none;
     }
   }
+  .ws-wrap {
+    @include flex-wrap(wrap);
+  }
 }
 
 .flex100 {

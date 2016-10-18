@@ -1,0 +1,69 @@
+.page-landing {
+  background: url(../i/lndbg.jpg) center center no-repeat;
+  background-size: cover;
+  .bricks {
+    height:8px;
+  }
+
+  .max-width {
+    max-width: 1040px;
+  }
+
+  #sitename {
+    width: 250px;
+  }
+}
+
+.landing-upper {
+  // Needs latest Compass, add '@import "compass"' to your scss
+  // Permalink - use to edit and share this gradient:
+  // http://colorzilla.com/gradient-editor/#307cb7+0,307cb7+50,307cb7+63,307cb7+100&0.83+0,0.83+50,0.66+63,0+100
+  @include filter-gradient(#d4307c, #00307c, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  rgba(48,124,183,0.83) 0%,rgba(48,124,183,0.83) 50%,rgba(48,124,183,0.66) 63%,rgba(48,124,183,0) 100%));
+
+  padding:20px 0 40px;
+  border-bottom: solid 3px $orange;
+}
+
+.sep.bg-white {
+  background: white;
+}
+
+.advant {
+  padding:0 110px;
+}
+
+.lnd-form {
+
+  background: rgba(#003471, 0.5);
+  border:dashed 1px white;
+  border-top-right-radius: 10px;
+  padding:10px 20px;
+}
+
+.flx215 {
+  @include flex(0 0 215px);
+}
+
+.h1 {
+  height:1px;
+}
+
+.landing-lower {
+  padding:20px 0 40px;
+  // Needs latest Compass, add '@import "compass"' to your scss
+  // Permalink - use to edit and share this gradient:
+  // http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+32,ffffff+100&0.83+0,0.66+32,0+100
+  @include filter-gradient(#ffffff, #ffffff, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  rgba(255,255,255,0.60) 0%,rgba(255,255,255,0.60) 52%,rgba(255,255,255,0) 100%));
+
+}
+
+.lnd-turop {
+  >div {
+    width:130px;
+    height:55px;
+    background: white;
+    margin-bottom: 15px;
+  }
+}
