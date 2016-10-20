@@ -411,6 +411,10 @@ a.orange {
   border-color:#65b510;
 }
 
+.self-stretch {
+  @include align-self(stretch);
+}
+
 .r {
   @include flex-direction(row);
 }

@@ -1,6 +1,5 @@
 .page-landing {
-  background: url(../i/lndbg.jpg) center center no-repeat;
-  background-size: cover;
+  padding-bottom: 40px;
   .bricks {
     height:8px;
   }
@@ -12,6 +11,11 @@
   #sitename {
     width: 250px;
   }
+}
+
+.landing-bg {
+  background: url(../i/lndbg.jpg) center center no-repeat;
+  background-size: cover;
 }
 
 .landing-upper {
